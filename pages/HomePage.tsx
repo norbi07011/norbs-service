@@ -54,25 +54,25 @@ const HomePage: React.FC = () => {
       icon: "🎨", 
       title: t('hero_carousel.graphics.title'), 
       description: t('hero_carousel.graphics.description'),
-      imgSrc: "https://images.unsplash.com/photo-1572044162444-24c9562b55da?q=80&w=1887&auto=format&fit=crop"
+      imgSrc: "/images/Projekty-graficzne.jpg"
     },
     { 
       icon: "📷", 
       title: t('hero_carousel.photo.title'), 
       description: t('hero_carousel.photo.description'),
-      imgSrc: "https://images.unsplash.com/photo-1520390138845-ff2d662dd554?q=80&w=2072&auto=format&fit=crop"
+      imgSrc: "/images/Fotografia.jpg"
     },
     { 
       icon: "🌐", 
       title: t('hero_carousel.websites.title'), 
       description: t('hero_carousel.websites.description'),
-      imgSrc: "https://images.unsplash.com/photo-1555774698-0b77e0abfe7c?q=80&w=2128&auto=format&fit=crop"
+      imgSrc: "/images/Strony-internetowe.jpg"
     },
     { 
       icon: "🎬", 
       title: t('hero_carousel.video.title'), 
       description: t('hero_carousel.video.description'),
-      imgSrc: "https://images.unsplash.com/photo-1526233139368-7d125770380b?q=80&w=1887&auto=format&fit=crop"
+      imgSrc: "/images/Wideo-marketing.jpg"
     }
   ];
 
