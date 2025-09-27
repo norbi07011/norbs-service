@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NORBS SERVICE - Premium Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 262 84% 59%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --radius: 0.5rem;
+        --glass: hsla(0, 0%, 100%, 0.05);
+        --border-color: hsla(0, 0%, 100%, 0.1);
+        --gold-accent: 38 92% 50%;
+
+        /* Green Theme for Cards (Default) */
+        --card-hue: 160;
+        --card-saturation-dark: 80%;
+        --card-saturation-light: 70%;
+      }
+      body.card-color-blue {
+        --card-hue: 210;
+        --card-saturation-dark: 80%;
+        --card-saturation-light: 80%;
+      }
+      .light {
+        --background: 0 0% 98%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 262 84% 59%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 240 5.9% 10%;
+        --glass: hsla(0, 0%, 0%, 0.05);
+        --border-color: hsla(0, 0%, 0%, 0.1);
+      }
+      .premium {
+        --background: 222 47% 11%;
+        --foreground: 210 40% 96%;
+        --card: 222 47% 11%;
+        --card-foreground: 210 40% 96%;
+        --popover: 222 47% 11%;
+        --popover-foreground: 210 40% 96%;
+        --primary: 210 40% 98%;
+        --primary-foreground: 222 47% 11%;
+        --secondary: 215 28% 17%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 215 28% 17%;
+        --muted-foreground: 215 20% 65%;
+        --accent: 217 91% 60%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 215 28% 17%;
+        --input: 215 28% 17%;
+        --ring: 215 20% 65%;
+        --glass: hsla(222, 47%, 20%, 0.5);
+        --border-color: hsla(217, 91%, 70%, 0.2);
+        --gold-accent: 38 92% 50%;
+      }
+
+      /* START of new 3D Glass Card Style */
+      .uiverse-card {
+        --card-bg-light: hsla(var(--card-hue), var(--card-saturation-light), 90%, 0.5);
+        --card-border-light: hsla(var(--card-hue), var(--card-saturation-light), 60%, 0.8);
+        --card-glow-light: hsla(var(--card-hue), var(--card-saturation-light), 60%, 0.5);
+        --card-shine-light: hsla(var(--card-hue), var(--card-saturation-light), 60%, 1);
+        
+        --card-bg-dark: hsla(var(--card-hue), var(--card-saturation-dark), 15%, 0.4);
+        --card-border-dark: hsla(var(--card-hue), var(--card-saturation-dark), 40%, 0.5);
+        --card-glow-dark: hsla(var(--card-hue), var(--card-saturation-dark), 40%, 0.3);
+        --card-shine-dark: hsla(var(--card-hue), var(--card-saturation-dark), 40%, 0.8);
+
+        --card-bg: var(--card-bg-dark);
+        --card-border: var(--card-border-dark);
+        --card-glow: var(--card-glow-dark);
+        --card-shine: var(--card-shine-dark);
+        
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 2rem;
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 2px solid var(--card-border);
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1),
+                    0 0 0 2px var(--card-border),
+                    0 0 20px var(--card-glow);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+      }
+      .light .uiverse-card {
+        --card-bg: var(--card-bg-light);
+        --card-border: var(--card-border-light);
+        --card-glow: var(--card-glow-light);
+        --card-shine: var(--card-shine-light);
+      }
+      .uiverse-card-content {
+          transform: translateZ(40px);
+          color: var(--foreground);
+      }
+      .uiverse-card::before { /* shine effect */
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 150%;
+          height: 100%;
+          background: linear-gradient(110deg, transparent 40%, var(--card-shine) 50%, transparent 60%);
+          transform: translateX(-100%) skewX(-20deg);
+          transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+          z-index: 1;
+          opacity: 0.7;
+          pointer-events: none;
+      }
+      .uiverse-card:hover {
+          transform: scale(1.05) rotateX(10deg) rotateY(5deg) translateZ(10px);
+          box-shadow: 0 20px 50px rgba(0,0,0,0.2),
+                      0 0 0 2px var(--card-border),
+                      0 0 40px var(--card-glow);
+      }
+      .uiverse-card:hover::before {
+          transform: translateX(100%) skewX(-20deg);
+      }
+      .uiverse-card-circles {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          border-radius: 2rem;
+          transform-style: preserve-3d;
+          z-index: -1;
+      }
+      .uiverse-card-circles div {
+          position: absolute;
+          border-radius: 50%;
+          background: var(--card-glow);
+          filter: blur(30px);
+          animation: uiverse-circles-anim 15s ease-in-out infinite;
+      }
+      .uiverse-card-circles div:nth-child(1) {
+          width: 200px;
+          height: 200px;
+          top: -15%;
+          right: -15%;
+          transform: translateZ(-20px);
+          animation-delay: 0s;
+      }
+      .uiverse-card-circles div:nth-child(2) {
+          width: 150px;
+          height: 150px;
+          bottom: -10%;
+          left: -20%;
+          transform: translateZ(-40px);
+          animation-delay: -5s;
+      }
+      .uiverse-card-circles div:nth-child(3) {
+          width: 100px;
+          height: 100px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) translateZ(-30px);
+          animation-delay: -10s;
+      }
+      @keyframes uiverse-circles-anim {
+          0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+          25% { transform: translate(20px, 40px) scale(1.2) rotate(90deg); opacity: 0.8; }
+          50% { transform: translate(-30px, -10px) scale(0.8) rotate(180deg); opacity: 1; }
+          75% { transform: translate(10px, -30px) scale(1.1) rotate(270deg); opacity: 0.7;}
+          100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 1; }
+      }
+      /* END of new 3D Glass Card Style */
+
+      /* START of Futuristic Toggle Switch */
+      .futuristic-toggle {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        cursor: pointer;
+      }
+
+      .futuristic-toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .futuristic-toggle .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(33, 150, 243, 0.2);
+        border: 1px solid rgba(33, 150, 243, 0.5);
+        transition: .4s;
+        border-radius: 40px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px rgba(33, 150, 243, 0.5), inset 0 0 5px rgba(33, 150, 243, 0.3);
+      }
+
+      .futuristic-toggle .slider:before {
+        position: absolute;
+        content: "";
+        height: 32px;
+        width: 32px;
+        left: 3px;
+        bottom: 3px;
+        background-color: #2196F3;
+        transition: .4s;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #2196F3, 0 0 3px white inset;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
+      }
+
+      .futuristic-toggle input:checked + .slider {
+        background-color: rgba(76, 175, 80, 0.2);
+        border-color: rgba(76, 175, 80, 0.5);
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.5), inset 0 0 5px rgba(76, 175, 80, 0.3);
+      }
+
+      .futuristic-toggle input:checked + .slider:before {
+        transform: translateX(40px);
+        background-color: #4CAF50;
+        box-shadow: 0 0 15px #4CAF50, 0 0 3px white inset;
+      }
+
+      .futuristic-toggle .slider .on, .futuristic-toggle .slider .off {
+        color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: 600;
+        text-shadow: 0 0 5px;
+        pointer-events: none;
+        transition: opacity 0.4s ease-in-out;
+      }
+
+      .futuristic-toggle .slider .on {
+        left: 0;
+        opacity: 0;
+        color: #a5d6a7;
+      }
+
+      .futuristic-toggle .slider .off {
+        right: 0;
+        opacity: 1;
+        color: #90caf9;
+      }
+
+      .futuristic-toggle input:checked + .slider .on {
+        opacity: 1;
+      }
+
+      .futuristic-toggle input:checked + .slider .off {
+        opacity: 0;
+      }
+      /* END of Futuristic Toggle Switch */
+      
+      .logo-3d-effect {
+        font-family: 'Impact', 'Arial Black', sans-serif;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, #EAEAEA 30%, #B0B0B0 70%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        display: inline-block;
+      }
+
+      /* Marquee & 3D Carousel for About Page */
+      @keyframes continuous-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .scrolling-carousel {
+        display: flex;
+        width: 200%; /* Double width for seamless loop */
+        animation: continuous-scroll 40s linear infinite;
+      }
+      .scrolling-carousel:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes rotate-card {
+        from { transform: rotateY(0deg); }
+        to { transform: rotateY(360deg); }
+      }
+      @keyframes counter-rotate-card {
+        from { transform: rotateY(0deg); }
+        to { transform: rotateY(-360deg); }
+      }
+      .card-3d {
+        transform-style: preserve-3d;
+        animation: rotate-card 20s linear infinite;
+      }
+      .card-3d-content {
+        transform-style: preserve-3d;
+        animation: counter-rotate-card 20s linear infinite;
+      }
+      .card-3d:hover, .card-3d:hover .card-3d-content {
+        animation-play-state: paused;
+      }
+
+      /* Tech Logo Grid */
+      .tech-logo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 2rem;
+      }
+      .tech-logo {
+        transition: transform 0.3s ease;
+      }
+      .tech-logo:hover {
+        transform: scale(1.1);
+      }
+      .tech-logo img {
+        filter: grayscale(100%) brightness(0.8);
+        transition: filter 0.3s ease;
+      }
+      .tech-logo:hover img {
+        filter: grayscale(0%) brightness(1) drop-shadow(0 0 8px hsl(var(--accent) / 0.6));
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'border': 'hsl(var(--border))',
+              'input': 'hsl(var(--input))',
+              'ring': 'hsl(var(--ring))',
+              'background': 'hsl(var(--background))',
+              'foreground': 'hsl(var(--foreground))',
+              'primary': {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))'
+              },
+              'secondary': {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))'
+              },
+              'destructive': {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))'
+              },
+              'muted': {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))'
+              },
+              'accent': {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))'
+              },
+              'gold': 'hsl(var(--gold-accent))',
+              'popover': {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))'
+              },
+              'card': {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))'
+              },
+              'glass': 'var(--glass)',
+              'border-color': 'var(--border-color)',
+              'brand-purple': '#9333ea',
+              'brand-gold': '#f59e0b',
+              'brand-blue': '#3b82f6',
+              'brand-dark': '#0a0a0a',
+            },
+            animation: {
+              'gradient': 'gradient 8s linear infinite',
+              'glitch': 'glitch 1s linear infinite',
+              'typewriter': 'typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal',
+              'carousel-spin': 'rotateY-360 25s linear infinite',
+              'image-spin': 'rotateY-360 15s linear infinite reverse',
+              'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+            },
+            keyframes: {
+              gradient: {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              },
+              glitch: {
+                '2%,64%': { transform: 'translate(2px,0) skew(0deg)' },
+                '4%,60%': { transform: 'translate(-2px,0) skew(0deg)' },
+                '62%': { transform: 'translate(0,0) skew(5deg)' }
+              },
+              typewriter: {
+                from: { width: '0' },
+                to: { width: '100%' }
+              },
+              blinkTextCursor: {
+                from: { 'border-right-color': 'rgba(255,255,255,.75)' },
+                to: { 'border-right-color': 'transparent' }
+              },
+              'rotateY-360': {
+                'from': { transform: 'rotateY(0deg)' },
+                'to': { transform: 'rotateY(360deg)' },
+              },
+              'fade-in-up': {
+                'from': {
+                  opacity: '0',
+                  transform: 'translateY(20px)'
+                },
+                'to': {
+                  opacity: '1',
+                  transform: 'translateY(0)'
+                }
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^0.15.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background text-foreground transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

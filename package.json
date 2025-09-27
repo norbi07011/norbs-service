@@ -1,0 +1,30 @@
+{
+  "name": "norbs-service---premium-marketing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:install": "cd backend && npm install",
+    "backend:migrate": "cd backend && npm run migrate",
+    "backend:seed": "cd backend && npm run seed",
+    "dev:full": "concurrently \"npm run dev\" \"npm run backend:dev\"",
+    "setup": "npm install && npm run backend:install && npm run backend:migrate && npm run backend:seed"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
+    "@google/genai": "^0.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "concurrently": "^8.2.2"
+  }
+}
