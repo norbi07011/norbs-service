@@ -301,6 +301,8 @@ const SettingsCenter: React.FC = () => {
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                 settings.security.passwordPolicy.requireUppercase ? 'bg-accent' : 'bg-muted'
               }`}
+              title="Toggle require uppercase letters"
+              aria-label={`Require uppercase letters is ${settings.security.passwordPolicy.requireUppercase ? 'enabled' : 'disabled'}`}
             >
               <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                 settings.security.passwordPolicy.requireUppercase ? 'translate-x-6' : 'translate-x-1'
@@ -315,6 +317,8 @@ const SettingsCenter: React.FC = () => {
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                 settings.security.passwordPolicy.requireNumbers ? 'bg-accent' : 'bg-muted'
               }`}
+              title="Toggle require numbers"
+              aria-label={`Require numbers is ${settings.security.passwordPolicy.requireNumbers ? 'enabled' : 'disabled'}`}
             >
               <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                 settings.security.passwordPolicy.requireNumbers ? 'translate-x-6' : 'translate-x-1'
@@ -329,6 +333,8 @@ const SettingsCenter: React.FC = () => {
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                 settings.security.passwordPolicy.requireSymbols ? 'bg-accent' : 'bg-muted'
               }`}
+              title="Toggle require symbols"
+              aria-label={`Require symbols is ${settings.security.passwordPolicy.requireSymbols ? 'enabled' : 'disabled'}`}
             >
               <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                 settings.security.passwordPolicy.requireSymbols ? 'translate-x-6' : 'translate-x-1'
@@ -353,6 +359,8 @@ const SettingsCenter: React.FC = () => {
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
               settings.notifications.emailEnabled ? 'bg-accent' : 'bg-muted'
             }`}
+            title="Toggle email notifications"
+            aria-label={`Email notifications are ${settings.notifications.emailEnabled ? 'enabled' : 'disabled'}`}
           >
             <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
               settings.notifications.emailEnabled ? 'translate-x-6' : 'translate-x-1'
@@ -370,6 +378,8 @@ const SettingsCenter: React.FC = () => {
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
               settings.notifications.pushEnabled ? 'bg-accent' : 'bg-muted'
             }`}
+            title="Toggle push notifications"
+            aria-label={`Push notifications are ${settings.notifications.pushEnabled ? 'enabled' : 'disabled'}`}
           >
             <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
               settings.notifications.pushEnabled ? 'translate-x-6' : 'translate-x-1'
@@ -404,6 +414,8 @@ const SettingsCenter: React.FC = () => {
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
             settings.backup.autoBackup ? 'bg-accent' : 'bg-muted'
           }`}
+          title="Toggle automatic backups"
+          aria-label={`Automatic backups are ${settings.backup.autoBackup ? 'enabled' : 'disabled'}`}
         >
           <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
             settings.backup.autoBackup ? 'translate-x-6' : 'translate-x-1'
@@ -418,6 +430,7 @@ const SettingsCenter: React.FC = () => {
             value={settings.backup.backupFrequency}
             onChange={(e) => updateSettings('backup', 'backupFrequency', e.target.value)}
             className="w-full bg-background border border-border rounded-lg px-3 py-2"
+            title="Select backup frequency"
           >
             <option value="daily">{t('daily')}</option>
             <option value="weekly">{t('weekly')}</option>
@@ -434,6 +447,8 @@ const SettingsCenter: React.FC = () => {
             className="w-full bg-background border border-border rounded-lg px-3 py-2"
             min="7"
             max="365"
+            title="Number of days to retain backups"
+            placeholder="Enter retention days"
           />
         </div>
       </div>
@@ -448,6 +463,8 @@ const SettingsCenter: React.FC = () => {
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
             settings.backup.cloudStorage ? 'bg-accent' : 'bg-muted'
           }`}
+          title="Toggle cloud storage for backups"
+          aria-label={`Cloud storage for backups is ${settings.backup.cloudStorage ? 'enabled' : 'disabled'}`}
         >
           <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
             settings.backup.cloudStorage ? 'translate-x-6' : 'translate-x-1'
@@ -470,6 +487,8 @@ const SettingsCenter: React.FC = () => {
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
               settings.performance.cacheEnabled ? 'bg-accent' : 'bg-muted'
             }`}
+            title="Toggle caching"
+            aria-label={`Caching is ${settings.performance.cacheEnabled ? 'enabled' : 'disabled'}`}
           >
             <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
               settings.performance.cacheEnabled ? 'translate-x-6' : 'translate-x-1'
@@ -487,6 +506,8 @@ const SettingsCenter: React.FC = () => {
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
               settings.performance.compressionEnabled ? 'bg-accent' : 'bg-muted'
             }`}
+            title="Toggle compression"
+            aria-label={`Compression is ${settings.performance.compressionEnabled ? 'enabled' : 'disabled'}`}
           >
             <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
               settings.performance.compressionEnabled ? 'translate-x-6' : 'translate-x-1'
@@ -503,6 +524,8 @@ const SettingsCenter: React.FC = () => {
             className="w-full max-w-xs bg-background border border-border rounded-lg px-3 py-2"
             min="1"
             max="500"
+            title="Maximum file size in megabytes"
+            placeholder="Enter max file size"
           />
         </div>
       </div>
