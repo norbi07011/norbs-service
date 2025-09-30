@@ -164,6 +164,8 @@ const CalendarView: React.FC<CalendarViewProps> = ({ events, onEventClick, onDat
             <button
               onClick={() => navigateCalendar('prev')}
               className="p-2 hover:bg-muted rounded-lg transition-colors"
+              aria-label="Poprzedni miesiąc"
+              title="Poprzedni miesiąc"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -178,6 +180,8 @@ const CalendarView: React.FC<CalendarViewProps> = ({ events, onEventClick, onDat
             <button
               onClick={() => navigateCalendar('next')}
               className="p-2 hover:bg-muted rounded-lg transition-colors"
+              aria-label="Następny miesiąc"
+              title="Następny miesiąc"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
