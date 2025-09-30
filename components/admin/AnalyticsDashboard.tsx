@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../../hooks/useTranslations';
+import '../../styles/admin-dashboard.css';
 
 interface AnalyticsData {
   revenue: {
@@ -138,6 +139,8 @@ const AnalyticsDashboard: React.FC = () => {
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as typeof timeRange)}
             className="bg-background border border-border rounded-lg px-3 py-2 text-sm"
+            title="Wybierz zakres czasowy"
+            aria-label="Wybierz zakres czasowy do analizy danych"
           >
             <option value="7d">{t('last_7_days')}</option>
             <option value="30d">{t('last_30_days')}</option>

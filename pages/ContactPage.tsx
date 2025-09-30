@@ -624,7 +624,16 @@ const ContactPage: React.FC = () => {
                         </ul>
                     </div>
                      <div className="h-64 rounded-xl overflow-hidden">
-                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.482811327151!2d4.182404677103758!3d52.03058987193796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b0f807358797%3A0x6758411d73a6e9a!2sBraamstraat%2019%2C%202681%20GL%20Monster%2C%20Netherlands!5e0!3m2!1sen!2spl!4v1716124796349!5m2!1sen!2spl" width="100%" height="100%" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                       <iframe 
+                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.482811327151!2d4.182404677103758!3d52.03058987193796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b0f807358797%3A0x6758411d73a6e9a!2sBraamstraat%2019%2C%202681%20GL%20Monster%2C%20Netherlands!5e0!3m2!1sen!2spl!4v1716124796349!5m2!1sen!2spl" 
+                         width="100%" 
+                         height="100%" 
+                         style={{border:0}} 
+                         allowFullScreen 
+                         loading="lazy" 
+                         referrerPolicy="no-referrer-when-downgrade"
+                         title="Mapa lokalizacji - Braamstraat 19, Monster, Netherlands"
+                       ></iframe>
                     </div>
                 </div>
 
