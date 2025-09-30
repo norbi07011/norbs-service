@@ -262,6 +262,8 @@ const ReportsCenter: React.FC = () => {
                 dateRange: { ...prev.dateRange, start: e.target.value }
               }))}
               className="w-full bg-background border border-border rounded-lg px-3 py-2"
+              title={t('start_date')}
+              aria-label={t('start_date')}
             />
           </div>
           
@@ -275,6 +277,8 @@ const ReportsCenter: React.FC = () => {
                 dateRange: { ...prev.dateRange, end: e.target.value }
               }))}
               className="w-full bg-background border border-border rounded-lg px-3 py-2"
+              title={t('end_date')}
+              aria-label={t('end_date')}
             />
           </div>
         </div>
@@ -323,6 +327,8 @@ const ReportsCenter: React.FC = () => {
                   type="checkbox"
                   id={`report-${report.id}`}
                   className="w-4 h-4 text-accent border-border rounded"
+                  title={report.name}
+                  aria-label={`${t('select')} ${report.name}`}
                 />
                 <label htmlFor={`report-${report.id}`} className="flex items-center space-x-3">
                   <div className="p-2 bg-accent/10 rounded text-accent">

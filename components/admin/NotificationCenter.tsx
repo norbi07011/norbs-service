@@ -393,6 +393,8 @@ const NotificationCenter: React.FC = () => {
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.email ? 'bg-accent' : 'bg-muted'
                     }`}
+                    aria-label={t('toggle_email_notifications')}
+                    title={t('toggle_email_notifications')}
                   >
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.email ? 'translate-x-6' : 'translate-x-1'
@@ -410,6 +412,8 @@ const NotificationCenter: React.FC = () => {
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.push ? 'bg-accent' : 'bg-muted'
                     }`}
+                    aria-label={t('toggle_push_notifications')}
+                    title={t('toggle_push_notifications')}
                   >
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.push ? 'translate-x-6' : 'translate-x-1'
@@ -427,6 +431,8 @@ const NotificationCenter: React.FC = () => {
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.sms ? 'bg-accent' : 'bg-muted'
                     }`}
+                    aria-label={t('toggle_sms_notifications')}
+                    title={t('toggle_sms_notifications')}
                   >
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.sms ? 'translate-x-6' : 'translate-x-1'

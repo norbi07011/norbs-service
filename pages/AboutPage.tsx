@@ -72,8 +72,9 @@ const AccordionItem: React.FC<{ title: string, children: React.ReactNode }> = ({
       <button 
         onClick={() => setIsOpen(!isOpen)} 
         className="w-full text-left flex justify-between items-center py-6 px-4 hover:bg-muted/20 rounded-lg transition-all duration-300"
-        aria-expanded={isOpen ? 'true' : 'false'}
         type="button"
+        title={title}
+        aria-label={isOpen ? `Collapse ${title}` : `Expand ${title}`}
       >
         <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-300">{title}</span>
         <span className={`transform transition-all duration-300 text-accent ${isOpen ? 'rotate-180 scale-110' : 'hover:scale-110'}`}>
