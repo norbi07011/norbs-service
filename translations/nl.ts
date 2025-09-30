@@ -29,6 +29,118 @@ export default {
     video: {
       title: "Video Marketing",
       description: "Boeiende promotievideo's en muziekvideo's die uw verhaal vertellen."
+    },
+    clothing: {
+      title: "Kledingontwerp",
+      description: "Professioneel ontwerp en productie van kleding - van concept tot eindproduct."
+    }
+  },
+
+  clothing: {
+    page_title: "Kledingontwerp & Productie",
+    page_subtitle: "Van idee tot eindproduct - wij creëren unieke kleding met materialen van de hoogste kwaliteit",
+    hero_badges: {
+      designs: "Originele ontwerpen",
+      materials: "Premium materialen",
+      technologies: "Geavanceerde technologieën",
+      service: "Complete service"
+    },
+    configurator: {
+      title: "Kledingconfigurator",
+      subtitle: "Creëer uw droomkledingstuk in enkele stappen",
+      clothing_type: "Type kleding",
+      material: "Materiaal",
+      print_tech: "Druktechnologie",
+      calculate_price: "Bereken prijs",
+      estimated_price: "Geschatte prijs",
+      order_now: "Bestel nu",
+      select_type: "Selecteer type kleding",
+      select_material: "Selecteer materiaal",
+      select_print: "Selecteer druktechnologie"
+    },
+    gallery: {
+      title: "Onze Kleding Realisaties",
+      cta_title: "Heeft u een idee voor uw eigen collectie?",
+      cta_subtitle: "Gebruik onze configurator en creëer unieke kleding aangepast aan uw behoeften. Van individuele stuks tot hele collecties - wij helpen u elke visie te realiseren.",
+      configurator_btn: "Start configurator",
+      contact_btn: "Neem contact op"
+    },
+    process: {
+      title: "Ons Productieproces",
+      consultation: {
+        title: "Consultatie",
+        description: "We bespreken uw visie, doel en vereisten voor het kledingproject"
+      },
+      design: {
+        title: "Ontwerp",
+        description: "We creëren originele ontwerpen en 3D visualisaties van uw kleding"
+      },
+      production: {
+        title: "Productie",
+        description: "Productie met de beste materialen en technologieën"
+      },
+      delivery: {
+        title: "Levering",
+        description: "Kwaliteitscontrole en veilige verpakking voor verzending"
+      }
+    },
+    technologies: {
+      title: "Onze Druktechnologieën",
+      dtg: {
+        title: "DTG - Direct to Garment",
+        description: "De modernste technologie voor digitaal drukken direct op textiel. Onbeperkt kleurenpalet en hoogste kwaliteit details."
+      },
+      embroidery: {
+        title: "Computerbordering",
+        description: "Traditionele, luxueuze methode voor het versieren van kleding. Ideaal voor bedrijfslogo's, monogrammen en elegante patronen."
+      },
+      sublimation: {
+        title: "Sublimatie",
+        description: "Volkleurendruk over het hele oppervlak van het kledingstuk. Ideaal voor all-over patronen en sportshirts."
+      },
+      screen_print: {
+        title: "Zeefdruk",
+        description: "Klassieke methode ideaal voor grotere oplages. Uitzonderlijke duurzaamheid en kleurintensiteit."
+      },
+      vinyl: {
+        title: "Flex & Flock Folie",
+        description: "Elastische folies ideaal voor stretch materialen en projecten met teksten. Beschikbaar in gladde en fluwelen versie."
+      },
+      special: {
+        title: "Speciale Effecten",
+        description: "Puff print (3D), discharge, foil print, glow in the dark en andere geavanceerde technieken voor unieke effecten."
+      }
+    },
+    pricing: {
+      title: "Prijzen Kledingdiensten",
+      starter: {
+        title: "Starter",
+        price: "vanaf €12",
+        features: ["T-shirts en tank tops", "Basis materialen", "DTG of vinyl", "Min. 1 stuk"]
+      },
+      professional: {
+        title: "Professional",
+        price: "vanaf €22",
+        popular: "MEEST POPULAIR",
+        features: ["Alle kledingstukken", "Premium materialen", "Bordering + alle technologieën", "Gratis grafisch ontwerp"]
+      },
+      premium: {
+        title: "Premium",
+        price: "vanaf €42",
+        features: ["Exclusieve materialen", "Speciale effecten", "Volledige personalisatie", "VIP service"]
+      }
+    },
+    faq: {
+      title: "Veelgestelde Vragen",
+      subtitle: "Vind antwoorden op de meestgestelde vragen over onze kledingdiensten. Geen antwoord gevonden? Neem contact met ons op!",
+      contact_title: "Heeft u andere vragen?",
+      contact_subtitle: "Ons team van experts staat klaar om u te helpen bij uw kledingproject"
+    },
+    cta: {
+      title: "Klaar om uw collectie te creëren?",
+      subtitle: "Neem contact met ons op en bespreek de details van uw project",
+      consultation_btn: "Gratis consultatie",
+      portfolio_btn: "Bekijk portfolio"
     }
   },
   services_teaser: {
@@ -167,6 +279,27 @@ export default {
       actors_label: "Zijn er acteurs/figuranten nodig voor de opnames?",
       actors_yes: "Ja",
       actors_no: "Nee"
+    },
+
+    clothing_options: {
+      title: "Kledingontwerp Details",
+      type_label: "Wat voor soort kleding wilt u ontwerpen? (meerdere selecties mogelijk)",
+      streetwear: "Streetwear",
+      corporate: "Bedrijfskleding",
+      eco_fashion: "Eco Mode",
+      sports_wear: "Sportkleding",
+      luxury: "Luxe Collectie",
+      casual: "Casual/Dagelijks",
+      quantity_label: "Aantal te produceren",
+      sizes_label: "Maten (bijv. S, M, L, XL)",
+      materials_label: "Gewenste materialen",
+      design_concept_label: "Beschrijf uw ontwerpconcept",
+      production_needed_label: "Heeft u ook productie nodig?",
+      production_needed_yes: "Ja, ik wil volledige service ontwerp + productie",
+      production_needed_no: "Nee, alleen ontwerp",
+      branding_label: "Heeft u branding/logo op de kleding nodig?",
+      branding_yes: "Ja",
+      branding_no: "Nee"
     },
     
     budget_label: "Wat is uw geschatte budget?",
@@ -333,5 +466,110 @@ export default {
       title: "Muziekvideo Productie",
       description: "Een conceptuele muziekvideo met een sterke verhaallijn en visuele effecten. We werkten nauw samen met de artiest om hun visie tot leven te brengen door middel van cinematografie en postproductie."
     }
+  },
+  admin: {
+    // Navigation
+    dashboard: "Dashboard",
+    clients: "Klanten",
+    projects: "Projecten",
+    categories: "Categorieën",
+    invoicing: "Facturering",
+    
+    // Dashboard
+    welcome: "Welkom",
+    adminPanel: "Beheerpaneel",
+    totalRevenue: "Totale omzet",
+    outstandingRevenue: "Uitstaande omzet",
+    activeProjects: "Actieve projecten",
+    totalClients: "Totaal klanten",
+    overdueInvoices: "Vervallen facturen",
+    upcomingDeadlines: "Aankomende deadlines",
+    noOverdueInvoices: "Geen achterstallige facturen. Goed werk!",
+    noUpcomingDeadlines: "Geen aankomende deadlines in de komende 7 dagen.",
+    recentActivity: "Recente activiteit",
+    
+    // Clients
+    clientsList: "Klantenlijst",
+    addClient: "Klant toevoegen",
+    editClient: "Klant bewerken",
+    clientName: "Klantnaam",
+    email: "E-mail",
+    phone: "Telefoon",
+    company: "Bedrijf",
+    address: "Adres",
+    save: "Opslaan",
+    cancel: "Annuleren",
+    deleteItem: "Verwijderen",
+    
+    // Projects
+    projectsList: "Projectenlijst",
+    addProject: "Project toevoegen",
+    editProject: "Project bewerken",
+    projectName: "Projectnaam",
+    description: "Beschrijving",
+    client: "Klant",
+    category: "Categorie",
+    status: "Status",
+    priority: "Prioriteit",
+    startDate: "Startdatum",
+    dueDate: "Vervaldatum",
+    budget: "Budget",
+    
+    // Categories
+    categoriesList: "Categorieënlijst",
+    addCategory: "Categorie toevoegen",
+    editCategory: "Categorie bewerken",
+    categoryName: "Categorienaam",
+    color: "Kleur",
+    
+    // Invoicing
+    invoicesList: "Facturenlijst",
+    createInvoice: "Factuur aanmaken",
+    editInvoice: "Factuur bewerken",
+    invoiceNumber: "Factuurnummer",
+    project: "Project",
+    amount: "Bedrag",
+    taxRate: "Belastingtarief",
+    total: "Totaal",
+    issueDate: "Uitgiftedatum",
+    invoiceDueDate: "Vervaldatum",
+    
+    // Status values
+    draft: "Concept",
+    sent: "Verzonden",
+    paid: "Betaald",
+    overdue: "Vervallen",
+    planning: "Planning",
+    inProgress: "In uitvoering",
+    review: "Beoordeling",
+    done: "Voltooid",
+    low: "Laag",
+    medium: "Gemiddeld",
+    high: "Hoog",
+    
+    // Actions
+    view: "Bekijken",
+    edit: "Bewerken",
+    deleteAction: "Verwijderen",
+    create: "Aanmaken",
+    update: "Bijwerken",
+    search: "Zoeken",
+    filter: "Filteren",
+    export: "Exporteren",
+    
+    // Messages
+    confirmDelete: "Weet je zeker dat je dit item wilt verwijderen?",
+    itemDeleted: "Item succesvol verwijderd",
+    itemSaved: "Item succesvol opgeslagen",
+    errorOccurred: "Er is een fout opgetreden",
+    noResults: "Geen resultaten gevonden",
+    
+    // Files
+    files: "Bestanden",
+    uploadFile: "Bestand uploaden",
+    fileName: "Bestandsnaam",
+    fileSize: "Bestandsgrootte",
+    uploadDate: "Uploaddatum",
+    download: "Downloaden"
   }
 };

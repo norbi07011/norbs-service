@@ -38,6 +38,118 @@ export default {
     video: {
       title: "Video Marketing",
       description: "Engaging promotional videos and music videos that tell your story."
+    },
+    clothing: {
+      title: "Clothing Design",
+      description: "Professional clothing design and production - from concept to finished product."
+    }
+  },
+
+  clothing: {
+    page_title: "Clothing Design & Production",
+    page_subtitle: "From idea to finished product - we create unique clothing with the highest quality materials",
+    hero_badges: {
+      designs: "Original designs",
+      materials: "Premium materials",
+      technologies: "Advanced technologies",
+      service: "Complete service"
+    },
+    configurator: {
+      title: "Clothing Configurator",
+      subtitle: "Create your dream garment in a few steps",
+      clothing_type: "Clothing type",
+      material: "Material",
+      print_tech: "Print technology",
+      calculate_price: "Calculate price",
+      estimated_price: "Estimated price",
+      order_now: "Order now",
+      select_type: "Select clothing type",
+      select_material: "Select material",
+      select_print: "Select print technology"
+    },
+    gallery: {
+      title: "Our Clothing Realizations",
+      cta_title: "Have an idea for your own collection?",
+      cta_subtitle: "Use our configurator and create unique clothing tailored to your needs. From individual pieces to entire collections - we help you realize any vision.",
+      configurator_btn: "Launch configurator",
+      contact_btn: "Contact us"
+    },
+    process: {
+      title: "Our Production Process",
+      consultation: {
+        title: "Consultation",
+        description: "We discuss your vision, goals and requirements for the clothing project"
+      },
+      design: {
+        title: "Design",
+        description: "We create original designs and 3D visualizations of your garment"
+      },
+      production: {
+        title: "Production",
+        description: "Production using the best materials and technologies"
+      },
+      delivery: {
+        title: "Delivery",
+        description: "Quality control and secure packaging before shipping"
+      }
+    },
+    technologies: {
+      title: "Our Print Technologies",
+      dtg: {
+        title: "DTG - Direct to Garment",
+        description: "The most advanced technology for digital printing directly on fabric. Unlimited color palette and highest quality details."
+      },
+      embroidery: {
+        title: "Computer Embroidery",
+        description: "Traditional, luxurious method of decorating clothing. Ideal for company logos, monograms and elegant patterns."
+      },
+      sublimation: {
+        title: "Sublimation",
+        description: "Full-color printing over the entire surface of the garment. Ideal for all-over patterns and sports shirts."
+      },
+      screen_print: {
+        title: "Screen Printing",
+        description: "Classic method ideal for larger runs. Exceptional durability and color intensity."
+      },
+      vinyl: {
+        title: "Flex & Flock Vinyl",
+        description: "Elastic films ideal for stretch materials and text projects. Available in smooth and velvet versions."
+      },
+      special: {
+        title: "Special Effects",
+        description: "Puff print (3D), discharge, foil print, glow in the dark and other advanced techniques for unique effects."
+      }
+    },
+    pricing: {
+      title: "Clothing Services Pricing",
+      starter: {
+        title: "Starter",
+        price: "from $12",
+        features: ["T-shirts and tank tops", "Basic materials", "DTG or vinyl", "Min. 1 piece"]
+      },
+      professional: {
+        title: "Professional",
+        price: "from $22",
+        popular: "MOST POPULAR",
+        features: ["All clothing types", "Premium materials", "Embroidery + all technologies", "Free graphic design"]
+      },
+      premium: {
+        title: "Premium",
+        price: "from $42",
+        features: ["Exclusive materials", "Special effects", "Full personalization", "VIP service"]
+      }
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Find answers to the most common questions about our clothing services. Didn't find an answer? Contact us!",
+      contact_title: "Have other questions?",
+      contact_subtitle: "Our team of experts is ready to help you with your clothing project"
+    },
+    cta: {
+      title: "Ready to create your collection?",
+      subtitle: "Contact us and discuss the details of your project",
+      consultation_btn: "Free consultation",
+      portfolio_btn: "View portfolio"
     }
   },
   services_teaser: {
@@ -176,6 +288,27 @@ export default {
       actors_label: "Are actors/extras required for the filming?",
       actors_yes: "Yes",
       actors_no: "No"
+    },
+
+    clothing_options: {
+      title: "Clothing Design Details",
+      type_label: "What types of clothing do you want to design? (can select multiple)",
+      streetwear: "Streetwear",
+      corporate: "Corporate Uniforms",
+      eco_fashion: "Eco Fashion",
+      sports_wear: "Sports Wear",
+      luxury: "Luxury Collection",
+      casual: "Casual/Everyday",
+      quantity_label: "Quantity to produce",
+      sizes_label: "Sizes (e.g. S, M, L, XL)",
+      materials_label: "Preferred materials",
+      design_concept_label: "Describe your design concept",
+      production_needed_label: "Do you also need production?",
+      production_needed_yes: "Yes, I want full service design + production",
+      production_needed_no: "No, design only",
+      branding_label: "Do you need branding/logo on the clothing?",
+      branding_yes: "Yes",
+      branding_no: "No"
     },
     
     budget_label: "What is your approximate budget?",
@@ -342,5 +475,110 @@ export default {
       title: "Music Video Production",
       description: "A conceptual music video featuring a strong narrative and visual effects. We worked closely with the artist to bring their vision to life through cinematography and post-production."
     }
+  },
+  admin: {
+    // Navigation
+    dashboard: "Dashboard",
+    clients: "Clients",
+    projects: "Projects",
+    categories: "Categories",
+    invoicing: "Invoicing",
+    
+    // Dashboard
+    welcome: "Welcome",
+    adminPanel: "Admin Panel",
+    totalRevenue: "Total Revenue",
+    outstandingRevenue: "Outstanding Revenue",
+    activeProjects: "Active Projects",
+    totalClients: "Total Clients",
+    overdueInvoices: "Overdue Invoices",
+    upcomingDeadlines: "Upcoming Deadlines",
+    noOverdueInvoices: "No overdue invoices. Great job!",
+    noUpcomingDeadlines: "No upcoming deadlines in the next 7 days.",
+    recentActivity: "Recent Activity",
+    
+    // Clients
+    clientsList: "Clients List",
+    addClient: "Add Client",
+    editClient: "Edit Client",
+    clientName: "Client Name",
+    email: "Email",
+    phone: "Phone",
+    company: "Company",
+    address: "Address",
+    save: "Save",
+    cancel: "Cancel",
+    deleteItem: "Delete",
+    
+    // Projects
+    projectsList: "Projects List",
+    addProject: "Add Project",
+    editProject: "Edit Project",
+    projectName: "Project Name",
+    description: "Description",
+    client: "Client",
+    category: "Category",
+    status: "Status",
+    priority: "Priority",
+    startDate: "Start Date",
+    dueDate: "Due Date",
+    budget: "Budget",
+    
+    // Categories
+    categoriesList: "Categories List",
+    addCategory: "Add Category",
+    editCategory: "Edit Category",
+    categoryName: "Category Name",
+    color: "Color",
+    
+    // Invoicing
+    invoicesList: "Invoices List",
+    createInvoice: "Create Invoice",
+    editInvoice: "Edit Invoice",
+    invoiceNumber: "Invoice Number",
+    project: "Project",
+    amount: "Amount",
+    taxRate: "Tax Rate",
+    total: "Total",
+    issueDate: "Issue Date",
+    invoiceDueDate: "Due Date",
+    
+    // Status values
+    draft: "Draft",
+    sent: "Sent",
+    paid: "Paid",
+    overdue: "Overdue",
+    planning: "Planning",
+    inProgress: "In Progress",
+    review: "Review",
+    done: "Done",
+    low: "Low",
+    medium: "Medium",
+    high: "High",
+    
+    // Actions
+    view: "View",
+    edit: "Edit",
+    deleteAction: "Delete",
+    create: "Create",
+    update: "Update",
+    search: "Search",
+    filter: "Filter",
+    export: "Export",
+    
+    // Messages
+    confirmDelete: "Are you sure you want to delete this item?",
+    itemDeleted: "Item deleted successfully",
+    itemSaved: "Item saved successfully",
+    errorOccurred: "An error occurred",
+    noResults: "No results found",
+    
+    // Files
+    files: "Files",
+    uploadFile: "Upload File",
+    fileName: "File Name",
+    fileSize: "File Size",
+    uploadDate: "Upload Date",
+    download: "Download"
   }
 };

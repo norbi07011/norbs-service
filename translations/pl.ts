@@ -39,6 +39,118 @@ export default {
     video: {
       title: "Wideo marketing",
       description: "Angażujące filmy promocyjne i teledyski, które opowiedzą Twoją historię."
+    },
+    clothing: {
+      title: "Projektowanie ubrań",
+      description: "Profesjonalne projektowanie i produkcja odzieży - od koncepcji do gotowego produktu."
+    }
+  },
+  
+  clothing: {
+    page_title: "Projektowanie & Produkcja Ubrań",
+    page_subtitle: "Od pomysłu do gotowego produktu - tworzymy unikalne ubrania z najwyższej jakości materiałów",
+    hero_badges: {
+      designs: "Autorskie projekty",
+      materials: "Premium materiały", 
+      technologies: "Zaawansowane technologie",
+      service: "Kompleksowa obsługa"
+    },
+    configurator: {
+      title: "Konfigurator Ubrań",
+      subtitle: "Stwórz swoje wymarzone ubranie w kilku krokach",
+      clothing_type: "Typ ubrania",
+      material: "Materiał",
+      print_tech: "Technologia nadruku",
+      calculate_price: "Oblicz cenę",
+      estimated_price: "Szacowana cena",
+      order_now: "Zamów teraz",
+      select_type: "Wybierz typ ubrania",
+      select_material: "Wybierz materiał",
+      select_print: "Wybierz technologię nadruku"
+    },
+    gallery: {
+      title: "Nasze Realizacje Odzieżowe",
+      cta_title: "Masz pomysł na własną kolekcję?",
+      cta_subtitle: "Skorzystaj z naszego konfiguratora i stwórz unikalne ubrania dopasowane do Twoich potrzeb. Od pojedynczych sztuk po całe kolekcje - pomożemy Ci zrealizować każdą wizję.",
+      configurator_btn: "Uruchom konfigurator",
+      contact_btn: "Skontaktuj się z nami"
+    },
+    process: {
+      title: "Nasz Proces Produkcji",
+      consultation: {
+        title: "Konsultacja",
+        description: "Omawiamy Twoją wizję, cel i wymagania dotyczące projektu odzieżowego"
+      },
+      design: {
+        title: "Projektowanie", 
+        description: "Tworzymy autorskie projekty i wizualizacje 3D Twojego ubrania"
+      },
+      production: {
+        title: "Produkcja",
+        description: "Produkcja z wykorzystaniem najlepszych materiałów i technologii"
+      },
+      delivery: {
+        title: "Dostawa",
+        description: "Kontrola jakości i bezpieczne zapakowanie przed wysyłką"
+      }
+    },
+    technologies: {
+      title: "Nasze Technologie Nadruku",
+      dtg: {
+        title: "DTG - Direct to Garment",
+        description: "Najnowocześniejsza technologia cyfrowego nadruku bezpośrednio na tkaninę. Nieograniczona paleta kolorów i najwyższa jakość detali."
+      },
+      embroidery: {
+        title: "Haft Komputerowy",
+        description: "Tradycyjna, luksusowa metoda zdobienia ubrań. Idealna dla logo firmowych, monogramów i eleganckich wzorów."
+      },
+      sublimation: {
+        title: "Sublimacja",
+        description: "Pełnokolorowy nadruk na całej powierzchni ubrania. Idealna dla wzorów all-over i sportowych koszulek."
+      },
+      screen_print: {
+        title: "Sitodruk",
+        description: "Klasyczna metoda idealna dla większych nakładów. Wyjątkowa trwałość i intensywność kolorów."
+      },
+      vinyl: {
+        title: "Folia Flex & Flock",
+        description: "Elastyczne folie idealne dla materiałów stretch i projektów z napisami. Dostępne w wersji gładkiej i aksamitnej."
+      },
+      special: {
+        title: "Efekty Specjalne",
+        description: "Puff print (3D), discharge, foil print, glow in the dark i inne zaawansowane techniki dla wyjątkowych efektów."
+      }
+    },
+    pricing: {
+      title: "Cennik Usług Odzieżowych",
+      starter: {
+        title: "Starter",
+        price: "od 25 zł",
+        features: ["T-shirty i tank topy", "Podstawowe materiały", "DTG lub vinyl", "Min. 1 sztuka"]
+      },
+      professional: {
+        title: "Professional", 
+        price: "od 45 zł",
+        popular: "NAJPOPULARNIEJSZY",
+        features: ["Wszystkie typy ubrań", "Premium materiały", "Haft + wszystkie technologie", "Projekt graficzny gratis"]
+      },
+      premium: {
+        title: "Premium",
+        price: "od 85 zł", 
+        features: ["Ekskluzywne materiały", "Efekty specjalne", "Pełna personalizacja", "Obsługa VIP"]
+      }
+    },
+    faq: {
+      title: "Często Zadawane Pytania",
+      subtitle: "Znajdź odpowiedzi na najczęstsze pytania dotyczące naszych usług odzieżowych. Nie znalazłeś odpowiedzi? Skontaktuj się z nami!",
+      contact_title: "Masz inne pytania?",
+      contact_subtitle: "Nasz zespół ekspertów jest gotowy pomóc Ci w realizacji projektu odzieżowego"
+    },
+    cta: {
+      title: "Gotowy na stworzenie swojej kolekcji?",
+      subtitle: "Skontaktuj się z nami i omówmy detale Twojego projektu",
+      consultation_btn: "Bezpłatna konsultacja",
+      portfolio_btn: "Zobacz portfolio"
     }
   },
   services_teaser: {
@@ -47,6 +159,7 @@ export default {
     photo: "Fotografia",
     websites: "Strony internetowe",
     video: "Wideo marketing",
+    clothing: "Projektowanie ubrań",
   },
   why_us: {
     title: "Dlaczego NORBS SERVICE?",
@@ -177,6 +290,27 @@ export default {
       actors_label: "Czy nagranie wymaga aktorów/statystów?",
       actors_yes: "Tak",
       actors_no: "Nie"
+    },
+
+    clothing_options: {
+      title: "Szczegóły projektu ubrań",
+      type_label: "Jakie rodzaje ubrań chcesz projektować? (można wybrać kilka)",
+      streetwear: "Streetwear",
+      corporate: "Ubrania korporacyjne",
+      eco_fashion: "Moda ekologiczna",
+      sports_wear: "Odzież sportowa",
+      luxury: "Luksusowa kolekcja",
+      casual: "Casual/Codzienne",
+      quantity_label: "Ilość sztuk do wyprodukowania",
+      sizes_label: "Rozmiary (np. S, M, L, XL)",
+      materials_label: "Preferowane materiały",
+      design_concept_label: "Opisz koncepcję designu",
+      production_needed_label: "Czy potrzebujesz również produkcji?",
+      production_needed_yes: "Tak, chcę pełną usługę projekt + produkcja",
+      production_needed_no: "Nie, tylko projekt",
+      branding_label: "Czy potrzebujesz brandingu/logo na ubraniach?",
+      branding_yes: "Tak",
+      branding_no: "Nie"
     },
     
     budget_label: "Jaki jest Twój przybliżony budżet?",
@@ -343,5 +477,110 @@ export default {
       title: "Produkcja Teledysku",
       description: "Koncepcyjny teledysk z silną fabułą i efektami wizualnymi. Ściśle współpracowaliśmy z artystą, aby ożywić jego wizję za pomocą kinematografii i postprodukcji."
     }
+  },
+  admin: {
+    // Navigation
+    dashboard: "Dashboard",
+    clients: "Klienci",
+    projects: "Projekty",
+    categories: "Kategorie",
+    invoicing: "Fakturowanie",
+    
+    // Dashboard
+    welcome: "Witaj",
+    adminPanel: "Panel Administratora",
+    totalRevenue: "Całkowity Przychód",
+    outstandingRevenue: "Niespłacone Przychody",
+    activeProjects: "Aktywne Projekty",
+    totalClients: "Wszyscy Klienci",
+    overdueInvoices: "Przeterminowane Faktury",
+    upcomingDeadlines: "Nadchodzące Terminy",
+    noOverdueInvoices: "Brak przeterminowanych faktur. Świetna robota!",
+    noUpcomingDeadlines: "Brak nadchodzących terminów w ciągu najbliższych 7 dni.",
+    recentActivity: "Ostatnia Aktywność",
+    
+    // Clients
+    clientsList: "Lista Klientów",
+    addClient: "Dodaj Klienta",
+    editClient: "Edytuj Klienta",
+    clientName: "Nazwa Klienta",
+    email: "Email",
+    phone: "Telefon",
+    company: "Firma",
+    address: "Adres",
+    save: "Zapisz",
+    cancel: "Anuluj",
+    deleteItem: "Usuń",
+    
+    // Projects
+    projectsList: "Lista Projektów",
+    addProject: "Dodaj Projekt",
+    editProject: "Edytuj Projekt",
+    projectName: "Nazwa Projektu",
+    description: "Opis",
+    client: "Klient",
+    category: "Kategoria",
+    status: "Status",
+    priority: "Priorytet",
+    startDate: "Data Rozpoczęcia",
+    dueDate: "Termin Wykonania",
+    budget: "Budżet",
+    
+    // Categories
+    categoriesList: "Lista Kategorii",
+    addCategory: "Dodaj Kategorię",
+    editCategory: "Edytuj Kategorię",
+    categoryName: "Nazwa Kategorii",
+    color: "Kolor",
+    
+    // Invoicing
+    invoicesList: "Lista Faktur",
+    createInvoice: "Utwórz Fakturę",
+    editInvoice: "Edytuj Fakturę",
+    invoiceNumber: "Numer Faktury",
+    project: "Projekt",
+    amount: "Kwota",
+    taxRate: "Stawka VAT",
+    total: "Razem",
+    issueDate: "Data Wystawienia",
+    invoiceDueDate: "Termin Płatności",
+    
+    // Status values
+    draft: "Szkic",
+    sent: "Wysłane",
+    paid: "Opłacone",
+    overdue: "Przeterminowane",
+    planning: "Planowanie",
+    inProgress: "W Trakcie",
+    review: "Recenzja",
+    done: "Ukończone",
+    low: "Niski",
+    medium: "Średni",
+    high: "Wysoki",
+    
+    // Actions
+    view: "Zobacz",
+    edit: "Edytuj",
+    deleteAction: "Usuń",
+    create: "Utwórz",
+    update: "Aktualizuj",
+    search: "Szukaj",
+    filter: "Filtruj",
+    export: "Eksportuj",
+    
+    // Messages
+    confirmDelete: "Czy na pewno chcesz usunąć ten element?",
+    itemDeleted: "Element został pomyślnie usunięty",
+    itemSaved: "Element został pomyślnie zapisany",
+    errorOccurred: "Wystąpił błąd",
+    noResults: "Brak wyników",
+    
+    // Files
+    files: "Pliki",
+    uploadFile: "Prześlij Plik",
+    fileName: "Nazwa Pliku",
+    fileSize: "Rozmiar Pliku",
+    uploadDate: "Data Przesłania",
+    download: "Pobierz"
   }
 };

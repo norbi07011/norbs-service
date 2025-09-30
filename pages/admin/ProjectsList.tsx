@@ -73,8 +73,10 @@ const ProjectsList: React.FC = () => {
             const valA = a[key as keyof typeof a];
             const valB = b[key as keyof typeof b];
 
-            if (valA < valB) return sortConfig.direction === 'asc' ? -1 : 1;
-            if (valA > valB) return sortConfig.direction === 'asc' ? 1 : -1;
+            if (valA != null && valB != null) {
+                if (valA < valB) return sortConfig.direction === 'asc' ? -1 : 1;
+                if (valA > valB) return sortConfig.direction === 'asc' ? 1 : -1;
+            }
             return 0;
         });
         
@@ -121,7 +123,13 @@ const ProjectsList: React.FC = () => {
                             onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
                             className="flex-grow max-w-xs px-4 py-2 bg-secondary border border-border rounded-full focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-foreground"
                         />
-                        <select value={statusFilter} onChange={e => { setStatusFilter(e.target.value as any); setCurrentPage(1); }} className="px-4 py-2 bg-secondary border border-border rounded-full focus:ring-accent focus:border-accent outline-none appearance-none">
+                        <select 
+                            value={statusFilter} 
+                            onChange={e => { setStatusFilter(e.target.value as any); setCurrentPage(1); }} 
+                            className="px-4 py-2 bg-secondary border border-border rounded-full focus:ring-accent focus:border-accent outline-none appearance-none"
+                            aria-label="Filtruj projekty po statusie"
+                            title="Filtruj projekty po statusie"
+                        >
                             <option value="all">All Statuses</option>
                             <option value="planning">Planning</option>
                             <option value="in-progress">In Progress</option>

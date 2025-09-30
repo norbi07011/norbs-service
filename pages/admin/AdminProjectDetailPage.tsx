@@ -71,7 +71,7 @@ const AdminProjectDetailPage: React.FC = () => {
                     getClientById(projectData.clientId),
                     getTasksByProjectId(id)
                 ]);
-                setClient(clientData);
+                setClient(clientData || null);
                 setTasks(tasksData);
             }
             setLoading(false);

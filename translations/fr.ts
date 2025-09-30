@@ -29,6 +29,118 @@ export default {
     video: {
       title: "Marketing Vidéo",
       description: "Vidéos promotionnelles et clips musicaux captivants qui racontent votre histoire."
+    },
+    clothing: {
+      title: "Design de Vêtements",
+      description: "Design et production professionnels de vêtements - du concept au produit fini."
+    }
+  },
+
+  clothing: {
+    page_title: "Design & Production de Vêtements",
+    page_subtitle: "De l'idée au produit fini - nous créons des vêtements uniques avec des matériaux de la plus haute qualité",
+    hero_badges: {
+      designs: "Designs originaux",
+      materials: "Matériaux premium",
+      technologies: "Technologies avancées",
+      service: "Service complet"
+    },
+    configurator: {
+      title: "Configurateur de Vêtements",
+      subtitle: "Créez votre vêtement de rêve en quelques étapes",
+      clothing_type: "Type de vêtement",
+      material: "Matériau",
+      print_tech: "Technologie d'impression",
+      calculate_price: "Calculer le prix",
+      estimated_price: "Prix estimé",
+      order_now: "Commander maintenant",
+      select_type: "Sélectionner le type de vêtement",
+      select_material: "Sélectionner le matériau",
+      select_print: "Sélectionner la technologie d'impression"
+    },
+    gallery: {
+      title: "Nos Réalisations Vestimentaires",
+      cta_title: "Avez-vous une idée pour votre propre collection ?",
+      cta_subtitle: "Utilisez notre configurateur et créez des vêtements uniques adaptés à vos besoins. Des pièces individuelles aux collections entières - nous vous aidons à réaliser toute vision.",
+      configurator_btn: "Lancer le configurateur",
+      contact_btn: "Nous contacter"
+    },
+    process: {
+      title: "Notre Processus de Production",
+      consultation: {
+        title: "Consultation",
+        description: "Nous discutons de votre vision, objectifs et exigences pour le projet vestimentaire"
+      },
+      design: {
+        title: "Design",
+        description: "Nous créons des designs originaux et des visualisations 3D de votre vêtement"
+      },
+      production: {
+        title: "Production",
+        description: "Production utilisant les meilleurs matériaux et technologies"
+      },
+      delivery: {
+        title: "Livraison",
+        description: "Contrôle qualité et emballage sécurisé avant expédition"
+      }
+    },
+    technologies: {
+      title: "Nos Technologies d'Impression",
+      dtg: {
+        title: "DTG - Direct to Garment",
+        description: "La technologie la plus avancée pour l'impression numérique directement sur tissu. Palette de couleurs illimitée et détails de la plus haute qualité."
+      },
+      embroidery: {
+        title: "Broderie Informatique",
+        description: "Méthode traditionnelle et luxueuse de décoration des vêtements. Idéale pour les logos d'entreprise, monogrammes et motifs élégants."
+      },
+      sublimation: {
+        title: "Sublimation",
+        description: "Impression couleur sur toute la surface du vêtement. Idéale pour les motifs all-over et les maillots de sport."
+      },
+      screen_print: {
+        title: "Sérigraphie",
+        description: "Méthode classique idéale pour les grandes séries. Durabilité exceptionnelle et intensité des couleurs."
+      },
+      vinyl: {
+        title: "Vinyl Flex & Flock",
+        description: "Films élastiques idéaux pour les matériaux stretch et projets de texte. Disponibles en version lisse et velours."
+      },
+      special: {
+        title: "Effets Spéciaux",
+        description: "Puff print (3D), discharge, foil print, glow in the dark et autres techniques avancées pour des effets uniques."
+      }
+    },
+    pricing: {
+      title: "Tarifs Services Vestimentaires",
+      starter: {
+        title: "Starter",
+        price: "à partir de 12€",
+        features: ["T-shirts et débardeurs", "Matériaux de base", "DTG ou vinyl", "Min. 1 pièce"]
+      },
+      professional: {
+        title: "Professional",
+        price: "à partir de 22€",
+        popular: "PLUS POPULAIRE",
+        features: ["Tous types de vêtements", "Matériaux premium", "Broderie + toutes technologies", "Design graphique gratuit"]
+      },
+      premium: {
+        title: "Premium",
+        price: "à partir de 42€",
+        features: ["Matériaux exclusifs", "Effets spéciaux", "Personnalisation complète", "Service VIP"]
+      }
+    },
+    faq: {
+      title: "Questions Fréquemment Posées",
+      subtitle: "Trouvez des réponses aux questions les plus communes concernant nos services vestimentaires. Pas de réponse trouvée ? Contactez-nous !",
+      contact_title: "Avez-vous d'autres questions ?",
+      contact_subtitle: "Notre équipe d'experts est prête à vous aider avec votre projet vestimentaire"
+    },
+    cta: {
+      title: "Prêt à créer votre collection ?",
+      subtitle: "Contactez-nous et discutons des détails de votre projet",
+      consultation_btn: "Consultation gratuite",
+      portfolio_btn: "Voir le portfolio"
     }
   },
   services_teaser: {
@@ -167,6 +279,27 @@ export default {
       actors_label: "Des acteurs/figurants sont-ils nécessaires pour le tournage ?",
       actors_yes: "Oui",
       actors_no: "Non"
+    },
+
+    clothing_options: {
+      title: "Détails de la Conception de Vêtements",
+      type_label: "Quel type de vêtements voulez-vous concevoir ? (sélection multiple possible)",
+      streetwear: "Streetwear",
+      corporate: "Uniformes d'Entreprise",
+      eco_fashion: "Mode Écologique",
+      sports_wear: "Vêtements de Sport",
+      luxury: "Collection de Luxe",
+      casual: "Casual/Quotidien",
+      quantity_label: "Quantité à produire",
+      sizes_label: "Tailles (ex. S, M, L, XL)",
+      materials_label: "Matériaux préférés",
+      design_concept_label: "Décrivez votre concept de design",
+      production_needed_label: "Avez-vous aussi besoin de production ?",
+      production_needed_yes: "Oui, je veux un service complet design + production",
+      production_needed_no: "Non, design seulement",
+      branding_label: "Avez-vous besoin de branding/logo sur les vêtements ?",
+      branding_yes: "Oui",
+      branding_no: "Non"
     },
     
     budget_label: "Quel est votre budget approximatif ?",
@@ -333,5 +466,110 @@ export default {
       title: "Production de clip musical",
       description: "Un clip musical conceptuel avec une narration forte et des effets visuels. Nous avons travaillé en étroite collaboration avec l'artiste pour donner vie à sa vision grâce à la cinématographie et à la post-production."
     }
+  },
+  admin: {
+    // Navigation
+    dashboard: "Tableau de bord",
+    clients: "Clients",
+    projects: "Projets",
+    categories: "Catégories",
+    invoicing: "Facturation",
+    
+    // Dashboard
+    welcome: "Bienvenue",
+    adminPanel: "Panneau d'administration",
+    totalRevenue: "Revenus totaux",
+    outstandingRevenue: "Revenus en attente",
+    activeProjects: "Projets actifs",
+    totalClients: "Total des clients",
+    overdueInvoices: "Factures en retard",
+    upcomingDeadlines: "Échéances à venir",
+    noOverdueInvoices: "Aucune facture en retard. Excellent travail!",
+    noUpcomingDeadlines: "Aucune échéance dans les 7 prochains jours.",
+    recentActivity: "Activité récente",
+    
+    // Clients
+    clientsList: "Liste des clients",
+    addClient: "Ajouter un client",
+    editClient: "Modifier le client",
+    clientName: "Nom du client",
+    email: "E-mail",
+    phone: "Téléphone",
+    company: "Entreprise",
+    address: "Adresse",
+    save: "Enregistrer",
+    cancel: "Annuler",
+    deleteItem: "Supprimer",
+    
+    // Projects
+    projectsList: "Liste des projets",
+    addProject: "Ajouter un projet",
+    editProject: "Modifier le projet",
+    projectName: "Nom du projet",
+    description: "Description",
+    client: "Client",
+    category: "Catégorie",
+    status: "Statut",
+    priority: "Priorité",
+    startDate: "Date de début",
+    dueDate: "Date d'échéance",
+    budget: "Budget",
+    
+    // Categories
+    categoriesList: "Liste des catégories",
+    addCategory: "Ajouter une catégorie",
+    editCategory: "Modifier la catégorie",
+    categoryName: "Nom de la catégorie",
+    color: "Couleur",
+    
+    // Invoicing
+    invoicesList: "Liste des factures",
+    createInvoice: "Créer une facture",
+    editInvoice: "Modifier la facture",
+    invoiceNumber: "Numéro de facture",
+    project: "Projet",
+    amount: "Montant",
+    taxRate: "Taux de taxe",
+    total: "Total",
+    issueDate: "Date d'émission",
+    invoiceDueDate: "Date d'échéance",
+    
+    // Status values
+    draft: "Brouillon",
+    sent: "Envoyé",
+    paid: "Payé",
+    overdue: "En retard",
+    planning: "Planification",
+    inProgress: "En cours",
+    review: "Révision",
+    done: "Terminé",
+    low: "Faible",
+    medium: "Moyen",
+    high: "Élevé",
+    
+    // Actions
+    view: "Voir",
+    edit: "Modifier",
+    deleteAction: "Supprimer",
+    create: "Créer",
+    update: "Mettre à jour",
+    search: "Rechercher",
+    filter: "Filtrer",
+    export: "Exporter",
+    
+    // Messages
+    confirmDelete: "Êtes-vous sûr de vouloir supprimer cet élément?",
+    itemDeleted: "Élément supprimé avec succès",
+    itemSaved: "Élément enregistré avec succès",
+    errorOccurred: "Une erreur s'est produite",
+    noResults: "Aucun résultat trouvé",
+    
+    // Files
+    files: "Fichiers",
+    uploadFile: "Télécharger un fichier",
+    fileName: "Nom du fichier",
+    fileSize: "Taille du fichier",
+    uploadDate: "Date de téléchargement",
+    download: "Télécharger"
   }
 };

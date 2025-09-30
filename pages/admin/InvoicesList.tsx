@@ -78,14 +78,26 @@ const InvoicesList: React.FC = () => {
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="flex-grow w-full sm:w-auto px-4 py-2 bg-secondary border border-border rounded-full focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-foreground"
                         />
-                        <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="px-4 py-2 bg-secondary border border-border rounded-full focus:ring-accent focus:border-accent outline-none appearance-none">
+                        <select 
+                            value={statusFilter} 
+                            onChange={e => setStatusFilter(e.target.value as any)} 
+                            className="px-4 py-2 bg-secondary border border-border rounded-full focus:ring-accent focus:border-accent outline-none appearance-none"
+                            aria-label="Filtruj po statusie"
+                            title="Filtruj po statusie"
+                        >
                             <option value="all">All Statuses</option>
                             <option value="draft">Draft</option>
                             <option value="sent">Sent</option>
                             <option value="paid">Paid</option>
                             <option value="overdue">Overdue</option>
                         </select>
-                        <select value={clientFilter} onChange={e => setClientFilter(e.target.value)} className="px-4 py-2 bg-secondary border border-border rounded-full focus:ring-accent focus:border-accent outline-none appearance-none">
+                        <select 
+                            value={clientFilter} 
+                            onChange={e => setClientFilter(e.target.value)} 
+                            className="px-4 py-2 bg-secondary border border-border rounded-full focus:ring-accent focus:border-accent outline-none appearance-none"
+                            aria-label="Filtruj po kliencie"
+                            title="Filtruj po kliencie"
+                        >
                             <option value="all">All Clients</option>
                             {clients.map(client => (
                                 <option key={client.id} value={client.id}>{client.name}</option>
@@ -122,6 +134,8 @@ const InvoicesList: React.FC = () => {
                                                 value={invoice.status} 
                                                 onChange={(e) => handleStatusChange(invoice.id, e.target.value as InvoiceStatus)}
                                                 className={`px-2 py-1 text-xs font-semibold rounded-full capitalize border-0 appearance-none focus:ring-0 ${statusColors[invoice.status]}`}
+                                                aria-label={`Zmień status faktury ${invoice.invoiceNumber}`}
+                                                title={`Zmień status faktury ${invoice.invoiceNumber}`}
                                             >
                                                 <option value="draft">Draft</option>
                                                 <option value="sent">Sent</option>

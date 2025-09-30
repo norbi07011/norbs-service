@@ -49,15 +49,19 @@ export interface Project {
   id: string;
   clientId: string;
   title: string;
+  name: string;
   description: string;
   status: ProjectStatus;
   startDate: string;
   dueDate: string;
+  deadline?: string;
   priority: ProjectPriority;
   tags: string[];
   budgetType: BudgetType;
   budgetAmount: number;
   hourlyRate: number;
+  progress?: number;
+  clientName?: string;
   createdAt: string;
 }
 
@@ -76,16 +80,18 @@ export interface File {
 }
 
 export type TaskStatus = 'pending' | 'completed';
+export type TaskPriority = 'low' | 'medium' | 'high';
 
 export interface Task {
   id: string;
   projectId: string;
   title: string;
   description: string;
-  dueDate: string;
+  dueDate?: string;
   status: TaskStatus;
+  priority: TaskPriority;
   hoursLogged: number;
-  createdAt: string;
+  createdAt?: string;
 }
 
 export interface TaskData extends Omit<Task, 'id' | 'createdAt' | 'projectId'> {}

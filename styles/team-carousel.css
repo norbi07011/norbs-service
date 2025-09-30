@@ -1,0 +1,58 @@
+/* Team Carousel 3D Styles */
+.team-carousel-3d {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.team-member-card {
+  transform-style: preserve-3d;
+  transition: all 0.7s ease-in-out;
+}
+
+.team-member-card.active {
+  z-index: 30;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateZ(320px) scale(1.1);
+}
+
+.team-member-card.adjacent {
+  z-index: 20;
+  opacity: 0.8;
+  transform: translate(-50%, -50%) translateZ(280px) scale(0.9);
+}
+
+.team-member-card.distant {
+  z-index: 10;
+  opacity: 0.4;
+  transform: translate(-50%, -50%) translateZ(280px) scale(0.7);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}

@@ -29,6 +29,118 @@ export default {
     video: {
       title: "Video Pazarlama",
       description: "Hikayenizi anlatan ilgi çekici tanıtım videoları ve müzik videoları."
+    },
+    clothing: {
+      title: "Kıyafet Tasarımı",
+      description: "Profesyonel kıyafet tasarımı ve üretimi - konseptten bitmiş ürüne kadar."
+    }
+  },
+
+  clothing: {
+    page_title: "Kıyafet Tasarımı & Üretimi",
+    page_subtitle: "Fikirden bitmiş ürüne - en yüksek kaliteli malzemelerle benzersiz kıyafetler yaratıyoruz",
+    hero_badges: {
+      designs: "Özgün tasarımlar",
+      materials: "Premium malzemeler",
+      technologies: "İleri teknolojiler",
+      service: "Komple hizmet"
+    },
+    configurator: {
+      title: "Kıyafet Konfiguratörü",
+      subtitle: "Hayalinizdeki kıyafeti birkaç adımda yaratın",
+      clothing_type: "Kıyafet tipi",
+      material: "Malzeme",
+      print_tech: "Baskı teknolojisi",
+      calculate_price: "Fiyat hesapla",
+      estimated_price: "Tahmini fiyat",
+      order_now: "Şimdi sipariş ver",
+      select_type: "Kıyafet tipi seçin",
+      select_material: "Malzeme seçin",
+      select_print: "Baskı teknolojisi seçin"
+    },
+    gallery: {
+      title: "Kıyafet Gerçekleştirmelerimiz",
+      cta_title: "Kendi koleksiyonunuz için bir fikriniz var mı?",
+      cta_subtitle: "Konfiguratörümüzü kullanın ve ihtiyaçlarınıza göre benzersiz kıyafetler yaratın. Tekil parçalardan bütün koleksiyonlara - her vizyonu gerçekleştirmenize yardımcı oluyoruz.",
+      configurator_btn: "Konfiguratörü başlat",
+      contact_btn: "Bizimle iletişime geçin"
+    },
+    process: {
+      title: "Üretim Sürecimiz",
+      consultation: {
+        title: "Danışmanlık",
+        description: "Vizyonunuzu, hedeflerinizi ve kıyafet projesi gereksinimlerinizi konuşuyoruz"
+      },
+      design: {
+        title: "Tasarım",
+        description: "Kıyafetinizin özgün tasarımlarını ve 3D görselleştirmelerini yaratıyoruz"
+      },
+      production: {
+        title: "Üretim",
+        description: "En iyi malzemeler ve teknolojiler kullanarak üretim"
+      },
+      delivery: {
+        title: "Teslimat",
+        description: "Kalite kontrolü ve gönderim öncesi güvenli paketleme"
+      }
+    },
+    technologies: {
+      title: "Baskı Teknolojilerimiz",
+      dtg: {
+        title: "DTG - Direct to Garment",
+        description: "Doğrudan kumaş üzerine dijital baskı için en gelişmiş teknoloji. Sınırsız renk paleti ve en yüksek kalite detaylar."
+      },
+      embroidery: {
+        title: "Bilgisayar Nakışı",
+        description: "Kıyafetleri süslemenin geleneksel, lüks yöntemi. Şirket logoları, monogramlar ve zarif desenler için ideal."
+      },
+      sublimation: {
+        title: "Sublimation",
+        description: "Kıyafetin tüm yüzeyine tam renkli baskı. All-over desenler ve spor gömlekleri için ideal."
+      },
+      screen_print: {
+        title: "Serigrafi",
+        description: "Daha büyük tirajlar için ideal klasik yöntem. Olağanüstü dayanıklılık ve renk yoğunluğu."
+      },
+      vinyl: {
+        title: "Flex & Flock Folyo",
+        description: "Streç malzemeler ve metin projeleri için ideal elastik folyolar. Düz ve kadife versiyonlarda mevcuttur."
+      },
+      special: {
+        title: "Özel Efektler",
+        description: "Puff print (3D), discharge, foil print, karanlıkta parlama ve benzersiz efektler için diğer gelişmiş teknikler."
+      }
+    },
+    pricing: {
+      title: "Kıyafet Hizmetleri Fiyatlandırması",
+      starter: {
+        title: "Starter",
+        price: "₺240'dan başlayan",
+        features: ["T-shirtler ve atletler", "Temel malzemeler", "DTG veya vinil", "Min. 1 adet"]
+      },
+      professional: {
+        title: "Professional",
+        price: "₺440'dan başlayan",
+        popular: "EN POPÜLER",
+        features: ["Tüm kıyafet tipleri", "Premium malzemeler", "Nakış + tüm teknolojiler", "Ücretsiz grafik tasarım"]
+      },
+      premium: {
+        title: "Premium",
+        price: "₺840'dan başlayan",
+        features: ["Özel malzemeler", "Özel efektler", "Tam kişiselleştirme", "VIP hizmet"]
+      }
+    },
+    faq: {
+      title: "Sıkça Sorulan Sorular",
+      subtitle: "Kıyafet hizmetlerimizle ilgili en sık sorulan soruların cevaplarını bulun. Cevap bulamadınız mı? Bizimle iletişime geçin!",
+      contact_title: "Başka sorularınız var mı?",
+      contact_subtitle: "Uzman ekibimiz kıyafet projenizde size yardımcı olmaya hazır"
+    },
+    cta: {
+      title: "Koleksiyonunuzu yaratmaya hazır mısınız?",
+      subtitle: "Bizimle iletişime geçin ve projenizin detaylarını konuşalım",
+      consultation_btn: "Ücretsiz danışmanlık",
+      portfolio_btn: "Portföyü görüntüle"
     }
   },
   services_teaser: {
@@ -167,6 +279,27 @@ export default {
       actors_label: "Çekim için oyuncu/figüran gerekiyor mu?",
       actors_yes: "Evet",
       actors_no: "Hayır"
+    },
+
+    clothing_options: {
+      title: "Giyim Tasarımı Detayları",
+      type_label: "Ne tür giyim tasarımı yapmak istiyorsunuz? (birden fazla seçilebilir)",
+      streetwear: "Sokak Modası",
+      corporate: "Kurumsal Üniformalar",
+      eco_fashion: "Ekolojik Moda",
+      sports_wear: "Spor Giyim",
+      luxury: "Lüks Koleksiyon",
+      casual: "Günlük/Rahat",
+      quantity_label: "Üretilecek adet",
+      sizes_label: "Bedenler (örn. S, M, L, XL)",
+      materials_label: "Tercih edilen kumaşlar",
+      design_concept_label: "Tasarım konseptinizi açıklayın",
+      production_needed_label: "Üretim de gerekiyor mu?",
+      production_needed_yes: "Evet, tam hizmet tasarım + üretim istiyorum",
+      production_needed_no: "Hayır, sadece tasarım",
+      branding_label: "Giysilerde marka/logo gerekiyor mu?",
+      branding_yes: "Evet",
+      branding_no: "Hayır"
     },
     
     budget_label: "Yaklaşık bütçeniz nedir?",
@@ -333,5 +466,110 @@ export default {
       title: "Müzik Videosu Prodüksiyonu",
       description: "Güçlü bir anlatı ve görsel efektlere sahip kavramsal bir müzik videosu. Sanatçının vizyonunu sinematografi ve post prodüksiyon yoluyla hayata geçirmek için sanatçıyla yakın bir şekilde çalıştık."
     }
+  },
+  admin: {
+    // Navigation
+    dashboard: "Gösterge Paneli",
+    clients: "Müşteriler",
+    projects: "Projeler",
+    categories: "Kategoriler",
+    invoicing: "Faturalandırma",
+    
+    // Dashboard
+    welcome: "Hoş geldiniz",
+    adminPanel: "Yönetici Paneli",
+    totalRevenue: "Toplam Gelir",
+    outstandingRevenue: "Bekleyen Gelirler",
+    activeProjects: "Aktif Projeler",
+    totalClients: "Toplam Müşteriler",
+    overdueInvoices: "Gecikmiş Faturalar",
+    upcomingDeadlines: "Yaklaşan Son Tarihler",
+    noOverdueInvoices: "Gecikmiş fatura yok. Harika iş!",
+    noUpcomingDeadlines: "Gelecek 7 gün içinde yaklaşan son tarih yok.",
+    recentActivity: "Son Aktiviteler",
+    
+    // Clients
+    clientsList: "Müşteri Listesi",
+    addClient: "Müşteri Ekle",
+    editClient: "Müşteriyi Düzenle",
+    clientName: "Müşteri Adı",
+    email: "E-posta",
+    phone: "Telefon",
+    company: "Şirket",
+    address: "Adres",
+    save: "Kaydet",
+    cancel: "İptal",
+    deleteItem: "Sil",
+    
+    // Projects
+    projectsList: "Proje Listesi",
+    addProject: "Proje Ekle",
+    editProject: "Projeyi Düzenle",
+    projectName: "Proje Adı",
+    description: "Açıklama",
+    client: "Müşteri",
+    category: "Kategori",
+    status: "Durum",
+    priority: "Öncelik",
+    startDate: "Başlangıç Tarihi",
+    dueDate: "Bitiş Tarihi",
+    budget: "Bütçe",
+    
+    // Categories
+    categoriesList: "Kategori Listesi",
+    addCategory: "Kategori Ekle",
+    editCategory: "Kategoriyi Düzenle",
+    categoryName: "Kategori Adı",
+    color: "Renk",
+    
+    // Invoicing
+    invoicesList: "Fatura Listesi",
+    createInvoice: "Fatura Oluştur",
+    editInvoice: "Faturayı Düzenle",
+    invoiceNumber: "Fatura Numarası",
+    project: "Proje",
+    amount: "Tutar",
+    taxRate: "Vergi Oranı",
+    total: "Toplam",
+    issueDate: "Düzenleme Tarihi",
+    invoiceDueDate: "Vade Tarihi",
+    
+    // Status values
+    draft: "Taslak",
+    sent: "Gönderildi",
+    paid: "Ödendi",
+    overdue: "Gecikmiş",
+    planning: "Planlama",
+    inProgress: "Devam Ediyor",
+    review: "İnceleme",
+    done: "Tamamlandı",
+    low: "Düşük",
+    medium: "Orta",
+    high: "Yüksek",
+    
+    // Actions
+    view: "Görüntüle",
+    edit: "Düzenle",
+    deleteAction: "Sil",
+    create: "Oluştur",
+    update: "Güncelle",
+    search: "Ara",
+    filter: "Filtrele",
+    export: "Dışa Aktar",
+    
+    // Messages
+    confirmDelete: "Bu öğeyi silmek istediğinizden emin misiniz?",
+    itemDeleted: "Öğe başarıyla silindi",
+    itemSaved: "Öğe başarıyla kaydedildi",
+    errorOccurred: "Bir hata oluştu",
+    noResults: "Sonuç bulunamadı",
+    
+    // Files
+    files: "Dosyalar",
+    uploadFile: "Dosya Yükle",
+    fileName: "Dosya Adı",
+    fileSize: "Dosya Boyutu",
+    uploadDate: "Yükleme Tarihi",
+    download: "İndir"
   }
 };

@@ -95,7 +95,7 @@ interface FormData {
     company: string;
     email: string;
     phone: string;
-    service: 'graphics' | 'photo' | 'websites' | 'video' | '';
+    service: 'graphics' | 'photo' | 'websites' | 'video' | 'clothing' | '';
     details: any;
     budget: string;
     timeline: string;
@@ -250,6 +250,7 @@ const ContactPage: React.FC = () => {
                     { key: 'photo', icon: '📷', label: t('services_teaser.photo') },
                     { key: 'websites', icon: '🌐', label: t('services_teaser.websites') },
                     { key: 'video', icon: '🎬', label: t('services_teaser.video') },
+                    { key: 'clothing', icon: '👕', label: t('services_teaser.clothing') },
                 ];
                 return (
                     <div>
@@ -378,6 +379,36 @@ const ContactPage: React.FC = () => {
                               </div>
                           </div>
                         );
+                    case 'clothing':
+                        return (
+                          <div className="space-y-6">
+                              <h4 className="font-semibold text-lg text-foreground">{t('contact_form.clothing_options.type_label')}</h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                  <StyledCheckbox label={t('contact_form.clothing_options.streetwear')} name="clothing_types" value="streetwear" checked={!!formData.details.clothing_types?.streetwear} onChange={handleDetailChange} />
+                                  <StyledCheckbox label={t('contact_form.clothing_options.corporate')} name="clothing_types" value="corporate" checked={!!formData.details.clothing_types?.corporate} onChange={handleDetailChange} />
+                                  <StyledCheckbox label={t('contact_form.clothing_options.eco_fashion')} name="clothing_types" value="eco_fashion" checked={!!formData.details.clothing_types?.eco_fashion} onChange={handleDetailChange} />
+                                  <StyledCheckbox label={t('contact_form.clothing_options.sports_wear')} name="clothing_types" value="sports_wear" checked={!!formData.details.clothing_types?.sports_wear} onChange={handleDetailChange} />
+                                  <StyledCheckbox label={t('contact_form.clothing_options.luxury')} name="clothing_types" value="luxury" checked={!!formData.details.clothing_types?.luxury} onChange={handleDetailChange} />
+                                  <StyledCheckbox label={t('contact_form.clothing_options.casual')} name="clothing_types" value="casual" checked={!!formData.details.clothing_types?.casual} onChange={handleDetailChange} />
+                              </div>
+                              <FormInput label={t('contact_form.clothing_options.quantity_label')} name="quantity" value={formData.details.quantity || ''} onChange={handleDetailChange} type="number" />
+                              <FormInput label={t('contact_form.clothing_options.sizes_label')} name="sizes" value={formData.details.sizes || ''} onChange={handleDetailChange} />
+                              <FormTextarea label={t('contact_form.clothing_options.materials_label')} name="materials" value={formData.details.materials || ''} onChange={handleDetailChange} />
+                              <FormTextarea label={t('contact_form.clothing_options.design_concept_label')} name="design_concept" value={formData.details.design_concept || ''} onChange={handleDetailChange} />
+
+                              <h4 className="font-semibold text-lg text-foreground pt-6 border-t border-border mt-6">{t('contact_form.additional_questions_title')}</h4>
+                              <div className='space-y-3'>
+                                <p className='text-sm text-muted-foreground'>{t('contact_form.clothing_options.production_needed_label')}</p>
+                                <StyledRadio label={t('contact_form.clothing_options.production_needed_yes')} name="production_needed" value="yes" checked={formData.details.production_needed === 'yes'} onChange={handleDetailChange} />
+                                <StyledRadio label={t('contact_form.clothing_options.production_needed_no')} name="production_needed" value="no" checked={formData.details.production_needed === 'no'} onChange={handleDetailChange} />
+                              </div>
+                              <div className='space-y-3'>
+                                <p className='text-sm text-muted-foreground'>{t('contact_form.clothing_options.branding_label')}</p>
+                                <StyledRadio label={t('contact_form.clothing_options.branding_yes')} name="branding_needed" value="yes" checked={formData.details.branding_needed === 'yes'} onChange={handleDetailChange} />
+                                <StyledRadio label={t('contact_form.clothing_options.branding_no')} name="branding_needed" value="no" checked={formData.details.branding_needed === 'no'} onChange={handleDetailChange} />
+                              </div>
+                          </div>
+                        );
                     default: return <p>Please select a service first.</p>;
                   }
                 };
@@ -418,6 +449,7 @@ const ContactPage: React.FC = () => {
                     photo: t('services_teaser.photo'),
                     websites: t('services_teaser.websites'),
                     video: t('services_teaser.video'),
+                    clothing: t('services_teaser.clothing'),
                 };
                 const renderSummaryDetail = (labelKey: string, value: any) => value ? <p className="text-foreground text-sm"><strong>{t(labelKey)}:</strong> {value}</p> : null;
                 const renderSummaryRadio = (labelKey: string, valueKey: string | undefined, yesKey: string, noKey: string) => valueKey ? <p className="text-foreground text-sm"><strong>{t(labelKey)}:</strong> {valueKey === 'yes' ? t(yesKey) : t(noKey)}</p> : null;
@@ -465,6 +497,15 @@ const ContactPage: React.FC = () => {
                                 {formData.service === 'video' && <>
                                   {renderSummaryRadio('contact_form.video_options.actors_label', formData.details.actors, 'contact_form.video_options.actors_yes', 'contact_form.video_options.actors_no')}
                                   {renderSummaryRadio('contact_form.photo_options.location_scouting_label', formData.details.location_scouting, 'contact_form.photo_options.location_scouting_yes', 'contact_form.photo_options.location_scouting_no')}
+                                </>}
+                                {/* Clothing Additional Details */}
+                                {formData.service === 'clothing' && <>
+                                  {renderSummaryDetail('contact_form.clothing_options.quantity_label', formData.details.quantity)}
+                                  {renderSummaryDetail('contact_form.clothing_options.sizes_label', formData.details.sizes)}
+                                  {renderSummaryDetail('contact_form.clothing_options.materials_label', formData.details.materials)}
+                                  {renderSummaryDetail('contact_form.clothing_options.design_concept_label', formData.details.design_concept)}
+                                  {renderSummaryRadio('contact_form.clothing_options.production_needed_label', formData.details.production_needed, 'contact_form.clothing_options.production_needed_yes', 'contact_form.clothing_options.production_needed_no')}
+                                  {renderSummaryRadio('contact_form.clothing_options.branding_label', formData.details.branding_needed, 'contact_form.clothing_options.branding_yes', 'contact_form.clothing_options.branding_no')}
                                 </>}
                              </div>
                          </div>

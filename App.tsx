@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import PortfolioDetailPage from './pages/PortfolioDetailPage';
+import ClothingServicesPage from './pages/ClothingServicesPage';
 
 // New Imports for Admin/Client Portal
 import { AuthProvider } from './contexts/AuthContext';
@@ -33,6 +34,7 @@ const App: React.FC = () => {
           {/* Public Routes */}
           <Route path="/" element={<Layout><HomePage /></Layout>} />
           <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
+          <Route path="/clothing" element={<ClothingServicesPage />} />
           <Route path="/portfolio" element={<Layout><PortfolioPage /></Layout>} />
           <Route path="/portfolio/:id" element={<Layout><PortfolioDetailPage /></Layout>} />
           <Route path="/about" element={<Layout><AboutPage /></Layout>} />

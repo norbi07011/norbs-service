@@ -41,6 +41,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { to: '/', text: t('nav.home') },
     { to: '/services', text: t('nav.services') },
+    { to: '/clothing', text: t('hero_carousel.clothing.title') },
     { to: '/portfolio', text: t('nav.portfolio') },
     { to: '/about', text: t('nav.about') },
     { to: '/contact', text: t('nav.contact') },

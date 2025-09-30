@@ -82,7 +82,10 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
       return;
     }
 
-    onSave(formData);
+    onSave({
+      ...formData,
+      parentId: formData.parentId || undefined
+    });
     onClose();
   };
 
@@ -130,6 +133,8 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            aria-label="Zamknij modal"
+            title="Zamknij modal"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -212,14 +217,17 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
 
           {/* Type */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor="category-type" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Typ
             </label>
             <select
+              id="category-type"
               name="type"
               value={formData.type}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              aria-label="Wybierz typ kategorii"
+              title="Wybierz typ kategorii"
             >
               {typeOptions.map(option => (
                 <option key={option.value} value={option.value}>
@@ -231,14 +239,17 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
 
           {/* Parent Category */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor="parent-category" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Kategoria nadrzędna
             </label>
             <select
+              id="parent-category"
               name="parentId"
               value={formData.parentId || ''}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              aria-label="Wybierz kategorię nadrzędną"
+              title="Wybierz kategorię nadrzędną"
             >
               <option value="">Brak (kategoria główna)</option>
               {availableParents.map(parent => (
@@ -255,20 +266,28 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
               Kolor
             </label>
             <div className="flex items-center space-x-2 mb-2">
+              <label htmlFor="color-picker" className="sr-only">Wybierz kolor</label>
               <input
+                id="color-picker"
                 type="color"
                 name="color"
                 value={formData.color}
                 onChange={handleInputChange}
                 className="w-8 h-8 border border-gray-300 rounded cursor-pointer"
+                aria-label="Wybierz kolor"
+                title="Wybierz kolor"
               />
+              <label htmlFor="color-text" className="sr-only">Kod koloru</label>
               <input
+                id="color-text"
                 type="text"
                 name="color"
                 value={formData.color}
                 onChange={handleInputChange}
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 placeholder="#3B82F6"
+                aria-label="Kod koloru"
+                title="Kod koloru"
               />
             </div>
             <div className="flex flex-wrap gap-2">
@@ -281,6 +300,8 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
                     formData.color === color ? 'border-gray-800' : 'border-gray-300'
                   }`}
                   style={{ backgroundColor: color }}
+                  aria-label={`Ustaw kolor ${color}`}
+                  title={`Ustaw kolor ${color}`}
                 />
               ))}
             </div>
@@ -288,10 +309,11 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
 
           {/* Sort Order */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor="sort-order" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Kolejność sortowania
             </label>
             <input
+              id="sort-order"
               type="number"
               name="sortOrder"
               value={formData.sortOrder}
@@ -299,19 +321,24 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
               min="0"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               placeholder="0"
+              aria-label="Kolejność sortowania"
+              title="Kolejność sortowania"
             />
           </div>
 
           {/* Active Status */}
           <div className="flex items-center">
             <input
+              id="is-active"
               type="checkbox"
               name="isActive"
               checked={formData.isActive}
               onChange={handleInputChange}
               className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              aria-label="Kategoria aktywna"
+              title="Kategoria aktywna"
             />
-            <label className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+            <label htmlFor="is-active" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
               Kategoria aktywna
             </label>
           </div>

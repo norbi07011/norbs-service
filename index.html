@@ -37,6 +37,11 @@
         --card-saturation-dark: 80%;
         --card-saturation-light: 70%;
       }
+      body.card-color-green {
+        --card-hue: 160;
+        --card-saturation-dark: 80%;
+        --card-saturation-light: 70%;
+      }
       body.card-color-blue {
         --card-hue: 210;
         --card-saturation-dark: 80%;
@@ -90,6 +95,16 @@
         --gold-accent: 38 92% 50%;
       }
 
+      /* Gold color utilities */
+      .text-gold-600 { color: rgb(217 119 6); }
+      .bg-gold-500 { background-color: rgb(245 158 11); }
+      .bg-gold-600 { background-color: rgb(217 119 6); }
+      .hover\\:bg-gold-600:hover { background-color: rgb(217 119 6); }
+      .from-gold-500 { --tw-gradient-from: rgb(245 158 11); }
+      .to-orange-500 { --tw-gradient-to: rgb(249 115 22); }
+      .hover\\:from-gold-600:hover { --tw-gradient-from: rgb(217 119 6); }
+      .hover\\:to-orange-600:hover { --tw-gradient-to: rgb(234 88 12); }
+
       /* START of new 3D Glass Card Style */
       .uiverse-card {
         --card-bg-light: hsla(var(--card-hue), var(--card-saturation-light), 90%, 0.5);
@@ -112,8 +127,8 @@
         position: relative;
         border-radius: 2rem;
         background: var(--card-bg);
-        backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
         border: 2px solid var(--card-border);
         transform-style: preserve-3d;
         transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -230,8 +245,8 @@
         border: 1px solid rgba(33, 150, 243, 0.5);
         transition: .4s;
         border-radius: 40px;
-        backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
         box-shadow: 0 0 10px rgba(33, 150, 243, 0.5), inset 0 0 5px rgba(33, 150, 243, 0.3);
       }
 
@@ -457,6 +472,192 @@
         }
       }
     </script>
+    
+    <!-- Auto Carousel 3D Styles -->
+    <style>
+      /* Auto-rotating 3D Carousel Styles */
+      .auto-carousel-container {
+        perspective: 1200px;
+        perspective-origin: center center;
+      }
+      
+      .carousel-card {
+        width: 280px;
+        height: 380px;
+        border-radius: 20px;
+        background: linear-gradient(145deg, rgba(30,30,40,0.9), rgba(15,15,25,0.95));
+        border: 2px solid rgba(100,100,255,0.3);
+        box-shadow: 
+          0 20px 40px rgba(0,0,0,0.4),
+          0 0 20px rgba(100,100,255,0.2),
+          inset 0 1px 0 rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        transform-origin: center center;
+        left: 50%;
+        top: 50%;
+        margin-left: -140px;
+        margin-top: -190px;
+      }
+      
+      .carousel-image-container {
+        position: absolute;
+        inset: 16px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      
+      .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.7s ease;
+      }
+      
+      .carousel-image.dimmed {
+        filter: brightness(0.7) contrast(1.1);
+      }
+      
+      .carousel-gradient-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.8) 100%);
+      }
+      
+      .carousel-content {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+        color: white;
+      }
+      
+      .carousel-shine {
+        position: absolute;
+        inset: 0;
+        opacity: 0.3;
+        pointer-events: none;
+        background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+        animation: shine 3s ease-in-out infinite;
+      }
+      
+      .carousel-nav-btn {
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .carousel-nav-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
+      
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      }
+      
+      .hero-title {
+        text-shadow: 0 0 8px hsl(var(--accent)), 0 0 12px hsl(var(--gold-accent));
+      }
+      
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      
+      @keyframes shine {
+        0%, 100% { transform: translateX(-100%); }
+        50% { transform: translateX(100%); }
+      }
+      
+      /* Portfolio Carousel Styles */
+      .portfolio-carousel-container {
+        perspective: 1400px;
+        perspective-origin: center center;
+      }
+      
+      .portfolio-card {
+        width: 320px;
+        height: 450px;
+        border-radius: 20px;
+        background: linear-gradient(145deg, rgba(20,20,30,0.95), rgba(10,10,20,0.98));
+        border: 2px solid rgba(59,130,246,0.3);
+        box-shadow: 
+          0 25px 50px rgba(0,0,0,0.5),
+          0 0 30px rgba(59,130,246,0.15),
+          inset 0 1px 0 rgba(255,255,255,0.05);
+        backdrop-filter: blur(15px);
+        transform-origin: center center;
+        left: 50%;
+        top: 50%;
+        margin-left: -160px;
+        margin-top: -225px;
+        overflow: hidden;
+      }
+      
+      .portfolio-image-container {
+        position: absolute;
+        inset: 12px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      
+      .portfolio-image {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        transition: all 0.7s ease;
+        border-radius: 12px;
+      }
+      
+      .portfolio-image.dimmed {
+        filter: brightness(0.6) contrast(1.2) saturate(0.8);
+      }
+      
+      .portfolio-gradient-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+      }
+      
+      .portfolio-content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        color: white;
+        z-index: 2;
+      }
+      
+      .portfolio-shine {
+        position: absolute;
+        inset: 0;
+        opacity: 0.2;
+        pointer-events: none;
+        background: linear-gradient(45deg, transparent 30%, rgba(59,130,246,0.2) 50%, transparent 70%);
+        animation: shine 4s ease-in-out infinite;
+      }
+      
+      .portfolio-nav-btn {
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(59, 130, 246, 0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .portfolio-nav-btn:hover {
+        background: rgba(59, 130, 246, 0.2);
+        transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {

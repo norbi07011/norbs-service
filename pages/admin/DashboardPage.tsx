@@ -6,6 +6,7 @@ import { getInvoices } from '../../services/invoices'; // New
 import { MOCK_ACTIVITIES } from '../../data/mockData';
 import { Client, Project, Activity, Invoice, InvoiceStatus } from '../../types';
 import { NavLink } from 'react-router-dom';
+import { useTranslations } from '../../hooks/useTranslations';
 
 const statusColors: Record<InvoiceStatus, string> = {
     draft: 'text-gray-400',
@@ -16,6 +17,7 @@ const statusColors: Record<InvoiceStatus, string> = {
 
 
 const DashboardPage: React.FC = () => {
+    const { t } = useTranslations();
     const [clients, setClients] = useState<Client[]>([]);
     const [projects, setProjects] = useState<Project[]>([]);
     const [invoices, setInvoices] = useState<Invoice[]>([]);
@@ -57,30 +59,30 @@ const DashboardPage: React.FC = () => {
 
     return (
         <div className="space-y-8">
-            <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
+            <h1 className="text-3xl font-bold text-foreground">{t('admin.dashboard')}</h1>
 
             {/* Stat Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                  <StatCard 
-                    title="Total Revenue" 
+                    title={t('admin.totalRevenue')} 
                     value={`€${totalRevenue.toFixed(2)}`} 
                     colorClass="text-green-400"
                     icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>} 
                 />
                  <StatCard 
-                    title="Outstanding Revenue" 
+                    title={t('admin.outstandingRevenue')} 
                     value={`€${outstandingRevenue.toFixed(2)}`} 
                     colorClass="text-yellow-400"
                     icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="6" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>} 
                 />
                  <StatCard 
-                    title="Active Projects" 
+                    title={t('admin.activeProjects')} 
                     value={projects.filter(p => p.status === 'in-progress').length} 
                     colorClass="text-brand-blue"
                     icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>} 
                 />
                 <StatCard 
-                    title="Total Clients" 
+                    title={t('admin.totalClients')} 
                     value={clients.length} 
                     colorClass="text-brand-purple"
                     icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>} 
@@ -92,7 +94,7 @@ const DashboardPage: React.FC = () => {
                 <div className="uiverse-card">
                      <div className="uiverse-card-circles"><div></div><div></div><div></div></div>
                     <div className="uiverse-card-content relative z-10">
-                        <h2 className="text-xl font-bold text-foreground mb-4">Overdue Invoices</h2>
+                        <h2 className="text-xl font-bold text-foreground mb-4">{t('admin.overdueInvoices')}</h2>
                         <ul className="space-y-3">
                             {overdueInvoices.length > 0 ? overdueInvoices.map(invoice => (
                                 <li key={invoice.id} className="flex justify-between items-center p-3 bg-glass rounded-lg">
@@ -104,7 +106,7 @@ const DashboardPage: React.FC = () => {
                                     </div>
                                     <span className="text-sm font-medium text-destructive">{new Date(invoice.dueDate).toLocaleDateString()}</span>
                                 </li>
-                            )) : <p className="text-muted-foreground text-sm">No overdue invoices. Great job!</p>}
+                            )) : <li>                                        <p className="text-sm text-muted-foreground">{t('admin.noOverdueInvoices')}</p></li>}
                         </ul>
                     </div>
                 </div>
@@ -113,7 +115,7 @@ const DashboardPage: React.FC = () => {
                 <div className="uiverse-card">
                      <div className="uiverse-card-circles"><div></div><div></div><div></div></div>
                     <div className="uiverse-card-content relative z-10">
-                        <h2 className="text-xl font-bold text-foreground mb-4">Upcoming Deadlines</h2>
+                        <h2 className="text-xl font-bold text-foreground mb-4">{t('admin.upcomingDeadlines')}</h2>
                         <ul className="space-y-3">
                             {upcomingDeadlines.length > 0 ? upcomingDeadlines.map(project => (
                                 <li key={project.id} className="flex justify-between items-center p-3 bg-glass rounded-lg">
@@ -123,7 +125,7 @@ const DashboardPage: React.FC = () => {
                                     </div>
                                     <span className="text-sm font-medium text-muted-foreground">{new Date(project.dueDate).toLocaleDateString()}</span>
                                 </li>
-                            )) : <p className="text-muted-foreground text-sm">No upcoming deadlines.</p>}
+                            )) : <li>                                        <p className="text-muted-foreground text-sm">{t('admin.noUpcomingDeadlines')}</p></li>}
                         </ul>
                     </div>
                 </div>

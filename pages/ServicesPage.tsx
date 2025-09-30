@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, RefObject } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslations } from '../hooks/useTranslations';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 const AnimatedSection: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isOnScreen = useOnScreen(ref, { threshold: 0.2 });
+  const isOnScreen = useOnScreen(ref as RefObject<Element>, { threshold: 0.2 });
   return (
     <div
       ref={ref}
@@ -74,7 +74,17 @@ const ServicesPage: React.FC = () => {
         <AnimatedSection>
           <ServiceCategory icon="📷" title={t('services_page.photo_title')}>
             <PricingItem name={t('services_page.photo.photoshoot')} price={t('services_page.photo.price')} />
-            <li className="text-muted-foreground text-sm p-2">{t('services_page.photo.description')}</li>
+            <p className="text-muted-foreground text-sm p-2">{t('services_page.photo.description')}</p>
+          </ServiceCategory>
+        </AnimatedSection>
+
+        <AnimatedSection className="lg:col-span-2">
+          <ServiceCategory icon="👕" title="Projektowanie i Produkcja Ubrań">
+            <PricingItem name="T-shirt z nadrukiem DTG" price="od 25 zł" />
+            <PricingItem name="Bluza z haftem" price="od 65 zł" popular={true} />
+            <PricingItem name="Kolekcja firmowa (10 szt.)" price="od 450 zł" />
+            <PricingItem name="Projekt graficzny + wizualizacja 3D" price="150-350 zł" />
+            <p className="text-muted-foreground text-sm p-2">Premium materiały • Zaawansowane technologie nadruku • Pełna personalizacja</p>
           </ServiceCategory>
         </AnimatedSection>
 
@@ -92,7 +102,7 @@ const ServicesPage: React.FC = () => {
             <PricingItem name={t('services_page.video.promo')} price={t('services_page.video.price_promo')} />
             <PricingItem name={t('services_page.video.music')} price={t('services_page.video.price_music')} />
             <PricingItem name={t('services_page.video.reels_title')} price={t('services_page.video.price_reels')} />
-            <li className="text-muted-foreground text-sm p-2">{t('services_page.video.reels_description')}</li>
+            <p className="text-muted-foreground text-sm p-2">{t('services_page.video.reels_description')}</p>
           </ServiceCategory>
         </AnimatedSection>
       </div>

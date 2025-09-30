@@ -47,7 +47,7 @@ const AIBlogGenerator: React.FC = () => {
         },
       });
       
-      const jsonStr = response.text.trim();
+      const jsonStr = response.text?.trim() || '';
       const generatedIdeas = JSON.parse(jsonStr);
 
       if (Array.isArray(generatedIdeas)) {
@@ -66,7 +66,7 @@ const AIBlogGenerator: React.FC = () => {
 
   return (
     <section>
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 text-foreground" style={{ textShadow: '0 0 8px hsl(var(--accent))' }}>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 text-foreground glow-text">
         {t('faq_blog_page.ai_title')}
       </h2>
       <div className="max-w-2xl mx-auto">

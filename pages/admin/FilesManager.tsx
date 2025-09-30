@@ -134,7 +134,16 @@ const FilesManager: React.FC<FilesManagerProps> = ({ projectId }) => {
                     onClick={() => fileInputRef.current?.click()}
                     className={`flex justify-center items-center px-6 py-10 border-2 border-border border-dashed rounded-md transition-colors cursor-pointer ${isDragging ? 'border-accent bg-accent/10' : 'hover:border-muted-foreground/50'}`}
                 >
-                    <input type="file" multiple ref={fileInputRef} onChange={handleFileSelect} className="hidden" disabled={isUploading} />
+                    <input 
+                        type="file" 
+                        multiple 
+                        ref={fileInputRef} 
+                        onChange={handleFileSelect} 
+                        className="hidden" 
+                        disabled={isUploading}
+                        aria-label="Wybierz pliki do przesłania"
+                        title="Wybierz pliki do przesłania"
+                    />
                     <div className="space-y-2 text-center">
                         <svg className="mx-auto h-12 w-12 text-muted-foreground" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                         <button
@@ -172,7 +181,12 @@ const FilesManager: React.FC<FilesManagerProps> = ({ projectId }) => {
                                 <p className="text-xs text-muted-foreground">{new Date(file.createdAt).toLocaleDateString()}</p>
                             </div>
                             <div className="flex-shrink-0">
-                                <button onClick={() => handleDelete(file.id)} className="text-muted-foreground hover:text-destructive p-2 rounded-full">
+                                <button 
+                                    onClick={() => handleDelete(file.id)} 
+                                    className="text-muted-foreground hover:text-destructive p-2 rounded-full"
+                                    aria-label={`Usuń plik ${file.name}`}
+                                    title={`Usuń plik ${file.name}`}
+                                >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
                                 </button>
                             </div>
