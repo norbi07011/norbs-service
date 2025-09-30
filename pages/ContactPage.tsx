@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent, DragEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent, DragEvent, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { useTheme } from '../hooks/useTheme';
 
@@ -75,7 +75,7 @@ const ProgressBar: React.FC<{ currentStep: number, totalSteps: number, stepLabel
     <div className="w-full mb-12">
         <div className="flex justify-between items-center relative">
             <div className="absolute top-1/2 left-0 w-full h-1 bg-muted transform -translate-y-1/2"></div>
-            <div className="absolute top-1/2 left-0 h-1 bg-accent transform -translate-y-1/2 transition-all duration-500" style={{ width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%` }}></div>
+            <div className="absolute top-1/2 left-0 h-1 bg-accent transform -translate-y-1/2 transition-all duration-500 step-progress"></div>
             {stepLabels.map((label, index) => (
                 <div key={index} className="z-10 text-center">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-accent-foreground transition-all duration-500 ${currentStep > index ? 'bg-accent' : 'bg-muted'} ${currentStep === index + 1 ? 'ring-4 ring-accent/50' : ''}`}>
@@ -129,6 +129,12 @@ const ContactPage: React.FC = () => {
       t('contact_form.step_labels.budget'),
       t('contact_form.step_labels.summary'),
     ];
+
+    // Update CSS custom property for step progress
+    useEffect(() => {
+        const progressPercentage = ((step - 1) / (totalSteps - 1)) * 100;
+        document.documentElement.style.setProperty('--progress-width', `${progressPercentage}%`);
+    }, [step, totalSteps]);
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -607,7 +613,7 @@ const ContactPage: React.FC = () => {
 
     return (
         <div className="container mx-auto px-6 py-20">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-foreground" style={{ textShadow: '0 0 8px hsl(var(--accent))' }}>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-foreground text-shadow-accent">
                 {t('contact.title')}
             </h1>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">{t('contact.form_title')}</p>
@@ -628,7 +634,7 @@ const ContactPage: React.FC = () => {
                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.482811327151!2d4.182404677103758!3d52.03058987193796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b0f807358797%3A0x6758411d73a6e9a!2sBraamstraat%2019%2C%202681%20GL%20Monster%2C%20Netherlands!5e0!3m2!1sen!2spl!4v1716124796349!5m2!1sen!2spl" 
                          width="100%" 
                          height="100%" 
-                         style={{border:0}} 
+                         className="border-0" 
                          allowFullScreen 
                          loading="lazy" 
                          referrerPolicy="no-referrer-when-downgrade"

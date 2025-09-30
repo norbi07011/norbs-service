@@ -1,0 +1,75 @@
+/* Admin Components Custom Styles */
+
+/* Progress Bar Styles */
+.progress-bar-94 {
+  width: 94%;
+}
+
+.progress-bar-87 {
+  width: 87%;
+}
+
+/* Gantt Chart Dynamic Styles */
+.gantt-timeline {
+  /* Dynamic width will be set via CSS custom properties */
+  width: var(--timeline-width, 100%);
+}
+
+.gantt-task-bar {
+  /* Dynamic positioning and sizing */
+  left: var(--task-left, 0);
+  width: var(--task-width, 100px);
+  background: var(--task-color, #3b82f6);
+}
+
+/* Shadow Effect Styles */
+.text-shadow-accent {
+  text-shadow: 0 0 8px hsl(var(--accent));
+}
+
+/* Step Progress Styles */
+.step-progress {
+  /* Dynamic width for step indicator */
+  width: var(--progress-width, 0%);
+}
+
+/* 3D Carousel Positioning */
+.carousel-item {
+  transform: var(--carousel-transform, translateX(0));
+}
+
+/* Dynamic sizing classes */
+.w-dynamic {
+  width: var(--dynamic-width, auto);
+}
+
+.h-dynamic {
+  height: var(--dynamic-height, auto);
+}
+
+/* Positioning utilities */
+.left-dynamic {
+  left: var(--dynamic-left, 0);
+}
+
+.top-dynamic {
+  top: var(--dynamic-top, 0);
+}
+
+/* Progress indicators */
+.progress-width-0 { width: 0%; }
+.progress-width-10 { width: 10%; }
+.progress-width-20 { width: 20%; }
+.progress-width-30 { width: 30%; }
+.progress-width-40 { width: 40%; }
+.progress-width-50 { width: 50%; }
+.progress-width-60 { width: 60%; }
+.progress-width-70 { width: 70%; }
+.progress-width-80 { width: 80%; }
+.progress-width-90 { width: 90%; }
+.progress-width-100 { width: 100%; }
+
+/* System monitoring progress bars */
+.cpu-usage { width: var(--cpu-usage, 0%); }
+.memory-usage { width: var(--memory-usage, 0%); }
+.disk-usage { width: var(--disk-usage, 0%); }

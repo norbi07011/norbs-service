@@ -322,7 +322,7 @@ const AnalyticsDashboard: React.FC = () => {
                 <span className="font-medium">94%</span>
               </div>
               <div className="w-full bg-muted rounded-full h-2">
-                <div className="bg-green-500 h-2 rounded-full" style={{ width: '94%' }}></div>
+                <div className="bg-green-500 h-2 rounded-full progress-bar-94"></div>
               </div>
             </div>
           </div>
@@ -349,7 +349,7 @@ const AnalyticsDashboard: React.FC = () => {
                 <span className="font-medium">87%</span>
               </div>
               <div className="w-full bg-muted rounded-full h-2">
-                <div className="bg-blue-500 h-2 rounded-full" style={{ width: '87%' }}></div>
+                <div className="bg-blue-500 h-2 rounded-full progress-bar-87"></div>
               </div>
             </div>
           </div>

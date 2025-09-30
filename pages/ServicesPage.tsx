@@ -57,7 +57,7 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 py-20">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-foreground" style={{ textShadow: '0 0 8px hsl(var(--accent))' }}>
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-foreground text-shadow-accent">
         {t('services_page.title')}
       </h1>
       
