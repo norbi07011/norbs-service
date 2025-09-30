@@ -241,6 +241,8 @@ const SystemMonitoring: React.FC = () => {
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                 autoRefresh ? 'bg-accent' : 'bg-muted'
               }`}
+              title="Toggle auto refresh"
+              aria-label={`Auto refresh is ${autoRefresh ? 'on' : 'off'}`}
             >
               <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                 autoRefresh ? 'translate-x-6' : 'translate-x-1'

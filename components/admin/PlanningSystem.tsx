@@ -341,6 +341,8 @@ const PlanningSystem: React.FC<PlanningSystemProps> = ({
               <button
                 onClick={() => setShowTaskModal(false)}
                 className="text-muted-foreground hover:text-foreground"
+                title="Close modal"
+                aria-label="Close task details modal"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -356,6 +358,8 @@ const PlanningSystem: React.FC<PlanningSystemProps> = ({
                   value={selectedTask.title}
                   onChange={(e) => setSelectedTask({ ...selectedTask, title: e.target.value })}
                   className="w-full bg-background border border-border rounded px-3 py-2"
+                  title="Task title"
+                  placeholder="Enter task title"
                 />
               </div>
 
@@ -365,6 +369,8 @@ const PlanningSystem: React.FC<PlanningSystemProps> = ({
                   value={selectedTask.description}
                   onChange={(e) => setSelectedTask({ ...selectedTask, description: e.target.value })}
                   className="w-full bg-background border border-border rounded px-3 py-2 h-20"
+                  title="Task description"
+                  placeholder="Enter task description"
                 />
               </div>
 
@@ -375,6 +381,7 @@ const PlanningSystem: React.FC<PlanningSystemProps> = ({
                     value={selectedTask.status}
                     onChange={(e) => setSelectedTask({ ...selectedTask, status: e.target.value as 'pending' | 'completed' })}
                     className="w-full bg-background border border-border rounded px-3 py-2"
+                    title="Task status"
                   >
                     <option value="pending">{t('pending')}</option>
                     <option value="completed">{t('completed')}</option>
@@ -387,6 +394,7 @@ const PlanningSystem: React.FC<PlanningSystemProps> = ({
                     value={selectedTask.priority}
                     onChange={(e) => setSelectedTask({ ...selectedTask, priority: e.target.value as 'low' | 'medium' | 'high' })}
                     className="w-full bg-background border border-border rounded px-3 py-2"
+                    title="Task priority"
                   >
                     <option value="low">{t('low')}</option>
                     <option value="medium">{t('medium')}</option>

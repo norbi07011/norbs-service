@@ -232,6 +232,8 @@ const SettingsCenter: React.FC = () => {
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
             settings.general.maintenanceMode ? 'bg-accent' : 'bg-muted'
           }`}
+          title="Toggle maintenance mode"
+          aria-label={`Maintenance mode is ${settings.general.maintenanceMode ? 'enabled' : 'disabled'}`}
         >
           <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
             settings.general.maintenanceMode ? 'translate-x-6' : 'translate-x-1'
@@ -253,6 +255,8 @@ const SettingsCenter: React.FC = () => {
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
             settings.security.twoFactorAuth ? 'bg-accent' : 'bg-muted'
           }`}
+          title="Toggle two-factor authentication"
+          aria-label={`Two-factor authentication is ${settings.security.twoFactorAuth ? 'enabled' : 'disabled'}`}
         >
           <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
             settings.security.twoFactorAuth ? 'translate-x-6' : 'translate-x-1'

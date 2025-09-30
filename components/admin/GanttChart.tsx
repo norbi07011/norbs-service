@@ -211,6 +211,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
                 className="bg-background border border-border rounded px-2 py-1 text-sm"
                 value={viewMode}
                 onChange={(e) => {/* Handle view mode change */}}
+                title="Select view mode"
               >
                 <option value="days">{t('days')}</option>
                 <option value="weeks">{t('weeks')}</option>
@@ -231,6 +232,8 @@ const GanttChart: React.FC<GanttChartProps> = ({
                   setViewportEnd(newEnd);
                 }}
                 className="p-1 hover:bg-muted rounded"
+                title="Previous period"
+                aria-label="Navigate to previous time period"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -259,6 +262,8 @@ const GanttChart: React.FC<GanttChartProps> = ({
                   setViewportEnd(newEnd);
                 }}
                 className="p-1 hover:bg-muted rounded"
+                title="Next period"
+                aria-label="Navigate to next time period"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
