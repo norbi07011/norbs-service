@@ -184,6 +184,8 @@ const SettingsCenter: React.FC = () => {
             value={settings.general.siteName}
             onChange={(e) => updateSettings('general', 'siteName', e.target.value)}
             className="w-full bg-background border border-border rounded-lg px-3 py-2"
+            title="Site name"
+            placeholder="Enter site name"
           />
         </div>
         
@@ -194,6 +196,8 @@ const SettingsCenter: React.FC = () => {
             value={settings.general.siteUrl}
             onChange={(e) => updateSettings('general', 'siteUrl', e.target.value)}
             className="w-full bg-background border border-border rounded-lg px-3 py-2"
+            title="Site URL"
+            placeholder="Enter site URL"
           />
         </div>
         
@@ -204,6 +208,8 @@ const SettingsCenter: React.FC = () => {
             value={settings.general.adminEmail}
             onChange={(e) => updateSettings('general', 'adminEmail', e.target.value)}
             className="w-full bg-background border border-border rounded-lg px-3 py-2"
+            title="Admin email address"
+            placeholder="Enter admin email"
           />
         </div>
         
@@ -213,6 +219,7 @@ const SettingsCenter: React.FC = () => {
             value={settings.general.timezone}
             onChange={(e) => updateSettings('general', 'timezone', e.target.value)}
             className="w-full bg-background border border-border rounded-lg px-3 py-2"
+            title="Select timezone"
           >
             <option value="Europe/Amsterdam">Europe/Amsterdam</option>
             <option value="Europe/Warsaw">Europe/Warsaw</option>
@@ -273,6 +280,8 @@ const SettingsCenter: React.FC = () => {
           className="w-full max-w-xs bg-background border border-border rounded-lg px-3 py-2"
           min="5"
           max="480"
+          title="Session timeout in minutes"
+          placeholder="Enter timeout minutes"
         />
       </div>
       
@@ -289,6 +298,8 @@ const SettingsCenter: React.FC = () => {
               className="w-full bg-background border border-border rounded-lg px-3 py-2"
               min="6"
               max="32"
+              title="Minimum password length"
+              placeholder="Enter minimum length"
             />
           </div>
         </div>
