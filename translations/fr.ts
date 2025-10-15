@@ -39,6 +39,11 @@ export default {
   clothing: {
     page_title: "Design & Production de Vêtements",
     page_subtitle: "De l'idée au produit fini - nous créons des vêtements uniques avec des matériaux de la plus haute qualité",
+    launch_announcement: {
+      title: "Le Projet Démarre en Janvier 2026",
+      description: "Nous préparons un service complet de design et de production de vêtements pour vous. Plus d'informations bientôt!",
+      badge: "Lancement: Janvier 2026"
+    },
     hero_badges: {
       designs: "Designs originaux",
       materials: "Matériaux premium",
@@ -342,10 +347,12 @@ export default {
       business_cards: "Cartes de visite (design)",
       posters: "Affiches",
       banners: "Bannières",
-      price_logo: "€50",
-      price_business_cards: "€65",
-      price_posters: "€55",
-      price_banners: "€55"
+      general_graphics: "Graphiques",
+      price_logo: "€25",
+      price_business_cards: "€25",
+      price_posters: "€30",
+      price_banners: "€30",
+      price_general_graphics: "€25"
     },
     photo_title: "Photographie",
     photo: {
@@ -355,13 +362,15 @@ export default {
     },
     websites_title: "Sites Web",
     websites: {
-      simple: "Site vitrine simple",
-      business: "Site d'entreprise (multi-pages)",
-      ecommerce: "Boutique en ligne",
+      simple: "Vitrine simple",
+      business: "Site étendu",
+      advanced: "Site avancé (bases de données, profils, connexion)",
+      ecommerce: "Boutiques en ligne (bientôt disponible)",
       admin: "Administration",
-      price_simple: "à partir de €200",
-      price_business: "€1.100",
-      price_ecommerce: "€1.500–€3.000",
+      price_simple: "€250",
+      price_business: "€500",
+      price_advanced: "€750–€1250",
+      price_ecommerce: "bientôt disponible",
       price_admin: "€50/an",
       most_popular: "Le plus populaire"
     },
@@ -374,6 +383,12 @@ export default {
       price_promo: "€500–€1.000",
       price_music: "€500–€1.500",
       price_reels: "€75–€175"
+    },
+    clothing_title: "Design & Production de Vêtements (bientôt disponible)",
+    clothing: {
+      coming_soon: "Bientôt disponible !",
+      description: "Matériaux premium • Technologies d'impression avancées • Personnalisation complète",
+      available_soon: "Bientôt disponible"
     },
     order_cta: "Commander ce service"
   },
@@ -426,7 +441,12 @@ export default {
     faq3_title: "Le prix inclut-il l'impression / l'hébergement ?",
     faq3_answer: "Les prix de la conception graphique n'incluent pas l'impression. Les prix des sites Web n'incluent pas l'hébergement, mais nous pouvons vous aider à le choisir et à le configurer.",
     faq4_title: "À quoi ressemble le processus de collaboration ?",
-    faq4_answer: "Le processus commence par une consultation et un brief. Nous présentons ensuite des concepts initiaux, et après votre approbation et l'intégration des révisions, nous livrons le projet final."
+    faq4_answer: "Le processus commence par une consultation et un brief. Nous présentons ensuite des concepts initiaux, et après votre approbation et l'intégration des révisions, nous livrons le projet final.",
+    cta: {
+      title: "Contactez-nous aujourd'hui et commencez votre transformation numérique",
+      contact_btn: "Contactez-nous",
+      portfolio_btn: "Voir le portfolio"
+    }
   },
   card_color: {
     green: "VERT",
@@ -434,6 +454,7 @@ export default {
   },
   portfolio: {
     cta: "Je veux un projet similaire",
+    view_all: "Voir tous les projets",
     item1: {
       title: "Conception de logo abstrait",
       description: "Un logo vibrant et dynamique créé pour une startup technologique. Le concept était de visualiser l'innovation et la fluidité à travers des formes abstraites et une palette de couleurs audacieuse. Le résultat final est une marque mémorable et évolutive."

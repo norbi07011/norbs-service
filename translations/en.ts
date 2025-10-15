@@ -48,6 +48,11 @@ export default {
   clothing: {
     page_title: "Clothing Design & Production",
     page_subtitle: "From idea to finished product - we create unique clothing with the highest quality materials",
+    launch_announcement: {
+      title: "Project Launching January 2026",
+      description: "We are preparing a comprehensive clothing design and production service for you. More information coming soon!",
+      badge: "Launch: January 2026"
+    },
     hero_badges: {
       designs: "Original designs",
       materials: "Premium materials",
@@ -351,10 +356,12 @@ export default {
       business_cards: "Business Cards (design)",
       posters: "Posters",
       banners: "Banners",
-      price_logo: "€50",
-      price_business_cards: "€65",
-      price_posters: "€55",
-      price_banners: "€55"
+      general_graphics: "Graphics",
+      price_logo: "€25",
+      price_business_cards: "€25",
+      price_posters: "€30",
+      price_banners: "€30",
+      price_general_graphics: "€25"
     },
     photo_title: "Photography",
     photo: {
@@ -364,13 +371,15 @@ export default {
     },
     websites_title: "Websites",
     websites: {
-      simple: "Simple business card website",
-      business: "Company website (multi-page)",
-      ecommerce: "E-commerce store",
+      simple: "Simple business card",
+      business: "Extended website",
+      advanced: "Advanced website (databases, profiles, login)",
+      ecommerce: "Online stores (coming soon)",
       admin: "Administration",
-      price_simple: "from €200",
-      price_business: "€1.100",
-      price_ecommerce: "€1,500–€3,000",
+      price_simple: "€250",
+      price_business: "€500",
+      price_advanced: "€750–€1250",
+      price_ecommerce: "coming soon",
       price_admin: "€50/year",
       most_popular: "Most popular"
     },
@@ -383,6 +392,12 @@ export default {
       price_promo: "€500–€1.000",
       price_music: "€500–€1.500",
       price_reels: "€75–€175"
+    },
+    clothing_title: "Clothing Design & Production (coming soon)",
+    clothing: {
+      coming_soon: "Coming soon!",
+      description: "Premium materials • Advanced printing technologies • Full personalization",
+      available_soon: "Available soon"
     },
     order_cta: "Order this service"
   },
@@ -433,9 +448,14 @@ export default {
     faq2_title: "How many revisions are included in the price?",
     faq2_answer: "Each project includes two rounds of revisions. Each subsequent round is charged extra according to our price list.",
     faq3_title: "Does the price include printing / hosting?",
-    faq3_answer: "Prices for graphic design do not include printing. Website prices do not include hosting, but we can assist in its selection and configuration.",
+    faq3_answer: "Graphic design prices do not include printing. Website prices do not include hosting, but we can help with its selection and configuration.",
     faq4_title: "What does the collaboration process look like?",
-    faq4_answer: "The process begins with a consultation and brief. We then present initial concepts, and after your approval and incorporating revisions, we deliver the final project."
+    faq4_answer: "The process starts with a consultation and brief. Then we present initial concepts, and after your approval and incorporating revisions, we deliver the final project.",
+    cta: {
+      title: "Contact us today and start your digital transformation",
+      contact_btn: "Contact us",
+      portfolio_btn: "View portfolio"
+    }
   },
   card_color: {
     green: "GREEN",
@@ -443,6 +463,7 @@ export default {
   },
   portfolio: {
     cta: "I want a similar project",
+    view_all: "View all projects",
     item1: {
       title: "Abstract Logo Design",
       description: "A vibrant and dynamic logo created for a tech startup. The concept was to visualize innovation and fluidity through abstract shapes and a bold color palette. The final result is a memorable and scalable brand mark."

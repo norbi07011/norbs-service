@@ -1,24 +1,33 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Portfolio3DItem } from '../../data/portfolioData';
+import { useTranslations } from '../../hooks/useTranslations';
 
 interface PortfolioCarousel3DProps {
   items: Portfolio3DItem[];
 }
 
 const PortfolioCarousel3D: React.FC<PortfolioCarousel3DProps> = ({ items }) => {
+  const { t } = useTranslations();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  // Auto-rotation effect
+  // Minimum distance to trigger a swipe
+  const minSwipeDistance = 50;
+
+  // Auto-rotation effect - stops when video is playing OR when hovered
   useEffect(() => {
-    if (isHovered) return;
+    if (isHovered || isVideoPlaying) return;
     
     const interval = setInterval(() => {
       setActiveIndex(prev => (prev + 1) % items.length);
     }, 4000); // Rotate every 4 seconds
 
     return () => clearInterval(interval);
-  }, [items.length, isHovered]);
+  }, [items.length, isHovered, isVideoPlaying]);
 
   const goToSlide = useCallback((index: number) => {
     setActiveIndex(index);
@@ -31,6 +40,30 @@ const PortfolioCarousel3D: React.FC<PortfolioCarousel3DProps> = ({ items }) => {
   const goToNext = useCallback(() => {
     setActiveIndex(prev => (prev + 1) % items.length);
   }, [items.length]);
+
+  // Touch handlers
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToNext();
+    } else if (isRightSwipe) {
+      goToPrevious();
+    }
+  };
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
@@ -46,9 +79,12 @@ const PortfolioCarousel3D: React.FC<PortfolioCarousel3DProps> = ({ items }) => {
 
       {/* Main carousel container - matching your image layout */}
       <div 
-        className="relative w-full max-w-7xl h-[500px] flex items-center justify-center overflow-hidden portfolio-carousel-container"
+        className="relative w-full max-w-7xl h-[500px] flex items-center justify-center overflow-hidden portfolio-carousel-container touch-pan-y"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
       >
         {items.map((item, index) => {
           const offset = index - activeIndex;
@@ -83,22 +119,31 @@ const PortfolioCarousel3D: React.FC<PortfolioCarousel3DProps> = ({ items }) => {
               }}
               onClick={() => !isCenter && goToSlide(index)}
             >
-              {/* Portfolio Image */}
-              <div className="portfolio-image-container">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className={`portfolio-image ${!isCenter ? 'dimmed' : ''}`}
-                />
+              {/* Portfolio Media (Image or Video) */}
+              <div className="w-[350px] h-[500px] rounded-2xl overflow-hidden bg-gray-900 shadow-2xl border-2 border-blue-500/30 relative">
+                {item.image.endsWith('.mp4') ? (
+                  <video
+                    src={item.image}
+                    className="w-full h-full object-cover"
+                    controls={isCenter}
+                    autoPlay={isCenter}
+                    loop
+                    playsInline
+                    onPlay={() => setIsVideoPlaying(true)}
+                    onPause={() => setIsVideoPlaying(false)}
+                    onEnded={() => setIsVideoPlaying(false)}
+                  />
+                ) : (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 
                 {/* Gradient overlay */}
-                <div className="portfolio-gradient-overlay" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               </div>
-
-              {/* Shine effect for center card */}
-              {isCenter && (
-                <div className="portfolio-shine" />
-              )}
 
               {/* Hover indicator */}
               {!isCenter && (
@@ -166,9 +211,12 @@ const PortfolioCarousel3D: React.FC<PortfolioCarousel3DProps> = ({ items }) => {
 
       {/* CTA Button */}
       <div className="mt-8">
-        <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-          Zobacz wszystkie projekty
-        </button>
+        <NavLink 
+          to="/portfolio" 
+          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl inline-block"
+        >
+          {t('portfolio.view_all')}
+        </NavLink>
       </div>
     </div>
   );

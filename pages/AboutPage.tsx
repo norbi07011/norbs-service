@@ -1,7 +1,10 @@
 import React, { useRef, useState, useEffect, RefObject } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useTranslations } from '../hooks/useTranslations';
 import { useOnScreen } from '../hooks/useOnScreen';
 import TeamCarousel3D from '../components/ui/TeamCarousel3D';
+import LogoShowcase from '../components/ui/LogoShowcase';
+import MinimalLogoCard from '../components/ui/MinimalLogoCard';
 
 // --- HELPER & SUB-COMPONENTS ---
 
@@ -190,16 +193,11 @@ const AboutPage: React.FC = () => {
       <section className="relative h-screen flex items-center justify-center text-center">
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/10 z-5"></div>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
+        <img 
+          src="/images/okładka . on nas .jpg"
+          alt="Norbs Service - O Nas"
           className="absolute inset-0 w-full h-full object-cover"
-          poster="https://picsum.photos/1920/1080?random=100"
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
+        />
         <div className="relative z-20 container mx-auto px-6 max-w-4xl">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight animate-fade-in-up">
@@ -211,12 +209,18 @@ const AboutPage: React.FC = () => {
               {t('about_page.hero_subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-              <button className="px-8 py-4 bg-accent hover:bg-accent/80 text-accent-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25">
+              <NavLink 
+                to="/about#mission" 
+                className="px-8 py-4 bg-accent hover:bg-accent/80 text-accent-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 inline-block"
+              >
                 {t('learn_more')}
-              </button>
-              <button className="px-8 py-4 border-2 border-white/30 text-white hover:bg-white hover:text-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+              </NavLink>
+              <NavLink 
+                to="/portfolio" 
+                className="px-8 py-4 border-2 border-white/30 text-white hover:bg-white hover:text-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm inline-block"
+              >
                 {t('our_portfolio')}
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -269,6 +273,15 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </AnimatedSection>
+        
+        {/* Logo Showcase Section */}
+        <AnimatedSection>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nasza Marka</h2>
+            <p className="text-lg text-muted-foreground">Tworzymy wyjątkowe doświadczenia cyfrowe</p>
+          </div>
+          <LogoShowcase variant="featured" animated={true} />
         </AnimatedSection>
         
         {/* Values Section - Enhanced Grid */}
@@ -408,19 +421,24 @@ const AboutPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl p-12 md:p-16 border border-accent/20">
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Gotowy na kolejny krok?
+                  {t('about_page.cta.title').split(' i ')[0]}
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Skontaktuj się z nami już dziś i rozpocznij swoją cyfrową transformację 
-                  z zespołem ekspertów Norbs Service.
+                  {t('about_page.cta.title')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <button className="px-10 py-4 bg-accent hover:bg-accent/80 text-accent-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25">
-                    Skontaktuj się z nami
-                  </button>
-                  <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105">
-                    Zobacz portfolio
-                  </button>
+                  <NavLink 
+                    to="/contact" 
+                    className="px-10 py-4 bg-accent hover:bg-accent/80 text-accent-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 inline-block"
+                  >
+                    {t('about_page.cta.contact_btn')}
+                  </NavLink>
+                  <NavLink 
+                    to="/portfolio" 
+                    className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold rounded-full transition-all duration-300 hover:scale-105 inline-block"
+                  >
+                    {t('about_page.cta.portfolio_btn')}
+                  </NavLink>
                 </div>
               </div>
             </div>

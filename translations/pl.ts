@@ -49,6 +49,11 @@ export default {
   clothing: {
     page_title: "Projektowanie & Produkcja Ubrań",
     page_subtitle: "Od pomysłu do gotowego produktu - tworzymy unikalne ubrania z najwyższej jakości materiałów",
+    launch_announcement: {
+      title: "Projekt Startuje od Stycznia 2026",
+      description: "Przygotowujemy dla Ciebie kompleksową usługę projektowania i produkcji odzieży. Wkrótce więcej informacji!",
+      badge: "Start: Styczeń 2026"
+    },
     hero_badges: {
       designs: "Autorskie projekty",
       materials: "Premium materiały", 
@@ -437,7 +442,12 @@ export default {
     faq3_title: "Czy cena zawiera druk / hosting?",
     faq3_answer: "Ceny projektów graficznych nie obejmują druku. Ceny stron internetowych nie obejmują hostingu, ale możemy pomóc w jego wyborze i konfiguracji.",
     faq4_title: "Jak wygląda proces współpracy?",
-    faq4_answer: "Proces zaczyna się od konsultacji i briefu. Następnie przedstawiamy wstępne koncepcje, a po Twojej akceptacji i uwzględnieniu poprawek, dostarczamy finalny projekt."
+    faq4_answer: "Proces zaczyna się od konsultacji i briefu. Następnie przedstawiamy wstępne koncepcje, a po Twojej akceptacji i uwzględnieniu poprawek, dostarczamy finalny projekt.",
+    cta: {
+      title: "Skontaktuj się z nami już dziś i rozpocznij swoją cyfrową transformację",
+      contact_btn: "Skontaktuj się z nami",
+      portfolio_btn: "Zobacz portfolio"
+    }
   },
   card_color: {
     green: "ZIELONY",
@@ -445,6 +455,7 @@ export default {
   },
   portfolio: {
     cta: "Chcę podobny projekt",
+    view_all: "Zobacz wszystkie projekty",
     item1: {
       title: "Projekt Abstrakcyjnego Logo",
       description: "Żywe i dynamiczne logo stworzone dla startupu technologicznego. Koncepcją było zwizualizowanie innowacji i płynności poprzez abstrakcyjne kształty i odważną paletę kolorów. Efektem końcowym jest zapadający w pamięć i skalowalny znak marki."
@@ -476,6 +487,134 @@ export default {
     item8: {
       title: "Produkcja Teledysku",
       description: "Koncepcyjny teledysk z silną fabułą i efektami wizualnymi. Ściśle współpracowaliśmy z artystą, aby ożywić jego wizję za pomocą kinematografii i postprodukcji."
+    },
+    item9: {
+      title: "Projekt Graficzny - Katalog Produktowy",
+      description: "Profesjonalny katalog produktów z przemyślanym layoutem i eleganckim designem. Idealny do prezentacji oferty handlowej."
+    },
+    item10: {
+      title: "Projekt Graficzny - Broszura Firmowa",
+      description: "Wielostronicowa broszura korporacyjna z profesjonalnym designem. Spójny styl wizualny na wszystkich stronach."
+    },
+    item11: {
+      title: "Projekt Graficzny - Etykieta Produktu",
+      description: "Design etykiety produktowej łączący funkcjonalność z atrakcyjnym wyglądem. Projekt wyróżnia produkt na półce sklepowej."
+    },
+    item12: {
+      title: "Projekt Graficzny - Pakiet Brandingowy",
+      description: "Kompletny pakiet identyfikacji wizualnej zawierający wszystkie materiały firmowe. Spójna komunikacja wizualna marki."
+    },
+    item13: {
+      title: "Projekt Graficzny - Reklama Prasowa",
+      description: "Efektowna reklama prasowa z profesjonalnym layoutem. Design przyciąga uwagę czytelników i skutecznie komunikuje przekaz."
+    },
+    item14: {
+      title: "Projekt Graficzny - Materiały Event",
+      description: "Komplet materiałów graficznych dla wydarzenia: plakaty, ulotki, banery. Spójny design wizualny dla całej kampanii."
+    },
+    item15: {
+      title: "Projekt Graficzny - Newsletter",
+      description: "Design newslettera email z responsywnym layoutem. Atrakcyjny wizualnie i zoptymalizowany pod konwersje."
+    },
+    item16: {
+      title: "Projekt Graficzny - Prezentacja Multimedialna",
+      description: "Profesjonalna prezentacja multimedialna z nowoczesnym designem slajdów. Wizualna narracja wspierająca przekaz."
+    },
+    item17: {
+      title: "Fotografia - Sesja Produktowa",
+      description: "Profesjonalna fotografia produktowa z pełną postprodukcją. Wysokiej jakości zdjęcia idealne do e-commerce i materiałów marketingowych."
+    },
+    item18: {
+      title: "Strona Internetowa - Party Accessoires Verhuur",
+      description: "Nowoczesna strona internetowa dla firmy wynajmu akcesoriów imprezowych. Responsywny design z systemem rezerwacji online."
+    },
+    item19: {
+      title: "Projekt Graficzny - Social Media",
+      description: "Grafika zaprojektowana dla mediów społecznościowych. Nowoczesny styl wizualny idealny do kampanii marketingowych w social media."
+    },
+    item20: {
+      title: "Strona Internetowa - HUT SERVICE",
+      description: "Nowoczesna strona internetowa prezentująca ofertę usług specjalistycznych. Projekt wyróżnia się profesjonalnym designem i funkcjonalnością."
+    },
+    item21: {
+      title: "Fotografia - Sesja Biznesowa",
+      description: "Biznesowa sesja fotograficzna z profesjonalnym oświetleniem studyjnym. Zdjęcia korporacyjne najwyższej jakości."
+    },
+    item22: {
+      title: "Projekt Graficzny - Wizytówka",
+      description: "Elegancki design wizytówki z nowoczesnym podejściem. Minimalistyczna forma z maksymalnym efektem wizualnym."
+    },
+    item23: {
+      title: "Wideo Marketing - Reklama Produktu",
+      description: "Profesjonalny film reklamowy produktu z efektami wizualnymi i dynamicznym montażem. Angażujący content marketingowy."
+    },
+    item24: {
+      title: "Wideo Marketing - Prezentacja Firmy",
+      description: "Film korporacyjny prezentujący firmę, jej wartości i ofertę. Profesjonalna produkcja wideo z wywiadami i ujęciami produktowymi."
+    },
+    item25: {
+      title: "Wideo Marketing - Social Media Content",
+      description: "Krótkie, dynamiczne wideo stworzone z myślą o mediach społecznościowych. Optymalizowane pod Instagram, TikTok i Facebook."
+    },
+    item26: {
+      title: "Wideo Marketing - Kampania Reklamowa",
+      description: "Kompleksowa produkcja wideo dla kampanii reklamowej. Kinematograficzne ujęcia i profesjonalny storytelling."
+    },
+    item27: {
+      title: "Wideo Marketing - Tutorial Produktowy",
+      description: "Film instruktażowy pokazujący zastosowanie produktu. Przejrzysta narracja i profesjonalne ujęcia szczegółowe."
+    },
+    item28: {
+      title: "Wideo Marketing - Event Coverage",
+      description: "Profesjonalna relacja z wydarzenia firmowego. Dynamiczny montaż łączący momenty kluczowe, wywiady i atmosferę."
+    },
+    item29: {
+      title: "Wideo Marketing - Motion Graphics",
+      description: "Animowane wideo z motion graphics i efektami 3D. Nowoczesna forma przekazu idealna do prezentacji produktów i usług."
+    },
+    item30: {
+      title: "Fotografia - Sesja Eventowa",
+      description: "Profesjonalna fotografia eventowa z pełną relacją z wydarzenia. Reportaż fotograficzny najwyższej jakości."
+    },
+    item31: {
+      title: "Wideo Marketing - Kampania Brandowa",
+      description: "Kompleksowa kampania wideo budująca rozpoznawalność marki. Profesjonalny storytelling z efektami wizualnymi."
+    },
+    item32: {
+      title: "Wideo Marketing - Teledysk Reklamowy",
+      description: "Dynamiczny teledysk promocyjny z kinematograficznymi ujęciami. Muzyka i obraz w perfekcyjnej harmonii."
+    },
+    item33: {
+      title: "Wideo Marketing - Prezentacja Usług",
+      description: "Film prezentujący ofertę usług w atrakcyjny sposób. Przejrzysta narracja i profesjonalne ujęcia produktowe."
+    },
+    item34: {
+      title: "Wideo Marketing - Relacja z Eventu",
+      description: "Dynamiczna relacja wideo z wydarzenia biznesowego. Montaż łączący kluczowe momenty i wywiady."
+    },
+    item35: {
+      title: "Wideo Marketing - Animacja 3D",
+      description: "Profesjonalna animacja 3D z efektami motion graphics. Nowoczesna wizualizacja produktów i koncepcji."
+    },
+    item36: {
+      title: "Wideo Marketing - Film Korporacyjny",
+      description: "Elegancki film korporacyjny prezentujący firmę i jej wartości. Profesjonalna kolorystyka i montaż."
+    },
+    item37: {
+      title: "Strona Internetowa - KAJFASZ Trener Personalny",
+      description: "Profesjonalna strona dla trenera personalnego. Prezentacja oferty treningowej, planów dietetycznych i osiągnięć klientów."
+    },
+    item38: {
+      title: "Strona Internetowa - Scootershop MG",
+      description: "Nowoczesny sklep internetowy z hulajnogami i akcesoriami. Responsywny design z intuicyjną nawigacją i katalogiem produktów."
+    },
+    item39: {
+      title: "Strona Internetowa - TRENER PERSONALNY PATRYK MMA",
+      description: "Profesjonalna strona dla trenera MMA i sportów walki. Prezentacja technik treningowych, planów zajęć i osiągnięć sportowych."
+    },
+    item40: {
+      title: "Strona Internetowa - RESTAURACJA LENIWA BABA",
+      description: "Elegancka strona restauracji z menu, galerią potraw i systemem rezerwacji. Apetyczny design prezentujący kulinarne specjały."
     }
   },
   admin: {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { NavLink } from 'react-router-dom';
 import { portfolioItems, PortfolioCategory } from '../data/portfolioData';
+import LogoShowcase from '../components/ui/LogoShowcase';
 
 type CategoryFilter = 'all' | PortfolioCategory;
 
@@ -21,9 +22,14 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 py-20">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-foreground" style={{ textShadow: '0 0 8px hsl(var(--accent))' }}>
-        Portfolio
+            <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-8 text-foreground drop-shadow-[0_0_8px_hsl(var(--accent))]">
+        {t('portfolio_page.title')}
       </h1>
+      
+      {/* Logo Display */}
+      <div className="flex justify-center mb-12">
+        <LogoShowcase variant="compact" animated={true} />
+      </div>
       
       <div className="flex justify-center flex-wrap gap-4 mb-12">
         {categories.map(cat => (
@@ -37,25 +43,71 @@ const PortfolioPage: React.FC = () => {
         ))}
       </div>
 
-      <div key={filter} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div key={filter} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
         {filteredItems.map((item, index) => (
-          <NavLink
+          <div
             key={item.id}
-            to={`/portfolio/${item.id}`}
-            className="block uiverse-card group p-0 aspect-square opacity-0 animate-fade-in-up"
+            className={`opacity-0 animate-fade-in-up flex flex-col [animation-fill-mode:forwards]`}
             style={{ animationDelay: `${index * 50}ms` }}
           >
-            <div className="uiverse-card-circles">
-                <div></div><div></div><div></div>
-            </div>
-            <div className="uiverse-card-content relative z-10 w-full h-full p-0">
-                <img src={item.img} alt={t(item.titleKey)} className="w-full h-full object-cover rounded-[1.8rem]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 rounded-[1.8rem]">
-                    <h3 className="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{t(item.titleKey)}</h3>
-                    <p className="text-gray-300 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100 capitalize">{item.category}</p>
+            {/* Karta portfolio */}
+            {item.externalLink ? (
+              // Dla stron internetowych - tylko obrazek bez linku
+              <div className="block uiverse-card group p-0 mb-4">
+                <div className="uiverse-card-circles">
+                    <div></div><div></div><div></div>
                 </div>
-            </div>
-          </NavLink>
+                <div className="uiverse-card-content relative z-10 w-full h-full p-0 overflow-hidden">
+                  <img src={item.img} alt={t(item.titleKey)} className="w-full h-full object-cover rounded-[1.8rem]" />
+                </div>
+              </div>
+            ) : (
+              // Dla pozostałych - z linkiem do detail page
+              <NavLink
+                to={`/portfolio/${item.id}`}
+                className="block uiverse-card group p-0 mb-4"
+              >
+                <div className="uiverse-card-circles">
+                    <div></div><div></div><div></div>
+                </div>
+                <div className="uiverse-card-content relative z-10 w-full h-full p-0 overflow-hidden">
+                    {item.video ? (
+                      <video 
+                        src={item.video} 
+                        className="w-full h-full object-cover rounded-[1.8rem]"
+                        muted
+                        loop
+                        playsInline
+                        onMouseEnter={(e) => e.currentTarget.play()}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.pause();
+                          e.currentTarget.currentTime = 0;
+                        }}
+                      />
+                    ) : (
+                      <img src={item.img} alt={t(item.titleKey)} className="w-full h-full object-cover rounded-[1.8rem]" />
+                    )}
+                </div>
+              </NavLink>
+            )}
+            
+            {/* Przycisk dla stron internetowych */}
+            {item.externalLink && (
+              <a
+                href={item.externalLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Odwiedź stronę
+              </a>
+            )}
+          </div>
         ))}
       </div>
 

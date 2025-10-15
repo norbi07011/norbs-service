@@ -49,6 +49,11 @@ export default {
   clothing: {
     page_title: "Kleidungsdesign & Produktion",
     page_subtitle: "Von der Idee zum fertigen Produkt - wir kreieren einzigartige Kleidung mit Materialien höchster Qualität",
+    launch_announcement: {
+      title: "Projekt startet im Januar 2026",
+      description: "Wir bereiten einen umfassenden Kleidungsdesign- und Produktionsservice für Sie vor. Weitere Informationen folgen bald!",
+      badge: "Start: Januar 2026"
+    },
     hero_badges: {
       designs: "Originelle Designs",
       materials: "Premium-Materialien",
@@ -352,10 +357,12 @@ export default {
       business_cards: "Visitenkarten (Design)",
       posters: "Poster",
       banners: "Banner",
-      price_logo: "€50",
-      price_business_cards: "€65",
-      price_posters: "€55",
-      price_banners: "€55"
+      general_graphics: "Grafiken",
+      price_logo: "€25",
+      price_business_cards: "€25",
+      price_posters: "€30",
+      price_banners: "€30",
+      price_general_graphics: "€25"
     },
     photo_title: "Fotografie",
     photo: {
@@ -365,13 +372,15 @@ export default {
     },
     websites_title: "Websites",
     websites: {
-      simple: "Einfache Visitenkarten-Website",
-      business: "Unternehmenswebsite (mehrseitig)",
-      ecommerce: "Online-Shop",
+      simple: "Einfache Visitenkarte",
+      business: "Erweiterte Website",
+      advanced: "Erweiterte Website (Datenbanken, Profile, Login)",
+      ecommerce: "Online-Shops (bald verfügbar)",
       admin: "Verwaltung",
-      price_simple: "ab €200",
-      price_business: "€1.100",
-      price_ecommerce: "€1.500–€3.000",
+      price_simple: "€250",
+      price_business: "€500",
+      price_advanced: "€750–€1250",
+      price_ecommerce: "bald verfügbar",
       price_admin: "€50/Jahr",
       most_popular: "Am beliebtesten"
     },
@@ -384,6 +393,12 @@ export default {
       price_promo: "€500–€1.000",
       price_music: "€500–€1.500",
       price_reels: "€75–€175"
+    },
+    clothing_title: "Bekleidungsdesign & Produktion (bald verfügbar)",
+    clothing: {
+      coming_soon: "Bald verfügbar!",
+      description: "Premium-Materialien • Fortschrittliche Drucktechnologien • Vollständige Personalisierung",
+      available_soon: "Bald im Angebot"
     },
     order_cta: "Diese Dienstleistung bestellen"
   },
@@ -436,7 +451,12 @@ export default {
     faq3_title: "Beinhaltet der Preis Druck / Hosting?",
     faq3_answer: "Die Preise für Grafikdesign beinhalten keinen Druck. Website-Preise beinhalten kein Hosting, aber wir können bei der Auswahl und Konfiguration behilflich sein.",
     faq4_title: "Wie sieht der Zusammenarbeitsprozess aus?",
-    faq4_answer: "Der Prozess beginnt mit einer Beratung und einem Briefing. Anschließend präsentieren wir erste Konzepte und liefern nach Ihrer Freigabe und Einarbeitung von Änderungen das endgültige Projekt."
+    faq4_answer: "Der Prozess beginnt mit einer Beratung und einem Briefing. Anschließend präsentieren wir erste Konzepte und liefern nach Ihrer Freigabe und Einarbeitung von Änderungen das endgültige Projekt.",
+    cta: {
+      title: "Kontaktieren Sie uns noch heute und starten Sie Ihre digitale Transformation",
+      contact_btn: "Kontaktieren Sie uns",
+      portfolio_btn: "Portfolio ansehen"
+    }
   },
   card_color: {
     green: "GRÜN",
@@ -444,6 +464,7 @@ export default {
   },
   portfolio: {
     cta: "Ich möchte ein ähnliches Projekt",
+    view_all: "Alle Projekte ansehen",
     item1: {
       title: "Abstraktes Logo-Design",
       description: "Ein lebendiges und dynamisches Logo, das für ein Technologie-Startup erstellt wurde. Das Konzept bestand darin, Innovation und Fluidität durch abstrakte Formen und eine kühne Farbpalette zu visualisieren. Das Endergebnis ist ein einprägsames und skalierbares Markenzeichnen."

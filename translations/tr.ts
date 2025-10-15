@@ -39,6 +39,11 @@ export default {
   clothing: {
     page_title: "Kıyafet Tasarımı & Üretimi",
     page_subtitle: "Fikirden bitmiş ürüne - en yüksek kaliteli malzemelerle benzersiz kıyafetler yaratıyoruz",
+    launch_announcement: {
+      title: "Proje Ocak 2026'da Başlıyor",
+      description: "Sizin için kapsamlı bir kıyafet tasarımı ve üretim hizmeti hazırlıyoruz. Yakında daha fazla bilgi!",
+      badge: "Başlangıç: Ocak 2026"
+    },
     hero_badges: {
       designs: "Özgün tasarımlar",
       materials: "Premium malzemeler",
@@ -342,10 +347,12 @@ export default {
       business_cards: "Kartvizitler (tasarım)",
       posters: "Afişler",
       banners: "Bannerlar",
-      price_logo: "€50",
-      price_business_cards: "€65",
-      price_posters: "€55",
-      price_banners: "€55"
+      general_graphics: "Grafikler",
+      price_logo: "€25",
+      price_business_cards: "€25",
+      price_posters: "€30",
+      price_banners: "€30",
+      price_general_graphics: "€25"
     },
     photo_title: "Fotoğrafçılık",
     photo: {
@@ -355,13 +362,15 @@ export default {
     },
     websites_title: "Web Siteleri",
     websites: {
-      simple: "Basit kartvizit web sitesi",
-      business: "Şirket web sitesi (çok sayfalı)",
-      ecommerce: "E-ticaret mağazası",
+      simple: "Basit kartvizit",
+      business: "Genişletilmiş web sitesi",
+      advanced: "Gelişmiş web sitesi (veritabanları, profiller, giriş)",
+      ecommerce: "Online mağazalar (yakında)",
       admin: "Yönetim",
-      price_simple: "€200'dan başlayan fiyatlarla",
-      price_business: "€1.100",
-      price_ecommerce: "€1.500–€3.000",
+      price_simple: "€250",
+      price_business: "€500",
+      price_advanced: "€750–€1250",
+      price_ecommerce: "yakında",
       price_admin: "€50/yıl",
       most_popular: "En popüler"
     },
@@ -374,6 +383,12 @@ export default {
       price_promo: "€500–€1.000",
       price_music: "€500–€1.500",
       price_reels: "€75–€175"
+    },
+    clothing_title: "Giysi Tasarımı & Üretimi (yakında)",
+    clothing: {
+      coming_soon: "Yakında!",
+      description: "Premium malzemeler • Gelişmiş baskı teknolojileri • Tam kişiselleştirme",
+      available_soon: "Yakında mevcut"
     },
     order_cta: "Bu hizmeti sipariş et"
   },
@@ -426,7 +441,12 @@ export default {
     faq3_title: "Fiyata baskı / hosting dahil mi?",
     faq3_answer: "Grafik tasarım fiyatlarına baskı dahil değildir. Web sitesi fiyatlarına hosting dahil değildir, ancak seçiminde ve yapılandırılmasında yardımcı olabiliriz.",
     faq4_title: "İşbirliği süreci nasıl işliyor?",
-    faq4_answer: "Süreç bir danışma ve brief ile başlar. Ardından ilk konseptleri sunarız ve onayınız ve revizyonların dahil edilmesinden sonra nihai projeyi teslim ederiz."
+    faq4_answer: "Süreç bir danışma ve brief ile başlar. Ardından ilk konseptleri sunarız ve onayınız ve revizyonların dahil edilmesinden sonra nihai projeyi teslim ederiz.",
+    cta: {
+      title: "Bugün bizimle iletişime geçin ve dijital dönüşümünüzü başlatın",
+      contact_btn: "Bize ulaşın",
+      portfolio_btn: "Portföyü görüntüle"
+    }
   },
   card_color: {
     green: "YEŞİL",
@@ -434,6 +454,7 @@ export default {
   },
   portfolio: {
     cta: "Benzer bir proje istiyorum",
+    view_all: "Tüm projeleri görüntüle",
     item1: {
       title: "Soyut Logo Tasarımı",
       description: "Bir teknoloji girişimi için oluşturulan canlı ve dinamik bir logo. Konsept, soyut şekiller ve cesur bir renk paleti aracılığıyla yeniliği ve akıcılığı görselleştirmekti. Nihai sonuç, unutulmaz ve ölçeklenebilir bir marka işareti oldu."

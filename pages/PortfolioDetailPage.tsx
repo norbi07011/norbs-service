@@ -29,25 +29,19 @@ const PortfolioDetailPage: React.FC = () => {
             
             <div className="uiverse-card p-0 overflow-hidden">
                 <div className="uiverse-card-circles"><div></div><div></div><div></div></div>
-                <div className="uiverse-card-content relative z-10 w-full h-full text-left">
-                    <img src={item.img} alt={t(item.titleKey)} className="w-full h-[50vh] max-h-[500px] object-cover" />
-                    <div className="p-8 md:p-12">
-                        <h1 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4" style={{ textShadow: '0 0 8px hsl(var(--accent))' }}>
-                            {t(item.titleKey)}
-                        </h1>
-
-                        <div className="mb-8">
-                            {item.technologies.map(tech => (
-                                <span key={tech} className="inline-block bg-secondary text-muted-foreground text-xs font-semibold mr-2 mb-2 px-3 py-1 rounded-full">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="prose prose-invert prose-lg text-muted-foreground max-w-none">
-                            <p>{t(item.descriptionKey)}</p>
-                        </div>
-                    </div>
+                <div className="uiverse-card-content relative z-10 w-full text-left overflow-hidden rounded-[1.8rem]">
+                    {item.video ? (
+                        <video 
+                            controls 
+                            className="w-full h-auto object-contain bg-black rounded-t-[1.8rem]"
+                        >
+                            <source src={item.video} type="video/mp4" />
+                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        </video>
+                    ) : (
+                        <img src={item.img} alt={t(item.titleKey)} className="w-full h-auto object-contain rounded-t-[1.8rem]" />
+                    )}
+                    {/* Usunięto opisy i technologie - tylko media */}
                 </div>
             </div>
 

@@ -1,10 +1,12 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { useTranslations } from '../hooks/useTranslations';
-import ClothingConfigurator from '../components/ui/ClothingConfigurator';
+// import ClothingConfigurator from '../components/ui/ClothingConfigurator';
 import ClothingGallery from '../components/ui/ClothingGallery';
 import ClothingFAQ from '../components/ui/ClothingFAQ';
 import ClothingContactForm from '../components/ui/ClothingContactForm';
 import Layout from '../components/layout/Layout';
+import MinimalLogoCard from '../components/ui/MinimalLogoCard';
 
 const ClothingServicesPage: React.FC = () => {
   const { t } = useTranslations();
@@ -13,43 +15,74 @@ const ClothingServicesPage: React.FC = () => {
     <Layout>
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+        <section className="relative py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
+          
+          {/* Animated background elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full mix-blend-overlay filter blur-3xl animate-float animation-delay-300"></div>
+          </div>
+          
           <div className="relative container mx-auto px-6 text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
               {t('clothing.page_title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            
+            {/* Info o starcie projektu - GŁÓWNA INFORMACJA */}
+            <div className="max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-200">
+              <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500">
+                <div className="text-7xl mb-4 animate-bounce-slow">👕</div>
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                  {t('clothing.launch_announcement.title')}
+                </h2>
+                <p className="text-lg md:text-xl opacity-90 mb-6 leading-relaxed">
+                  {t('clothing.launch_announcement.description')}
+                </p>
+                <div className="inline-block bg-white/20 px-6 py-3 rounded-full animate-pulse-slow">
+                  <span className="text-base font-semibold">🚀 {t('clothing.launch_announcement.badge')}</span>
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up animation-delay-400">
               {t('clothing.page_subtitle')}
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-lg">
-              <span className="bg-white/20 px-4 py-2 rounded-full">🎨 {t('clothing.hero_badges.designs')}</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">🧵 {t('clothing.hero_badges.materials')}</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">🖨️ {t('clothing.hero_badges.technologies')}</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">📦 {t('clothing.hero_badges.service')}</span>
+            <div className="flex flex-wrap justify-center gap-4 text-lg animate-fade-in-up animation-delay-500">
+              <span className="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm hover:bg-white/30 transition-all duration-300 hover:scale-110">🎨 {t('clothing.hero_badges.designs')}</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm hover:bg-white/30 transition-all duration-300 hover:scale-110">🧵 {t('clothing.hero_badges.materials')}</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm hover:bg-white/30 transition-all duration-300 hover:scale-110">📦 {t('clothing.hero_badges.service')}</span>
             </div>
           </div>
         </section>
 
-        {/* Konfigurator */}
-        <section className="py-16">
+        {/* Separator */}
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+
+        {/* Konfigurator - ukryty, będzie dostępny wkrótce */}
+        {/* <section className="py-16">
           <div className="container mx-auto px-6">
             <ClothingConfigurator />
           </div>
-        </section>
+        </section> */}
 
         {/* Galeria realizacji */}
-        <ClothingGallery />
+        <div className="animate-fade-in-up">
+          <ClothingGallery />
+        </div>
+
+        {/* Separator */}
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-8"></div>
 
         {/* Proces produkcji */}
-        <section className="py-16 bg-card">
+        <section className="py-16 bg-card transition-all duration-500 hover:bg-card/80">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
               {t('clothing.process.title')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-xl group-hover:shadow-blue-500/50 transition-all duration-300">
                   <span className="text-3xl">💡</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">1. {t('clothing.process.consultation.title')}</h3>
@@ -57,8 +90,8 @@ const ClothingServicesPage: React.FC = () => {
                   {t('clothing.process.consultation.description')}
                 </p>
               </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-xl group-hover:shadow-green-500/50 transition-all duration-300">
                   <span className="text-3xl">🎨</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">2. {t('clothing.process.design.title')}</h3>
@@ -66,8 +99,8 @@ const ClothingServicesPage: React.FC = () => {
                   {t('clothing.process.design.description')}
                 </p>
               </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-xl group-hover:shadow-purple-500/50 transition-all duration-300">
                   <span className="text-3xl">🧵</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">3. {t('clothing.process.production.title')}</h3>
@@ -75,8 +108,8 @@ const ClothingServicesPage: React.FC = () => {
                   {t('clothing.process.production.description')}
                 </p>
               </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-orange-900 dark:to-orange-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-xl group-hover:shadow-orange-500/50 transition-all duration-300">
                   <span className="text-3xl">📦</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">4. {t('clothing.process.delivery.title')}</h3>
@@ -88,16 +121,22 @@ const ClothingServicesPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Separator */}
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-8"></div>
+
         {/* Technologie nadruku */}
         <section className="py-16">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
               {t('clothing.technologies.title')}
             </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
+              Wykorzystujemy najnowocześniejsze metody nadruku, aby zapewnić najwyższą jakość i trwałość
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="text-4xl mb-4">🖨️</div>
-                <h3 className="text-xl font-semibold mb-3">DTG - Direct to Garment</h3>
+              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group hover:transform hover:scale-105">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🖨️</div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">DTG - Direct to Garment</h3>
                 <p className="text-muted-foreground mb-4">
                   Najnowocześniejsza technologia cyfrowego nadruku bezpośrednio na tkaninę. 
                   Nieograniczona paleta kolorów i najwyższa jakość detali.
@@ -110,9 +149,9 @@ const ClothingServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="text-4xl mb-4">🪡</div>
-                <h3 className="text-xl font-semibold mb-3">Haft Komputerowy</h3>
+              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group hover:transform hover:scale-105">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🪡</div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Haft Komputerowy</h3>
                 <p className="text-muted-foreground mb-4">
                   Tradycyjna, luksusowa metoda zdobienia ubrań. Idealna dla logo firmowych, 
                   monogramów i eleganckich wzorów.
@@ -125,9 +164,9 @@ const ClothingServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="text-4xl mb-4">🌈</div>
-                <h3 className="text-xl font-semibold mb-3">Sublimacja</h3>
+              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group hover:transform hover:scale-105">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌈</div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Sublimacja</h3>
                 <p className="text-muted-foreground mb-4">
                   Pełnokolorowy nadruk na całej powierzchni ubrania. Idealna dla wzorów 
                   all-over i sportowych koszulek.
@@ -140,9 +179,9 @@ const ClothingServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="text-4xl mb-4">🎨</div>
-                <h3 className="text-xl font-semibold mb-3">Sitodruk</h3>
+              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group hover:transform hover:scale-105">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎨</div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Sitodruk</h3>
                 <p className="text-muted-foreground mb-4">
                   Klasyczna metoda idealna dla większych nakładów. Wyjątkowa trwałość 
                   i intensywność kolorów.
@@ -155,9 +194,9 @@ const ClothingServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="text-4xl mb-4">✨</div>
-                <h3 className="text-xl font-semibold mb-3">Folia Flex & Flock</h3>
+              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group hover:transform hover:scale-105">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">✨</div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Folia Flex & Flock</h3>
                 <p className="text-muted-foreground mb-4">
                   Elastyczne folie idealne dla materiałów stretch i projektów z napisami. 
                   Dostępne w wersji gładkiej i aksamitnej.
@@ -170,9 +209,9 @@ const ClothingServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="text-4xl mb-4">🎭</div>
-                <h3 className="text-xl font-semibold mb-3">Efekty Specjalne</h3>
+              <div className="bg-card p-6 rounded-xl border border-border hover:shadow-2xl hover:border-accent/50 transition-all duration-500 group hover:transform hover:scale-105">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎭</div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Efekty Specjalne</h3>
                 <p className="text-muted-foreground mb-4">
                   Puff print (3D), discharge, foil print, glow in the dark i inne 
                   zaawansowane techniki dla wyjątkowych efektów.
@@ -188,99 +227,8 @@ const ClothingServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Cennik */}
-        <section className="py-16 bg-card">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-              Cennik Usług Odzieżowych
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Pakiet Starter */}
-              <div className="bg-background p-8 rounded-xl border border-border hover:shadow-lg transition-all">
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">Starter</h3>
-                <div className="text-3xl font-bold mb-6">od 25 zł<span className="text-lg text-muted-foreground">/szt</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    T-shirty i tank topy
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    Podstawowe materiały
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    DTG lub vinyl
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    Min. 1 sztuka
-                  </li>
-                </ul>
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors">
-                  Zamów teraz
-                </button>
-              </div>
-
-              {/* Pakiet Professional */}
-              <div className="bg-gradient-to-br from-purple-600 to-blue-600 p-8 rounded-xl text-white transform scale-105 shadow-2xl">
-                <div className="bg-white/20 text-center py-2 px-4 rounded-full text-sm font-semibold mb-4">
-                  NAJPOPULARNIEJSZY
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Professional</h3>
-                <div className="text-3xl font-bold mb-6">od 45 zł<span className="text-lg opacity-75">/szt</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-300">✓</span>
-                    Wszystkie typy ubrań
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-300">✓</span>
-                    Premium materiały
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-300">✓</span>
-                    Haft + wszystkie technologie
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-300">✓</span>
-                    Projekt graficzny gratis
-                  </li>
-                </ul>
-                <button className="w-full bg-white text-purple-600 hover:bg-gray-100 py-3 px-6 rounded-lg transition-colors font-semibold">
-                  Zamów teraz
-                </button>
-              </div>
-
-              {/* Pakiet Premium */}
-              <div className="bg-background p-8 rounded-xl border border-border hover:shadow-lg transition-all">
-                <h3 className="text-2xl font-bold mb-4 text-gold-600">Premium</h3>
-                <div className="text-3xl font-bold mb-6">od 85 zł<span className="text-lg text-muted-foreground">/szt</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    Ekskluzywne materiały
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    Efekty specjalne
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    Pełna personalizacja
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    Obsługa VIP
-                  </li>
-                </ul>
-                <button className="w-full bg-gradient-to-r from-gold-500 to-orange-500 hover:from-gold-600 hover:to-orange-600 text-white py-3 px-6 rounded-lg transition-all">
-                  Zamów teraz
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Separator */}
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-8"></div>
 
         {/* FAQ */}
         <ClothingFAQ />
@@ -292,18 +240,24 @@ const ClothingServicesPage: React.FC = () => {
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-6 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">
-              Gotowy na stworzenie swojej kolekcji?
+              {t('clothing.cta.title')}
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Skontaktuj się z nami i omówmy detale Twojego projektu
+              {t('clothing.cta.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Bezpłatna konsultacja
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Zobacz portfolio
-              </button>
+              <NavLink 
+                to="/contact" 
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg inline-block"
+              >
+                {t('clothing.cta.consultation_btn')}
+              </NavLink>
+              <NavLink 
+                to="/portfolio" 
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-block"
+              >
+                {t('clothing.cta.portfolio_btn')}
+              </NavLink>
             </div>
           </div>
         </section>

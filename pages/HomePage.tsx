@@ -1,10 +1,11 @@
-import React, { useRef, useState, RefObject } from 'react';
+import React, { useRef, useState, useEffect, RefObject } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslations } from '../hooks/useTranslations';
 import { useOnScreen } from '../hooks/useOnScreen';
 import AutoCarousel3D from '../components/ui/AutoCarousel3D';
 import PortfolioCarousel3D from '../components/ui/PortfolioCarousel3D';
 import { portfolio3DItems } from '../data/portfolioData';
+import LogoShowcase from '../components/ui/LogoShowcase';
 
 // Helper component for animated sections
 const AnimatedSection: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => {
@@ -51,6 +52,7 @@ const InfoCard: React.FC<{ title: string; description: string; icon: string; }> 
 const HomePage: React.FC = () => {
   const { t } = useTranslations();
   const [activeCarouselIndex, setActiveCarouselIndex] = useState(0);
+  const heroBackgroundRef = useRef<HTMLDivElement>(null);
   
   const carouselItems = [
     {
@@ -84,16 +86,23 @@ const HomePage: React.FC = () => {
       imgSrc: '/images/Clothing-design.jpg',
       link: '/clothing'
     }
-  ];  return (
+  ];
+
+  // Update background image when carousel changes
+  useEffect(() => {
+    if (heroBackgroundRef.current) {
+      heroBackgroundRef.current.style.backgroundImage = `url(${carouselItems[activeCarouselIndex]?.imgSrc})`;
+    }
+  }, [activeCarouselIndex, carouselItems]);
+
+  return (
     <div className="space-y-24 md:space-y-32 overflow-x-hidden pb-16">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center pt-20 pb-16 -mt-20 relative transition-all duration-700">
+      <section className="min-h-screen flex flex-col items-center justify-center pt-20 pb-16 -mt-20 relative transition-all duration-700 hero-section">
         {/* Dynamic background image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
-          style={{
-            backgroundImage: `url(${carouselItems[activeCarouselIndex]?.imgSrc})`,
-          }}
+          ref={heroBackgroundRef}
+          className="hero-background absolute inset-0 bg-cover bg-center transition-all duration-1000"
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-md"></div>
         <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(var(--accent)/0.2),transparent_80%)]"></div>
@@ -124,6 +133,11 @@ const HomePage: React.FC = () => {
           <ServiceCard icon="🎬" title={t('services_teaser.video')} />
           <ServiceCard icon="👕" title={t('services_teaser.clothing')} />
         </div>
+      </AnimatedSection>
+      
+      {/* Logo Showcase Section */}
+      <AnimatedSection className="container mx-auto px-6">
+        <LogoShowcase variant="hero" animated={true} />
       </AnimatedSection>
       
       {/* Portfolio Carousel 3D */}

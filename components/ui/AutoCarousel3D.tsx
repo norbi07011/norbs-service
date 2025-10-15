@@ -17,7 +17,12 @@ interface AutoCarousel3DProps {
 const AutoCarousel3D: React.FC<AutoCarousel3DProps> = ({ items, onActiveIndexChange }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const navigate = useNavigate();
+
+  // Minimum distance to trigger a swipe
+  const minSwipeDistance = 50;
 
   // Auto-rotation effect
   useEffect(() => {
@@ -67,13 +72,40 @@ const AutoCarousel3D: React.FC<AutoCarousel3DProps> = ({ items, onActiveIndexCha
     });
   }, [items.length, onActiveIndexChange]);
 
+  // Touch handlers
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null); // Reset touch end
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToNext();
+    } else if (isRightSwipe) {
+      goToPrevious();
+    }
+  };
+
   return (
     <div className="w-full flex flex-col items-center justify-center py-12">
       {/* Main carousel container - exact layout from your image */}
       <div 
-        className="relative w-full max-w-6xl h-[450px] flex items-center justify-center overflow-hidden auto-carousel-container"
+        className="relative w-full max-w-6xl h-[450px] flex items-center justify-center overflow-hidden auto-carousel-container touch-pan-y"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
       >
         {items.map((item, index) => {
           const offset = index - activeIndex;
@@ -118,13 +150,6 @@ const AutoCarousel3D: React.FC<AutoCarousel3DProps> = ({ items, onActiveIndexCha
                 
                 {/* Gradient overlay */}
                 <div className="carousel-gradient-overlay" />
-              </div>
-
-              {/* Content overlay - positioned like in your image */}
-              <div className="carousel-content">
-                <div className="text-2xl mb-2">{item.icon}</div>
-                <h3 className="text-lg font-bold mb-1 text-shadow">{item.title}</h3>
-                <p className="text-sm opacity-90 line-clamp-2">{item.description}</p>
               </div>
 
               {/* Shine effect for center card */}

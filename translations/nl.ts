@@ -39,6 +39,11 @@ export default {
   clothing: {
     page_title: "Kledingontwerp & Productie",
     page_subtitle: "Van idee tot eindproduct - wij creëren unieke kleding met materialen van de hoogste kwaliteit",
+    launch_announcement: {
+      title: "Project Start in Januari 2026",
+      description: "Wij bereiden een uitgebreide kledingontwerp- en productieservice voor u voor. Binnenkort meer informatie!",
+      badge: "Start: Januari 2026"
+    },
     hero_badges: {
       designs: "Originele ontwerpen",
       materials: "Premium materialen",
@@ -342,10 +347,12 @@ export default {
       business_cards: "Visitekaartjes (ontwerp)",
       posters: "Posters",
       banners: "Banners",
-      price_logo: "€50",
-      price_business_cards: "€65",
-      price_posters: "€55",
-      price_banners: "€55"
+      general_graphics: "Grafische ontwerpen",
+      price_logo: "€25",
+      price_business_cards: "€25",
+      price_posters: "€30",
+      price_banners: "€30",
+      price_general_graphics: "€25"
     },
     photo_title: "Fotografie",
     photo: {
@@ -355,13 +362,15 @@ export default {
     },
     websites_title: "Websites",
     websites: {
-      simple: "Eenvoudige visitekaartje website",
-      business: "Bedrijfswebsite (meerdere pagina's)",
-      ecommerce: "Webshop",
+      simple: "Eenvoudige visitekaartje",
+      business: "Uitgebreide website",
+      advanced: "Geavanceerde website (databases, profielen, login)",
+      ecommerce: "Webshops (binnenkort beschikbaar)",
       admin: "Administratie",
-      price_simple: "vanaf €200",
-      price_business: "€1.100",
-      price_ecommerce: "€1.500–€3.000",
+      price_simple: "€250",
+      price_business: "€500",
+      price_advanced: "€750–€1250",
+      price_ecommerce: "binnenkort beschikbaar",
       price_admin: "€50/jaar",
       most_popular: "Meest gekozen"
     },
@@ -374,6 +383,12 @@ export default {
       price_promo: "€500–€1.000",
       price_music: "€500–€1.500",
       price_reels: "€75–€175"
+    },
+    clothing_title: "Kledingontwerp & Productie (binnenkort beschikbaar)",
+    clothing: {
+      coming_soon: "Binnenkort beschikbaar!",
+      description: "Premium materialen • Geavanceerde druktechnologieën • Volledige personalisatie",
+      available_soon: "Binnenkort beschikbaar"
     },
     order_cta: "Bestel deze dienst"
   },
@@ -426,7 +441,12 @@ export default {
     faq3_title: "Is de prijs inclusief drukwerk / hosting?",
     faq3_answer: "Prijzen for grafisch ontwerp zijn exclusief drukwerk. Websiteprijzen zijn exclusief hosting, maar we kunnen helpen bij de selectie en configuratie ervan.",
     faq4_title: "Hoe ziet het samenwerkingsproces eruit?",
-    faq4_answer: "Het proces begint met een consultatie en een briefing. Vervolgens presenteren we initiële concepten en na uw goedkeuring en verwerking van de revisies, leveren we het definitieve project op."
+    faq4_answer: "Het proces begint met een consultatie en een briefing. Vervolgens presenteren we initiële concepten en na uw goedkeuring en verwerking van de revisies, leveren we het definitieve project op.",
+    cta: {
+      title: "Neem vandaag nog contact met ons op en start uw digitale transformatie",
+      contact_btn: "Neem contact op",
+      portfolio_btn: "Bekijk portfolio"
+    }
   },
   card_color: {
     green: "GROEN",
@@ -434,6 +454,7 @@ export default {
   },
   portfolio: {
     cta: "Ik wil een soortgelijk project",
+    view_all: "Bekijk alle projecten",
     item1: {
       title: "Abstract Logo Ontwerp",
       description: "Een levendig en dynamisch logo ontworpen voor een tech startup. Het concept was om innovatie en vloeiendheid te visualiseren door middel van abstracte vormen en een gedurfd kleurenpalet. Het eindresultaat is een gedenkwaardig en schaalbaar merkidentiteit."

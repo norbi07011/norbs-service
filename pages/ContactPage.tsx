@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent, DragEvent, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { useTheme } from '../hooks/useTheme';
+import LogoFrame from '../components/ui/LogoFrame';
 
 // --- STYLED & REUSABLE FORM COMPONENTS ---
 
@@ -617,6 +618,11 @@ const ContactPage: React.FC = () => {
                 {t('contact.title')}
             </h1>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">{t('contact.form_title')}</p>
+
+            {/* Logo Display */}
+            <div className="flex justify-center mb-16">
+                <LogoFrame />
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
                 <div className="lg:col-span-2 space-y-8">
