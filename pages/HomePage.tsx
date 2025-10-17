@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
       icon: '👕',
       title: t('hero_carousel.clothing.title'),
       description: t('hero_carousel.clothing.description'),
-      imgSrc: '/images/Clothing-design.jpg',
+      imgSrc: '/images/UBRANIA .jpg',
       link: '/clothing'
     }
   ];
