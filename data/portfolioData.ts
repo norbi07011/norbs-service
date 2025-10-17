@@ -50,12 +50,12 @@ export const portfolio3DItems: Portfolio3DItem[] = [
   },
   {
     id: 3,
-    title: "Fotografia - Sesja Biznesowa",
-    category: "Photography",
-    description: "Biznesowa sesja fotograficzna z profesjonalnym oświetleniem studyjnym. Zdjęcia korporacyjne najwyższej jakości.",
-    image: "/images/video/fotografie 2.mp4",
-    technologies: ["Sony A7III", "Capture One", "Adobe Lightroom"],
-    client: "Local Business",
+    title: "Projektowanie Ubrań - Visualizacja 3D",
+    category: "Clothing Design",
+    description: "Profesjonalne projektowanie odzieży z wykorzystaniem zaawansowanych narzędzi 3D. Kompleksowa wizualizacja projektu od koncepcji do finalnego produktu.",
+    image: "/images/UBRANIA .jpg",
+    technologies: ["CLO 3D", "Adobe Illustrator", "Pattern Making"],
+    client: "Fashion Brand",
     year: 2024
   },
   {
