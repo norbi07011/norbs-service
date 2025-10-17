@@ -50,16 +50,6 @@ export const portfolio3DItems: Portfolio3DItem[] = [
   },
   {
     id: 3,
-    title: "Projektowanie Ubrań - Visualizacja 3D",
-    category: "Clothing Design",
-    description: "Profesjonalne projektowanie odzieży z wykorzystaniem zaawansowanych narzędzi 3D. Kompleksowa wizualizacja projektu od koncepcji do finalnego produktu.",
-    image: "/images/UBRANIA .jpg",
-    technologies: ["CLO 3D", "Adobe Illustrator", "Pattern Making"],
-    client: "Fashion Brand",
-    year: 2024
-  },
-  {
-    id: 4,
     title: "Wideo Marketing - Social Media Content",
     category: "Video Marketing",
     description: "Krótkie, dynamiczne wideo stworzone z myślą o mediach społecznościowych. Optymalizowane pod Instagram, TikTok i Facebook.",
@@ -69,7 +59,7 @@ export const portfolio3DItems: Portfolio3DItem[] = [
     year: 2024
   },
   {
-    id: 5,
+    id: 4,
     title: "Wideo Marketing - Produkcja Reklamowa",
     category: "Video Marketing",
     description: "Dynamiczna reklama wideo z profesjonalnym montażem i efektami wizualnymi. Skuteczny content marketingowy.",
@@ -79,7 +69,7 @@ export const portfolio3DItems: Portfolio3DItem[] = [
     year: 2024
   },
   {
-    id: 6,
+    id: 5,
     title: "Wideo Marketing - Kampania Biznesowa",
     category: "Video Marketing",
     description: "Profesjonalny film biznesowy z najwyższą jakością produkcji. Kompleksowa realizacja od koncepcji po postprodukcję.",
@@ -89,7 +79,7 @@ export const portfolio3DItems: Portfolio3DItem[] = [
     year: 2024
   },
   {
-    id: 7,
+    id: 6,
     title: "Wideo Marketing - Social Media Video",
     category: "Video Marketing",
     description: "Kreatywne wideo zoptymalizowane pod media społecznościowe. Angażująca treść dla Instagram, TikTok i Facebook.",
@@ -99,7 +89,7 @@ export const portfolio3DItems: Portfolio3DItem[] = [
     year: 2024
   },
   {
-    id: 8,
+    id: 7,
     title: "Wideo Marketing - Kampania Reklamowa",
     category: "Video Marketing",
     description: "Profesjonalna kampania wideo z dynamicznym montażem. Wysokiej jakości produkcja dla mediów społecznościowych i reklam online.",
