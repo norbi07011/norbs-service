@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslations } from '../../hooks/useTranslations';
 import { useTheme } from '../../hooks/useTheme';
-import { useAuth } from '../../hooks/useAuth';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
 import ThemeSwitcher from '../ui/ThemeSwitcher';
 import Typewriter from '../ui/Typewriter';
@@ -36,7 +35,6 @@ const CardColorSwitcher: React.FC = () => {
 
 const Header: React.FC = () => {
   const { t } = useTranslations();
-  const { user, logout } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -77,16 +75,6 @@ const Header: React.FC = () => {
               {link.text}
             </NavLink>
           ))}
-           {user && user.role === 'owner' && (
-            <NavLink to="/admin" className={getNavLinkClass}>
-              Admin Panel
-            </NavLink>
-          )}
-          {user && user.role === 'client' && (
-            <NavLink to="/portal" className={getNavLinkClass}>
-              Client Portal
-            </NavLink>
-          )}
         </div>
         
         {/* Desktop Controls */}
@@ -94,18 +82,6 @@ const Header: React.FC = () => {
           <LanguageSwitcher />
           <ThemeSwitcher />
           <CardColorSwitcher />
-          {user ? (
-            <button onClick={logout} className="px-4 py-2 text-sm font-semibold text-destructive bg-destructive/10 rounded-md hover:bg-destructive/20 transition-colors">
-              {t('auth.logout') || 'Logout'}
-            </button>
-          ) : (
-            <NavLink 
-              to="/login" 
-              className="px-4 py-2 text-sm font-semibold text-accent bg-accent/10 rounded-md hover:bg-accent/20 transition-colors"
-            >
-              {t('auth.login') || 'Admin Login'}
-            </NavLink>
-          )}
         </div>
 
         {/* Mobile Controls */}
@@ -142,39 +118,13 @@ const Header: React.FC = () => {
                 {link.text}
               </NavLink>
             ))}
-            {user && user.role === 'owner' && (
-              <NavLink to="/admin" className={getMobileNavLinkClass} onClick={closeMobileMenu}>
-                Admin Panel
-              </NavLink>
-            )}
-            {user && user.role === 'client' && (
-              <NavLink to="/portal" className={getMobileNavLinkClass} onClick={closeMobileMenu}>
-                Client Portal
-              </NavLink>
-            )}
           </div>
           
-          {/* Mobile Auth & Settings */}
+          {/* Mobile Settings */}
           <div className="mt-4 pt-4 border-t border-border-color space-y-3">
             <div className="flex items-center gap-2">
               <CardColorSwitcher />
             </div>
-            {user ? (
-              <button 
-                onClick={() => { logout(); closeMobileMenu(); }} 
-                className="w-full px-4 py-3 text-left text-destructive bg-destructive/10 rounded-lg hover:bg-destructive/20 transition-colors"
-              >
-                {t('auth.logout') || 'Logout'}
-              </button>
-            ) : (
-              <NavLink 
-                to="/login" 
-                className="block w-full px-4 py-3 text-center text-accent bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors"
-                onClick={closeMobileMenu}
-              >
-                {t('auth.login') || 'Admin Login'}
-              </NavLink>
-            )}
           </div>
         </div>
       </div>

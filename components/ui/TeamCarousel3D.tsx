@@ -33,38 +33,39 @@ const TeamCarousel3D: React.FC = () => {
     {
       id: 1,
       name: "Norbi",
-      role: "Marketing, Strony Internetowe, Grafiki",
-      description: "Specjalista od kompleksowych rozwiązań marketingowych, tworzenia nowoczesnych stron internetowych i profesjonalnych projektów graficznych.",
-      image: "https://picsum.photos/300/300?random=101",
+      role: t('team.norbi.role'),
+      description: t('team.norbi.description'),
+      image: "/images/norbi.jpg",
       skills: ["Marketing Digital", "Web Development", "Graphic Design", "Branding"],
-      experience: "4+ lata",
+      experience: t('team.norbi.experience'),
       social: {
-        email: "norbi@norbs.nl"
+        email: "servicenorbs@gmail.com",
+        linkedin: "tel:+31642474314"
       }
     },
     {
       id: 2,
       name: "Martin",
-      role: "Odzież - Projektant",
-      description: "Kreatywny projektant odzieży specjalizujący się w unikalnych designach i innowacyjnych rozwiązaniach w modzie.",
+      role: t('team.martin.role'),
+      description: t('team.martin.description'),
       image: "/images/MARTIN .jpg",
       skills: ["Fashion Design", "Textile Design", "Pattern Making", "Brand Identity"],
-      experience: "8+ lat",
+      experience: t('team.martin.experience'),
       social: {
         instagram: "https://www.facebook.com/share/14JdrSnstks/"
       }
     },
     {
       id: 3,
-      name: "Jacko Placko",
-      role: "Kamerzysta, Montażysta Teledysków i Reklam",
-      description: "Profesjonalny kamerzysta i montażysta specjalizujący się w produkcji teledysków i materiałów reklamowych najwyższej jakości.",
+      name: "JACKREATOR",
+      role: t('team.jackreator.role'),
+      description: t('team.jackreator.description'),
       image: "/images/JACKO PACKO .jpg",
-      skills: ["Video Production", "Video Editing", "Color Grading", "Motion Graphics"],
-      experience: "12+ lat",
+      skills: [t('team.jackreator.skills.video_production'), t('team.jackreator.skills.video_editing'), t('team.jackreator.skills.special_effects')],
+      experience: t('team.jackreator.experience'),
       social: {
-        instagram: "https://www.instagram.com/jackreator?igsh=MTg4OTgxcjN5N3cycw==",
-        linkedin: "https://www.facebook.com/share/1CaMHPmYvQ/"
+        instagram: "https://www.instagram.com/jd_video_productions/",
+        linkedin: "https://www.facebook.com/share/17Uw3PV7y6/"
       }
     }
   ];

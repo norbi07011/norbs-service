@@ -453,6 +453,10 @@ export default {
     green: "ZIELONY",
     blue: "NIEBIESKI"
   },
+  portfolio_page: {
+    title: "Nasze Portfolio",
+    subtitle: "Odkryj nasze najlepsze projekty - od stron internetowych po kampanie marketingowe"
+  },
   portfolio: {
     cta: "Chcę podobny projekt",
     view_all: "Zobacz wszystkie projekty",
@@ -601,18 +605,30 @@ export default {
       description: "Elegancki film korporacyjny prezentujący firmę i jej wartości. Profesjonalna kolorystyka i montaż."
     },
     item37: {
+      title: "Wideo Marketing - Produkcja Reklamowa",
+      description: "Dynamiczna reklama wideo z profesjonalnym montażem i efektami wizualnymi. Skuteczny content marketingowy."
+    },
+    item38: {
+      title: "Wideo Marketing - Kampania Biznesowa",
+      description: "Profesjonalny film biznesowy z najwyższą jakością produkcji. Kompleksowa realizacja od koncepcji po postprodukcję."
+    },
+    item39: {
+      title: "Wideo Marketing - Kampania Reklamowa",
+      description: "Profesjonalna kampania wideo z dynamicznym montażem. Wysokiej jakości produkcja dla mediów społecznościowych i reklam online."
+    },
+    item40: {
       title: "Strona Internetowa - KAJFASZ Trener Personalny",
       description: "Profesjonalna strona dla trenera personalnego. Prezentacja oferty treningowej, planów dietetycznych i osiągnięć klientów."
     },
-    item38: {
+    item41: {
       title: "Strona Internetowa - Scootershop MG",
       description: "Nowoczesny sklep internetowy z hulajnogami i akcesoriami. Responsywny design z intuicyjną nawigacją i katalogiem produktów."
     },
-    item39: {
+    item42: {
       title: "Strona Internetowa - TRENER PERSONALNY PATRYK MMA",
       description: "Profesjonalna strona dla trenera MMA i sportów walki. Prezentacja technik treningowych, planów zajęć i osiągnięć sportowych."
     },
-    item40: {
+    item43: {
       title: "Strona Internetowa - RESTAURACJA LENIWA BABA",
       description: "Elegancka strona restauracji z menu, galerią potraw i systemem rezerwacji. Apetyczny design prezentujący kulinarne specjały."
     }
@@ -713,7 +729,7 @@ export default {
     itemSaved: "Element został pomyślnie zapisany",
     errorOccurred: "Wystąpił błąd",
     noResults: "Brak wyników",
-    
+
     // Files
     files: "Pliki",
     uploadFile: "Prześlij Plik",
@@ -721,5 +737,27 @@ export default {
     fileSize: "Rozmiar Pliku",
     uploadDate: "Data Przesłania",
     download: "Pobierz"
+  },
+  team: {
+    norbi: {
+      role: "Marketing, Strony Internetowe, Grafiki",
+      description: "Specjalista od kompleksowych rozwiązań marketingowych, tworzenia nowoczesnych stron internetowych i profesjonalnych projektów graficznych.",
+      experience: "4+ lata"
+    },
+    martin: {
+      role: "Odzież - Projektant",
+      description: "Kreatywny projektant odzieży specjalizujący się w unikalnych designach i innowacyjnych rozwiązaniach w modzie.",
+      experience: "8+ lat"
+    },
+    jackreator: {
+      role: "🎥 Kamerzysta, Montażysta Teledysków, Reklam i Eventów",
+      description: "Profesjonalne kamery i sprzęt, które wykorzystujemy w produkcji teledysków, reklam, wesel oraz relacji z koncertów i eventów. Jako współzałożyciel ekipy J&D VIDEO PRODUCTION gwarantuję najwyższą jakość obrazu, dźwięku i montażu.",
+      experience: "12+ lat",
+      skills: {
+        video_production: "🎬 Produkcja wideo",
+        video_editing: "✂️ Edycja wideo",
+        special_effects: "🎨 Efekty specjalne"
+      }
+    }
   }
 };

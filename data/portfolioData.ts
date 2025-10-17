@@ -40,16 +40,6 @@ export const portfolio3DItems: Portfolio3DItem[] = [
   },
   {
     id: 2,
-    title: "Projekty Graficzne - Kampania Social Media",
-    category: "Graphic Design",
-    description: "Kompletna identyfikacja wizualna dla kampanii w mediach społecznościowych. Spójny system graficzny zwiększający rozpoznawalność marki.",
-    image: "/images/portwolio zdjecia 9.jpg",
-    technologies: ["Adobe Photoshop", "Illustrator", "Figma"],
-    client: "Fashion Brand",
-    year: 2024
-  },
-  {
-    id: 3,
     title: "Wideo Marketing - Reklama Produktu",
     category: "Video Production",
     description: "Profesjonalny film reklamowy produktu z efektami wizualnymi i dynamicznym montażem. Angażujący content marketingowy.",
@@ -59,7 +49,7 @@ export const portfolio3DItems: Portfolio3DItem[] = [
     year: 2024
   },
   {
-    id: 4,
+    id: 3,
     title: "Fotografia - Sesja Biznesowa",
     category: "Photography",
     description: "Biznesowa sesja fotograficzna z profesjonalnym oświetleniem studyjnym. Zdjęcia korporacyjne najwyższej jakości.",
@@ -69,13 +59,53 @@ export const portfolio3DItems: Portfolio3DItem[] = [
     year: 2024
   },
   {
-    id: 5,
+    id: 4,
     title: "Wideo Marketing - Social Media Content",
     category: "Video Marketing",
     description: "Krótkie, dynamiczne wideo stworzone z myślą o mediach społecznościowych. Optymalizowane pod Instagram, TikTok i Facebook.",
     image: "/images/video/Marketing wideo3.mp4",
     technologies: ["Final Cut Pro", "Motion", "Social Media Optimization"],
     client: "Startup Company",
+    year: 2024
+  },
+  {
+    id: 5,
+    title: "Wideo Marketing - Produkcja Reklamowa",
+    category: "Video Marketing",
+    description: "Dynamiczna reklama wideo z profesjonalnym montażem i efektami wizualnymi. Skuteczny content marketingowy.",
+    image: "/images/video/Marketing wideo15.mp4",
+    technologies: ["Adobe Premiere Pro", "After Effects"],
+    client: "NORBS SERVICE",
+    year: 2024
+  },
+  {
+    id: 6,
+    title: "Wideo Marketing - Kampania Biznesowa",
+    category: "Video Marketing",
+    description: "Profesjonalny film biznesowy z najwyższą jakością produkcji. Kompleksowa realizacja od koncepcji po postprodukcję.",
+    image: "/images/video/Marketing wideo.15.mp4",
+    technologies: ["DaVinci Resolve", "Adobe Premiere Pro", "Color Grading"],
+    client: "Corporate Client",
+    year: 2024
+  },
+  {
+    id: 7,
+    title: "Wideo Marketing - Social Media Video",
+    category: "Video Marketing",
+    description: "Kreatywne wideo zoptymalizowane pod media społecznościowe. Angażująca treść dla Instagram, TikTok i Facebook.",
+    image: "/images/video/marketing wideo14.mp4",
+    technologies: ["Final Cut Pro", "Motion"],
+    client: "Digital Agency",
+    year: 2024
+  },
+  {
+    id: 8,
+    title: "Wideo Marketing - Kampania Reklamowa",
+    category: "Video Marketing",
+    description: "Profesjonalna kampania wideo z dynamicznym montażem. Wysokiej jakości produkcja dla mediów społecznościowych i reklam online.",
+    image: "/images/video/Marketing wideo.16.mp4",
+    technologies: ["Adobe Premiere Pro", "After Effects", "DaVinci Resolve"],
+    client: "NORBS SERVICE",
     year: 2024
   }
 ];
@@ -117,8 +147,11 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 34, category: 'video', titleKey: 'portfolio.item34.title', descriptionKey: 'portfolio.item34.description', technologies: ['Adobe Premiere Pro', 'Audition'], img: '/images/Wideo-marketing.jpg', video: '/images/video/marketing wideo12.mp4' },
   { id: 35, category: 'video', titleKey: 'portfolio.item35.title', descriptionKey: 'portfolio.item35.description', technologies: ['After Effects', 'Cinema 4D'], img: '/images/Wideo-marketing.jpg', video: '/images/video/marketing wideo13.mp4' },
   { id: 36, category: 'video', titleKey: 'portfolio.item36.title', descriptionKey: 'portfolio.item36.description', technologies: ['DaVinci Resolve', 'Color Grading'], img: '/images/Wideo-marketing.jpg', video: '/images/video/marketing wideo14.mp4' },
-  { id: 37, category: 'websites', titleKey: 'portfolio.item37.title', descriptionKey: 'portfolio.item37.description', technologies: ['React', 'TypeScript', 'Netlify'], img: '/images/KAJFASZ Trener Personalny.png', externalLink: 'https://celebrated-haupia-8bbbb6.netlify.app/' },
-  { id: 38, category: 'websites', titleKey: 'portfolio.item38.title', descriptionKey: 'portfolio.item38.description', technologies: ['React', 'React Router', 'Netlify'], img: '/images/Scootershop MG.png', externalLink: 'https://amazing-flan-607013.netlify.app/#/' },
-  { id: 39, category: 'websites', titleKey: 'portfolio.item39.title', descriptionKey: 'portfolio.item39.description', technologies: ['React', 'React Router', 'Netlify'], img: '/images/TRENER PERSONALNY PATRYK MMA.png', externalLink: 'https://precious-buttercream-c62641.netlify.app/#/' },
-  { id: 40, category: 'websites', titleKey: 'portfolio.item40.title', descriptionKey: 'portfolio.item40.description', technologies: ['React', 'TypeScript', 'Netlify'], img: '/images/RESTAURACJA LENIWA BABA.png', externalLink: 'https://silly-mandazi-938c89.netlify.app/' },
+  { id: 37, category: 'video', titleKey: 'portfolio.item37.title', descriptionKey: 'portfolio.item37.description', technologies: ['Adobe Premiere Pro', 'After Effects'], img: '/images/Wideo-marketing.jpg', video: '/images/video/Marketing wideo15.mp4' },
+  { id: 38, category: 'video', titleKey: 'portfolio.item38.title', descriptionKey: 'portfolio.item38.description', technologies: ['DaVinci Resolve', 'Adobe Premiere Pro'], img: '/images/Wideo-marketing.jpg', video: '/images/video/Marketing wideo.15.mp4' },
+  { id: 39, category: 'video', titleKey: 'portfolio.item39.title', descriptionKey: 'portfolio.item39.description', technologies: ['Final Cut Pro', 'Motion'], img: '/images/Wideo-marketing.jpg', video: '/images/video/Marketing wideo.16.mp4' },
+  { id: 40, category: 'websites', titleKey: 'portfolio.item40.title', descriptionKey: 'portfolio.item40.description', technologies: ['React', 'TypeScript', 'Netlify'], img: '/images/KAJFASZ Trener Personalny.png', externalLink: 'https://celebrated-haupia-8bbbb6.netlify.app/' },
+  { id: 41, category: 'websites', titleKey: 'portfolio.item41.title', descriptionKey: 'portfolio.item41.description', technologies: ['React', 'React Router', 'Netlify'], img: '/images/Scootershop MG.png', externalLink: 'https://amazing-flan-607013.netlify.app/#/' },
+  { id: 42, category: 'websites', titleKey: 'portfolio.item42.title', descriptionKey: 'portfolio.item42.description', technologies: ['React', 'React Router', 'Netlify'], img: '/images/TRENER PERSONALNY PATRYK MMA.png', externalLink: 'https://precious-buttercream-c62641.netlify.app/#/' },
+  { id: 43, category: 'websites', titleKey: 'portfolio.item43.title', descriptionKey: 'portfolio.item43.description', technologies: ['React', 'TypeScript', 'Netlify'], img: '/images/RESTAURACJA LENIWA BABA.png', externalLink: 'https://silly-mandazi-938c89.netlify.app/' },
 ];

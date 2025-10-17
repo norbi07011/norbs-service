@@ -462,6 +462,10 @@ export default {
     green: "GRÜN",
     blue: "BLAU"
   },
+  portfolio_page: {
+    title: "Unser Portfolio",
+    subtitle: "Entdecken Sie unsere besten Projekte - von Websites bis zu Marketingkampagnen"
+  },
   portfolio: {
     cta: "Ich möchte ein ähnliches Projekt",
     view_all: "Alle Projekte ansehen",
@@ -496,6 +500,34 @@ export default {
     item8: {
       title: "Musikvideo-Produktion",
       description: "Ein konzeptionelles Musikvideo mit einer starken Erzählung und visuellen Effekten. Wir arbeiteten eng mit dem Künstler zusammen, um seine Vision durch Kinematografie und Postproduktion zum Leben zu erwecken."
+    },
+    item37: {
+      title: "Videomarketing - Werbeproduktion",
+      description: "Dynamische Videowerbung mit professionellem Schnitt und visuellen Effekten. Effektiver Marketing-Content."
+    },
+    item38: {
+      title: "Videomarketing - Business-Kampagne",
+      description: "Professionelles Business-Video mit höchster Produktionsqualität. Komplette Umsetzung vom Konzept bis zur Postproduktion."
+    },
+    item39: {
+      title: "Videomarketing - Werbekampagne",
+      description: "Professionelle Video-Kampagne mit dynamischem Schnitt. Hochwertige Produktion für soziale Medien und Online-Werbung."
+    },
+    item40: {
+      title: "Website - KAJFASZ Personal Trainer",
+      description: "Professionelle Website für einen Personal Trainer. Präsentation des Trainingsangebots, Ernährungspläne und Kundenerfolge."
+    },
+    item41: {
+      title: "Website - Scootershop MG",
+      description: "Moderner Online-Shop mit Rollern und Zubehör. Responsives Design mit intuitiver Navigation und Produktkatalog."
+    },
+    item42: {
+      title: "Website - PERSONAL TRAINER PATRYK MMA",
+      description: "Professionelle Website für einen MMA-Trainer und Kampfsport. Präsentation von Trainingstechniken, Kursplan und sportlichen Erfolgen."
+    },
+    item43: {
+      title: "Website - RESTAURANT LENIWA BABA",
+      description: "Elegante Restaurant-Website mit Speisekarte, Gerichte-Galerie und Reservierungssystem. Appetitanregendes Design mit kulinarischen Spezialitäten."
     }
   },
   admin: {
@@ -594,7 +626,7 @@ export default {
     itemSaved: "Element erfolgreich gespeichert",
     errorOccurred: "Ein Fehler ist aufgetreten",
     noResults: "Keine Ergebnisse gefunden",
-    
+
     // Files
     files: "Dateien",
     uploadFile: "Datei hochladen",
@@ -602,5 +634,27 @@ export default {
     fileSize: "Dateigröße",
     uploadDate: "Upload-Datum",
     download: "Herunterladen"
+  },
+  team: {
+    norbi: {
+      role: "Marketing, Websites, Grafiken",
+      description: "Spezialist für umfassende Marketinglösungen, Erstellung moderner Websites und professioneller Grafikdesigns.",
+      experience: "4+ Jahre"
+    },
+    martin: {
+      role: "Bekleidung - Designer",
+      description: "Kreativer Bekleidungsdesigner mit Spezialisierung auf einzigartige Designs und innovative Modelösungen.",
+      experience: "8+ Jahre"
+    },
+    jackreator: {
+      role: "🎥 Kameramann, Musikvideo & Werbeschnitt",
+      description: "Professionelle Kameras und Ausrüstung für Musikvideo-, Werbe-, Hochzeitsproduktion und Konzert-/Event-Berichterstattung. Als Mitbegründer des J&D VIDEO PRODUCTION-Teams garantiere ich höchste Qualität bei Bild, Ton und Schnitt.",
+      experience: "12+ Jahre",
+      skills: {
+        video_production: "🎬 Videoproduktion",
+        video_editing: "✂️ Videobearbeitung",
+        special_effects: "🎨 Spezialeffekte"
+      }
+    }
   }
 };

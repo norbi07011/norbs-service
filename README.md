@@ -215,7 +215,8 @@ This project is licensed under the MIT License.
 
 For support and questions:
 - Email: servicenorbs@gmail.com
-- WhatsApp: +31 6 33387724
+- WhatsApp: +31 6 42474314
+- Tel: +31 6 42474314
 
 ---
 

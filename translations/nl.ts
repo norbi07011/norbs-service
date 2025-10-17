@@ -452,6 +452,10 @@ export default {
     green: "GROEN",
     blue: "BLAUW"
   },
+  portfolio_page: {
+    title: "Ons Portfolio",
+    subtitle: "Ontdek onze beste projecten - van websites tot marketingcampagnes"
+  },
   portfolio: {
     cta: "Ik wil een soortgelijk project",
     view_all: "Bekijk alle projecten",
@@ -486,6 +490,34 @@ export default {
     item8: {
       title: "Muziekvideo Productie",
       description: "Een conceptuele muziekvideo met een sterke verhaallijn en visuele effecten. We werkten nauw samen met de artiest om hun visie tot leven te brengen door middel van cinematografie en postproductie."
+    },
+    item37: {
+      title: "Videomarketing - Reclameproductie",
+      description: "Dynamische video-advertentie met professionele montage en visuele effecten. Effectieve marketingcontent."
+    },
+    item38: {
+      title: "Videomarketing - Bedrijfscampagne",
+      description: "Professionele bedrijfsvideo met de hoogste productiekwaliteit. Volledige uitvoering van concept tot postproductie."
+    },
+    item39: {
+      title: "Videomarketing - Reclamecampagne",
+      description: "Professionele videocampagne met dynamische montage. Hoogwaardige productie voor sociale media en online advertenties."
+    },
+    item40: {
+      title: "Website - KAJFASZ Personal Trainer",
+      description: "Professionele website voor een personal trainer. Presentatie van trainingsaanbod, dieetplannen en klantresultaten."
+    },
+    item41: {
+      title: "Website - Scootershop MG",
+      description: "Moderne webshop met scooters en accessoires. Responsive design met intuïtieve navigatie en productcatalogus."
+    },
+    item42: {
+      title: "Website - PERSONAL TRAINER PATRYK MMA",
+      description: "Professionele website voor een MMA trainer en gevechtssporten. Presentatie van trainingstechnieken, lesrooster en sportprestaties."
+    },
+    item43: {
+      title: "Website - RESTAURANT LENIWA BABA",
+      description: "Elegante restaurantwebsite met menu, gerechten galerie en reserveringssysteem. Appetijtelijk ontwerp met culinaire specialiteiten."
     }
   },
   admin: {
@@ -584,7 +616,7 @@ export default {
     itemSaved: "Item succesvol opgeslagen",
     errorOccurred: "Er is een fout opgetreden",
     noResults: "Geen resultaten gevonden",
-    
+
     // Files
     files: "Bestanden",
     uploadFile: "Bestand uploaden",
@@ -592,5 +624,27 @@ export default {
     fileSize: "Bestandsgrootte",
     uploadDate: "Uploaddatum",
     download: "Downloaden"
+  },
+  team: {
+    norbi: {
+      role: "Marketing, Websites, Graphics",
+      description: "Specialist in uitgebreide marketingoplossingen, het maken van moderne websites en professionele grafische ontwerpen.",
+      experience: "4+ jaar"
+    },
+    martin: {
+      role: "Kleding - Ontwerper",
+      description: "Creatief kledingontwerper gespecialiseerd in unieke ontwerpen en innovatieve mode-oplossingen.",
+      experience: "8+ jaar"
+    },
+    jackreator: {
+      role: "🎥 Cameraman, Muziekvideo & Reclame Editor",
+      description: "Professionele camera's en apparatuur gebruikt voor muziekvideo-, reclame-, bruiloftsproductie en concert-/evenement coverage. Als medeoprichter van het J&D VIDEO PRODUCTION team garandeer ik de hoogste kwaliteit beeld, geluid en montage.",
+      experience: "12+ jaar",
+      skills: {
+        video_production: "🎬 Videoproductie",
+        video_editing: "✂️ Video bewerking",
+        special_effects: "🎨 Speciale effecten"
+      }
+    }
   }
 };

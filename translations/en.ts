@@ -461,6 +461,10 @@ export default {
     green: "GREEN",
     blue: "BLUE"
   },
+  portfolio_page: {
+    title: "Our Portfolio",
+    subtitle: "Discover our best projects - from websites to marketing campaigns"
+  },
   portfolio: {
     cta: "I want a similar project",
     view_all: "View all projects",
@@ -495,6 +499,34 @@ export default {
     item8: {
       title: "Music Video Production",
       description: "A conceptual music video featuring a strong narrative and visual effects. We worked closely with the artist to bring their vision to life through cinematography and post-production."
+    },
+    item37: {
+      title: "Video Marketing - Advertising Production",
+      description: "Dynamic video advertisement with professional editing and visual effects. Effective marketing content."
+    },
+    item38: {
+      title: "Video Marketing - Business Campaign",
+      description: "Professional business video with highest production quality. Complete execution from concept to post-production."
+    },
+    item39: {
+      title: "Video Marketing - Advertising Campaign",
+      description: "Professional video campaign with dynamic editing. High-quality production for social media and online advertising."
+    },
+    item40: {
+      title: "Website - KAJFASZ Personal Trainer",
+      description: "Professional website for a personal trainer. Presentation of training offer, diet plans and client achievements."
+    },
+    item41: {
+      title: "Website - Scootershop MG",
+      description: "Modern online store with scooters and accessories. Responsive design with intuitive navigation and product catalog."
+    },
+    item42: {
+      title: "Website - PERSONAL TRAINER PATRYK MMA",
+      description: "Professional website for an MMA trainer and combat sports. Presentation of training techniques, class schedules and sports achievements."
+    },
+    item43: {
+      title: "Website - LENIWA BABA RESTAURANT",
+      description: "Elegant restaurant website with menu, dish gallery and reservation system. Appetizing design showcasing culinary specialties."
     }
   },
   admin: {
@@ -593,7 +625,7 @@ export default {
     itemSaved: "Item saved successfully",
     errorOccurred: "An error occurred",
     noResults: "No results found",
-    
+
     // Files
     files: "Files",
     uploadFile: "Upload File",
@@ -601,5 +633,27 @@ export default {
     fileSize: "File Size",
     uploadDate: "Upload Date",
     download: "Download"
+  },
+  team: {
+    norbi: {
+      role: "Marketing, Websites, Graphics",
+      description: "Specialist in comprehensive marketing solutions, creating modern websites and professional graphic designs.",
+      experience: "4+ years"
+    },
+    martin: {
+      role: "Clothing - Designer",
+      description: "Creative clothing designer specializing in unique designs and innovative fashion solutions.",
+      experience: "8+ years"
+    },
+    jackreator: {
+      role: "🎥 Cameraman, Music Video & Commercial Editor",
+      description: "Professional cameras and equipment used in music video, commercial, wedding production and concert/event coverage. As co-founder of J&D VIDEO PRODUCTION team, I guarantee highest quality image, sound and editing.",
+      experience: "12+ years",
+      skills: {
+        video_production: "🎬 Video production",
+        video_editing: "✂️ Video editing",
+        special_effects: "🎨 Special effects"
+      }
+    }
   }
 };

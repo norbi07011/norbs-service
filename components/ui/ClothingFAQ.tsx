@@ -141,13 +141,13 @@ const ClothingFAQ: React.FC<ClothingFAQProps> = ({ showTitle = true }) => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                📞 Zadzwoń: +31 6 123 456 789
+                📞 Zadzwoń: +31 6 42474314
               </button>
               <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                💬 WhatsApp
+                💬 WhatsApp: +31 6 42474314
               </button>
               <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                ✉️ E-mail
+                ✉️ servicenorbs@gmail.com
               </button>
             </div>
           </div>

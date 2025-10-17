@@ -452,6 +452,10 @@ export default {
     green: "VERT",
     blue: "BLEU"
   },
+  portfolio_page: {
+    title: "Notre Portfolio",
+    subtitle: "Découvrez nos meilleurs projets - des sites web aux campagnes marketing"
+  },
   portfolio: {
     cta: "Je veux un projet similaire",
     view_all: "Voir tous les projets",
@@ -486,6 +490,34 @@ export default {
     item8: {
       title: "Production de clip musical",
       description: "Un clip musical conceptuel avec une narration forte et des effets visuels. Nous avons travaillé en étroite collaboration avec l'artiste pour donner vie à sa vision grâce à la cinématographie et à la post-production."
+    },
+    item37: {
+      title: "Marketing vidéo - Production publicitaire",
+      description: "Publicité vidéo dynamique avec montage professionnel et effets visuels. Contenu marketing efficace."
+    },
+    item38: {
+      title: "Marketing vidéo - Campagne d'entreprise",
+      description: "Vidéo d'entreprise professionnelle avec la plus haute qualité de production. Réalisation complète du concept à la post-production."
+    },
+    item39: {
+      title: "Marketing vidéo - Campagne publicitaire",
+      description: "Campagne vidéo professionnelle avec montage dynamique. Production de haute qualité pour les médias sociaux et la publicité en ligne."
+    },
+    item40: {
+      title: "Site web - KAJFASZ Coach personnel",
+      description: "Site web professionnel pour un coach personnel. Présentation de l'offre d'entraînement, plans nutritionnels et réussites clients."
+    },
+    item41: {
+      title: "Site web - Scootershop MG",
+      description: "Boutique en ligne moderne avec trottinettes et accessoires. Design responsive avec navigation intuitive et catalogue de produits."
+    },
+    item42: {
+      title: "Site web - COACH PERSONNEL PATRYK MMA",
+      description: "Site web professionnel pour un coach MMA et sports de combat. Présentation des techniques d'entraînement, planning des cours et réussites sportives."
+    },
+    item43: {
+      title: "Site web - RESTAURANT LENIWA BABA",
+      description: "Site web élégant de restaurant avec menu, galerie de plats et système de réservation. Design appétissant présentant les spécialités culinaires."
     }
   },
   admin: {
@@ -584,7 +616,7 @@ export default {
     itemSaved: "Élément enregistré avec succès",
     errorOccurred: "Une erreur s'est produite",
     noResults: "Aucun résultat trouvé",
-    
+
     // Files
     files: "Fichiers",
     uploadFile: "Télécharger un fichier",
@@ -592,5 +624,27 @@ export default {
     fileSize: "Taille du fichier",
     uploadDate: "Date de téléchargement",
     download: "Télécharger"
+  },
+  team: {
+    norbi: {
+      role: "Marketing, Sites web, Graphiques",
+      description: "Spécialiste des solutions marketing complètes, création de sites web modernes et conceptions graphiques professionnelles.",
+      experience: "4+ ans"
+    },
+    martin: {
+      role: "Vêtements - Designer",
+      description: "Designer de vêtements créatif spécialisé dans les designs uniques et les solutions de mode innovantes.",
+      experience: "8+ ans"
+    },
+    jackreator: {
+      role: "🎥 Cameraman, Monteur de clips & publicités",
+      description: "Caméras et équipement professionnels utilisés pour la production de clips musicaux, publicités, mariages et couverture de concerts/événements. En tant que co-fondateur de l'équipe J&D VIDEO PRODUCTION, je garantis la plus haute qualité d'image, de son et de montage.",
+      experience: "12+ ans",
+      skills: {
+        video_production: "🎬 Production vidéo",
+        video_editing: "✂️ Montage vidéo",
+        special_effects: "🎨 Effets spéciaux"
+      }
+    }
   }
 };

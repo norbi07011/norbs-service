@@ -452,6 +452,10 @@ export default {
     green: "YEŞİL",
     blue: "MAVİ"
   },
+  portfolio_page: {
+    title: "Portfolyomuz",
+    subtitle: "Web sitelerinden pazarlama kampanyalarına kadar en iyi projelerimizi keşfedin"
+  },
   portfolio: {
     cta: "Benzer bir proje istiyorum",
     view_all: "Tüm projeleri görüntüle",
@@ -486,6 +490,34 @@ export default {
     item8: {
       title: "Müzik Videosu Prodüksiyonu",
       description: "Güçlü bir anlatı ve görsel efektlere sahip kavramsal bir müzik videosu. Sanatçının vizyonunu sinematografi ve post prodüksiyon yoluyla hayata geçirmek için sanatçıyla yakın bir şekilde çalıştık."
+    },
+    item37: {
+      title: "Video Pazarlama - Reklam Üretimi",
+      description: "Profesyonel düzenleme ve görsel efektlerle dinamik video reklamı. Etkili pazarlama içeriği."
+    },
+    item38: {
+      title: "Video Pazarlama - İş Kampanyası",
+      description: "En yüksek üretim kalitesine sahip profesyonel iş videosu. Konseptten post prodüksiyona kadar tam uygulama."
+    },
+    item39: {
+      title: "Video Pazarlama - Reklam Kampanyası",
+      description: "Dinamik düzenlemeyle profesyonel video kampanyası. Sosyal medya ve çevrimiçi reklamlar için yüksek kaliteli üretim."
+    },
+    item40: {
+      title: "Web Sitesi - KAJFASZ Kişisel Antrenör",
+      description: "Kişisel antrenör için profesyonel web sitesi. Antrenman teklifi, diyet planları ve müşteri başarılarının sunumu."
+    },
+    item41: {
+      title: "Web Sitesi - Scootershop MG",
+      description: "Scooter ve aksesuarlarla modern çevrimiçi mağaza. Sezgisel navigasyon ve ürün kataloğu ile duyarlı tasarım."
+    },
+    item42: {
+      title: "Web Sitesi - KİŞİSEL ANTRENÖR PATRYK MMA",
+      description: "MMA antrenörü ve dövüş sporları için profesyonel web sitesi. Antrenman teknikleri, ders programı ve spor başarılarının sunumu."
+    },
+    item43: {
+      title: "Web Sitesi - LENIWA BABA RESTORAN",
+      description: "Menü, yemek galerisi ve rezervasyon sistemiyle zarif restoran web sitesi. Mutfak özelliklerini sergileyen iştah açıcı tasarım."
     }
   },
   admin: {
@@ -584,7 +616,7 @@ export default {
     itemSaved: "Öğe başarıyla kaydedildi",
     errorOccurred: "Bir hata oluştu",
     noResults: "Sonuç bulunamadı",
-    
+
     // Files
     files: "Dosyalar",
     uploadFile: "Dosya Yükle",
@@ -592,5 +624,27 @@ export default {
     fileSize: "Dosya Boyutu",
     uploadDate: "Yükleme Tarihi",
     download: "İndir"
+  },
+  team: {
+    norbi: {
+      role: "Pazarlama, Web Siteleri, Grafikler",
+      description: "Kapsamlı pazarlama çözümleri, modern web siteleri oluşturma ve profesyonel grafik tasarımlar konusunda uzman.",
+      experience: "4+ yıl"
+    },
+    martin: {
+      role: "Giyim - Tasarımcı",
+      description: "Benzersiz tasarımlar ve yenilikçi moda çözümlerinde uzmanlaşmış yaratıcı giyim tasarımcısı.",
+      experience: "8+ yıl"
+    },
+    jackreator: {
+      role: "🎥 Kameraman, Müzik Videosu & Reklam Editörü",
+      description: "Müzik videosu, reklam, düğün prodüksiyonu ve konser/etkinlik kapsamında kullanılan profesyonel kameralar ve ekipman. J&D VIDEO PRODUCTION ekibinin kurucu ortağı olarak en yüksek kalitede görüntü, ses ve montaj garantisi veriyorum.",
+      experience: "12+ yıl",
+      skills: {
+        video_production: "🎬 Video prodüksiyon",
+        video_editing: "✂️ Video düzenleme",
+        special_effects: "🎨 Özel efektler"
+      }
+    }
   }
 };

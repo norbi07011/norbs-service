@@ -70,10 +70,10 @@ const PortfolioCarousel3D: React.FC<PortfolioCarousel3DProps> = ({ items }) => {
       {/* Portfolio Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Nasze Portfolio
+          {t('portfolio_page.title')}
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Odkryj nasze najlepsze projekty - od stron internetowych po kampanie marketingowe
+          {t('portfolio_page.subtitle')}
         </p>
       </div>
 
